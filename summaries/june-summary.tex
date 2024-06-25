@@ -18,6 +18,8 @@
 \newcommand{\Eint}{E_{\mathrm{int}}}
 \newcommand{\Eth}{E_{\mathrm{th}}}
 \newcommand{\Erec}{E_{\mathrm{rec}}}
+\newcommand{\Porb}{P_{\mathrm{orb}}}
+\newcommand{\Mwd}{M_{\mathrm{WD}}}
 
 \newcommand{\au}{\, \mathrm{au}}
 
@@ -46,12 +48,15 @@ E_{\mathrm{bind}} = E_{\mathrm{grav}} + E_{\mathrm{int}} = \int_{M_{\mathrm{core
 \]
 or
 \[
-E_{\mathrm{bind}} = E_{\mathrm{grav}} + \alphath E_{\mathrm{th}} + \alpharec E_{\mathrm{rec}}.
+	E_{\mathrm{bind}} = E_{\mathrm{grav}} + \alphath E_{\mathrm{th}} + \alpharec E_{\mathrm{rec}}.
 \]
 The results is presented in Figure \ref{yam_hi}, and we want to compare how this energy budget matches with the binding energy in COSMIC. Usually, the binding energy of the common envelope can be included in a structure parameter $\lambda$ such that 
-\[
-\Ebind = \frac{G M_i M_{\mathrm{env}}}{\lambda R_i}.    
-\]
+
+\begin{equation}
+	\Ebind = \frac{G M_i M_{\mathrm{env}}}{\lambda R_i}.   
+	\label{ebind}
+\end{equation}
+
 This $\lambda$ is represented in COSMIC as the \verb|lambdaf| flag in \verb|BSEDict|. Hence, we want to calculate the effective $\lambda$ in COSMIC that matches these binding energy models in MESA.
 
 \begin{figure}
@@ -203,7 +208,7 @@ Notice that the majority of these systems have final separation $a_f > 0.15 \au$
 
 Therefore, we lower the initial companion mass $M_{\star, i}$ and adjust the accretion efficiency \verb|acc_lim| and re-run the simulation. The results for $7\Msun + 0.7\Msun$ with \verb|acc_lim=0.1|, and $7\Msun + 0.5\Msun$ with \verb|acc_lim = 0.2| is shown in Figure \ref{stable_hi_ex}.
 
-After adjusting the initial mass of companion and the accretion efficiency, now the final mass of the companion is about $1\Msun$ and we get systems similar to our observed sample. Notice that when initial separation $a_i$ is in the range of about $2.5 \au$ to $4.5 \au$, the final separation increases rapidly. Also, it is only in this region that the final separation goes larger than the observed minimum $0.15 \au$. Hence, in the next subsection, we focus on this sharp increase and try to expain it qualitatively.
+After adjusting the initial mass of companion and the accretion efficiency, now the final mass of the companion is about $1\Msun$ and we get systems similar to our observed sample. Notice that when initial separation $a_i$ is in the range of about $2.5 \au$ to $4.5 \au$, the final separation increases rapidly. Also, it is only in this region that the final separation goes larger than the observed minimum $0.15 \au$. Hence, in the next subsection, we focus on this sharp increase and try to explain it qualitatively.
 
 \subsubsection{Discussions}
 In the previous section, we mentioned how $7\Msun + 1 \Msun$ systems with \verb|acc_lim = 0|, $7 \Msun + 0.7\Msun$ systems with \verb|acc_lim = 0.1|, and $7 \Msun + 0.5 \Msun$ systems with \verb|acc_lim = 0.2| produces WD+MS binaries with final separation $a_f > 0.15 \au$ and companion mass $\sim 1 \Msun$ in certain range of initial separation $a_i$. From the figure, we can clearly see that when initial separation $a_i$ is in the range of $2.5 \au \sim 4.5\au$, the final separation increases sharply as initial separation increases. In this section, we investigate the reason behind this by focusing on $7\Msun + 1\Msun$ binaries with \verb|acc_lim = 0|.
@@ -215,7 +220,7 @@ A typical \textbf{pre-spike} \verb|bpp| is presented in the left panel of Figure
 \begin{figure}
     \centering
     \includegraphics[width=\linewidth]{pre-spike-spike.png}
-    \caption{COSMIC simulation data of $7 \Msun + 1 \Msun$ systems with accretion efficiency $\beta = 0$ and initial separation $2.30 \au$ and $2.90 \au$ respectively. They represent typical "pre-spike" binaries and "spike" binaries. The blue rectangle marks out the common first phase of evolution in both systems — contact and common evnelope mass transfer.}
+    \caption{COSMIC simulation data of $7 \Msun + 1 \Msun$ systems with accretion efficiency $\beta = 0$ and initial separation $2.30 \au$ and $2.90 \au$ respectively. They represent typical "pre-spike" binaries and "spike" binaries. The blue rectangle marks out the common first phase of evolution in both systems — contact and common envelope mass transfer.}
     \label{pre-spike-spike}
 \end{figure}
 
@@ -247,9 +252,9 @@ From the equations, it is not difficult to see that the increase of separation i
     \label{merge-after-merge}
 \end{figure}
 
-A typical \textbf{merge} and an \textbf{after-merge} system are presneted in Figure \ref{merge-after-merge}. Notice that for the merge systems, the two stars come in contact and a common envelope process follows, similar to \textbf{spike} systems. Compared to the \textbf{spike} systems, we notice that the separation of the binary at the start of the common envelope is smaller in \textbf{merge} systems than in \textbf{spike} systems. This qualitatively explains the reason for the merging — the orbit does not have enough energy to eject the common envelope and two star merges. In contrast, the \textbf{after-merge} systems possesses more energy than the \textbf{merge} systems due to their larger intial separation. Hence, they either survives the common enevleope or do not come into contact at all. This explains why desired WD+MS systems form again as the initial separation $a_i$ increases.
+A typical \textbf{merge} and an \textbf{after-merge} system are presented in Figure \ref{merge-after-merge}. Notice that for the merge systems, the two stars come in contact and a common envelope process follows, similar to \textbf{spike} systems. Compared to the \textbf{spike} systems, we notice that the separation of the binary at the start of the common envelope is smaller in \textbf{merge} systems than in \textbf{spike} systems. This qualitatively explains the reason for the merging — the orbit does not have enough energy to eject the common envelope and two star merges. In contrast, the \textbf{after-merge} systems possesses more energy than the \textbf{merge} systems due to their larger initial separation. Hence, they either survives the common envelope or do not come into contact at all. This explains why desired WD+MS systems form again as the initial separation $a_i$ increases.
 
-This concludes our qualitative analysis on the evolution results of $7\Msun + 1\Msun$ through stable mass transfer. Again, as shown in Figure \ref{stable_hi}, for stable mass transfer, the observed minium separation of wide post-mass transfer WD+MS systems $0.15 \au$ can only be achived in the \textbf{spike} region. That is, in our results, all wide post-mass transfer systems are due to the strong wind mass loss from the primary that widens the orbit significantly.
+This concludes our qualitative analysis on the evolution results of $7\Msun + 1\Msun$ through stable mass transfer. Again, as shown in Figure \ref{stable_hi}, for stable mass transfer, the observed minimum separation of wide post-mass transfer WD+MS systems $0.15 \au$ can only be achieved in the \textbf{spike} region. That is, in our results, all wide post-mass transfer systems are due to the strong wind mass loss from the primary that widens the orbit significantly.
 
 Similarly, in \cite{yamaguchi_lo}, the author listed several arguments against the formation of wide post-mass transfer binaries through stable mass transfer. As shown in Figure \ref{theory-observed}, the observed wide post-mass transfer WD+MS binaries do not match the theoretical $M_{\mathrm{WD}} - P_{\mathrm{orb}}$ relation calculated in \cite{rappaport1995relation}, where the grey region is set to be a factor of 2.5 away from the calculated line.
 
@@ -261,7 +266,58 @@ Similarly, in \cite{yamaguchi_lo}, the author listed several arguments against t
 \end{figure}
 
 \section{Population Simulation}
-hello
+After investigating how the final separation depends on various parameters in individual binary star systems, we now shift our focus onto the distribution of final orbital period in a population of binaries (or equivalently final separation since $\Porb^2 \sim a^3$).
+
+\subsection{Methods}
+
+First of all, we sample the binary population using the independent sampler in COSMIC. We set the primary mass model to \verb|korupa01|, eccentricity model to \verb|uniform|, and orbital period model, together with the binary fraction model to \verb|moe19|. We sample a total number of about 10000 binaries with solar metallicity. The distribution of primary mass and the orbital period in the sampled population is shown in the Figure \ref{sample-distribution}.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{sample-distribution.png}
+	\caption{The distribution of primary mass, companion mass, and orbital period in the sampled population using independent sampler. \emph{Left:} Distribution of primary mass and companion mass in log scale. \emph{Right:} Distribution of orbital period $\Porb$ in log scale.}
+	\label{sample-distribution}
+\end{figure}
+
+Now to investigate how the final white dwarf mass and orbital period depends on \verb|lambdaf|, we simulation the sampled population with five different \verb|lambdaf| values, $-5$, $-15$, $-25$, $-35$, and $-45$, which corresponds to $\lambda = 5$, $15$, $25$, $35$ and $45$ in Equation \ref{ebind}. After that, for each binary star system in the population, we select the moment when CE is finished and when the system is a WD+MS one to record the white dwarf mass $\Mwd$ and final orbital period $P_{\mathrm{orb}, f}$. We also select the moment when the first RLOF started to record the initial orbital separation $P_{\mathrm{orb}, i}$. This will later on help us compare the difference and how much the orbit widens.
+
+\subsection{Results}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\linewidth]{Mwd-P scatter.png}
+	\caption{Scatter plot of white dwarf mass $\Mwd$ and final orbital period after common envelope in log scale $\log_{10}\Porb$. Different colors indicates results for different $\lambda$ values. For each different $\lambda$ value the same initial population is used.}
+	\label{Mwd-P-scatter}
+\end{figure}
+
+To show how the change in $\lambda$ affects the final orbital period, a scatter plot presenting the correlation of final orbital period $\Porb$ and white dwarf mass $\Mwd$ is presented in Figure \ref{Mwd-P-scatter}. We can see from the figure that when $\lambda$ increases, the final orbital period also increases. This is obvious for low $\Mwd$. This correlation is expected since for larger $\lambda$, less energy is require to unbind the common envelope.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{kstar-map-rearr.png}
+	\caption{Each panel: for this $\lambda$ value, scatter plot of white dwarf mass $\Mwd$ and final orbital period after common envelope in log scale $\log_{10}\Porb$. Different colors represent different kstar type of the primary at the start of mass transfer.}
+	\label{kstar-map}
+\end{figure}
+
+To also show how the final orbital separation $\Porb$ depends on the \verb|kstar_1| type at the start of first RLOF, we plot final orbital period $\Porb$ against white dwarf mass $\Mwd$ for each \verb|lambdaf| separately, and use different color to distinguish between different \verb|kstar_1| type at the start of mass transfer. The plot is shown in Figure \ref{kstar-map}. We can see that if the star is at later stages of evolution (\verb|kstar| large) when mass transfer starts, then the resulting white dwarf mass $\Mwd$ and orbital period $\Porb$ is also larger. Notice that few systems start the mass transfer at \verb|kstar_1 = 2| (Hertzsprung Gap) and \verb|kstar_1 = 4| (Core Helium Burning). This is because stars crosses Hertzsprung gap in a short timescale, leaving little time for interaction. Also, stellar radius is small when going through Core Helium Burning, reducing the possibility of interactions that starts when \verb|kstar_1 = 4|.
+
+To visualize the difference in final orbital period $\Porb$, and how they corresponds to different \verb|kstar_1| type at the start of RLOF, we create scatter plot in Figure \ref{dif-kstar map} of the difference in orbital period $\Delta P = P_{\mathrm{orb}}^{\lambda = 35} - P_{\mathrm{orb}}^{\lambda = 5}$ against the white dwarf mass $\Mwd$.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\linewidth]{dif-kstar map.png}
+	\caption{Scatter plot of difference in orbital period $\Delta P = P_{\mathrm{orb}}^{\lambda = 35} - P_{\mathrm{orb}}^{\lambda = 5}$ against the white dwarf mass $\Mwd$. Different colors indicates different kstar type of the primary at the start of mass transfer.}
+	\label{dif-kstar map}
+\end{figure}
+
+From Figure \ref{dif-kstar map}, we can see that for large \verb|kstar_1| type at the start of RLOF, $\Delta P = P_{\mathrm{orb}}^{\lambda = 35} - P_{\mathrm{orb}}^{\lambda = 5}$ is also larger. To explain this, we plot the how final white dwarf mass $\Mwd$, difference in final orbital period $\Delta \Porb$, and orbital period before mass transfer $P_{\mathrm{orb}, i}$ related to each other in Figure \ref{dif-kstar-exp}. We see that the larger initial orbital period $P_{\mathrm{orb}, i}$, the more significant effect does $\lambda$ have on the final orbital period. This is not unexpected since during mass transfer, the separation changes as $\dot{a} / a = \text{const}$. Hence $\dot{\Porb} / \Porb = \text{const}$. Therefore, the larger the initial orbital period, the larger it changes, and thus the larger effect does $\lambda$ have.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{dif-kstar two plot.png}
+	\caption{Left panel: scatter plot of initial orbital period at the start of RLOF $P_{\mathrm{orb}, i}$ against the final white dwarf mass $\MWD$. The color of the dots indicates how the final orbital period $P_{\mathrm{orb}, f}$ changes with respect to $\lambda=35$ and $\lambda=5$. That is, the color indicates the magnitude of $\Delta P = P_{\mathrm{orb}}^{\lambda = 35} - P_{\mathrm{orb}}^{\lambda = 5}$. Right panel: scatter plot of $\log_{10} \Delta \Porb$ against the initial orbital period in log scale $\log_{10} P_{\mathrm{orb}, i}$ at the start of RLOF. Different colors indicates different kstar type of the primary at the start of RLOF.}
+	\label{dif-kstar-exp}
+\end{figure}
 
 \bibliographystyle{apalike}
 \bibliography{reference.bib}

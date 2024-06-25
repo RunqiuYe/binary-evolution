@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.10)  24 JUN 2024 16:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.10)  25 JUN 2024 16:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -178,25 +178,25 @@ File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
 Package translations Info: No language package found. I am going to use `englis
-h' as default language. on input line 28.
+h' as default language. on input line 30.
 
 (./june-summary.aux)
 \openout1 = `june-summary.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -268,20 +268,20 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 28.
+or `english'. on input line 30.
 \c@lstlisting=\count287
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 30.
+(Font)              <14.4> on input line 32.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 30.
+(Font)              <7> on input line 32.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 36.
+(Font)              <12> on input line 38.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 36.
+(Font)              <8> on input line 38.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 36.
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 5
-5.
+(Font)              <6> on input line 38.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 6
+0.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
@@ -289,7 +289,7 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 <yamaguchi-7+1.png, id=1, 1935.23pt x 939.51pt>
 File: yamaguchi-7+1.png Graphic file (type png)
 <use yamaguchi-7+1.png>
-Package pdftex.def Info: yamaguchi-7+1.png  used on input line 59.
+Package pdftex.def Info: yamaguchi-7+1.png  used on input line 64.
 (pdftex.def)             Requested size: 527.57014pt x 256.1225pt.
  [1
 
@@ -297,119 +297,148 @@ Package pdftex.def Info: yamaguchi-7+1.png  used on input line 59.
 <7+1results.png, id=22, 1762.585pt x 1210.5225pt>
 File: 7+1results.png Graphic file (type png)
 <use 7+1results.png>
-Package pdftex.def Info: 7+1results.png  used on input line 73.
+Package pdftex.def Info: 7+1results.png  used on input line 78.
 (pdftex.def)             Requested size: 474.8099pt x 326.08813pt.
  [2 <./yamaguchi-7+1.png>] [3 <./7+1results.png>]
 <jump-zoom.png, id=32, 462.528pt x 346.896pt>
 File: jump-zoom.png Graphic file (type png)
 <use jump-zoom.png>
-Package pdftex.def Info: jump-zoom.png  used on input line 89.
+Package pdftex.def Info: jump-zoom.png  used on input line 94.
 (pdftex.def)             Requested size: 316.5453pt x 237.42117pt.
  [4 <./jump-zoom.png>]
 <7+1fit.png, id=37, 1085.7363pt x 280.8894pt>
 File: 7+1fit.png Graphic file (type png)
 <use 7+1fit.png>
-Package pdftex.def Info: 7+1fit.png  used on input line 107.
+Package pdftex.def Info: 7+1fit.png  used on input line 112.
 (pdftex.def)             Requested size: 527.57014pt x 136.49265pt.
 <7+1cmp.png, id=38, 1077.5457pt x 274.626pt>
 File: 7+1cmp.png Graphic file (type png)
 <use 7+1cmp.png>
-Package pdftex.def Info: 7+1cmp.png  used on input line 118.
+Package pdftex.def Info: 7+1cmp.png  used on input line 123.
 (pdftex.def)             Requested size: 527.57014pt x 134.46315pt.
 <7+1ebcmp.png, id=39, 1083.0864pt x 275.3487pt>
 File: 7+1ebcmp.png Graphic file (type png)
 <use 7+1ebcmp.png>
-Package pdftex.def Info: 7+1ebcmp.png  used on input line 127.
+Package pdftex.def Info: 7+1ebcmp.png  used on input line 132.
 (pdftex.def)             Requested size: 527.57014pt x 134.12375pt.
  [5 <./7+1fit.png> <./7+1cmp.png>]
 <yamaguchi-1.5+0.8.png, id=46, 1949.2825pt x 1343.0175pt>
 File: yamaguchi-1.5+0.8.png Graphic file (type png)
 <use yamaguchi-1.5+0.8.png>
-Package pdftex.def Info: yamaguchi-1.5+0.8.png  used on input line 144.
+Package pdftex.def Info: yamaguchi-1.5+0.8.png  used on input line 149.
 (pdftex.def)             Requested size: 527.57014pt x 363.48027pt.
 <1.5+0.8results.png, id=47, 1778.645pt x 1200.485pt>
 File: 1.5+0.8results.png Graphic file (type png)
 <use 1.5+0.8results.png>
-Package pdftex.def Info: 1.5+0.8results.png  used on input line 153.
+Package pdftex.def Info: 1.5+0.8results.png  used on input line 158.
 (pdftex.def)             Requested size: 474.8099pt x 320.47171pt.
 <1.5+0.8cmp_whole.png, id=48, 1084.5318pt x 273.6624pt>
 File: 1.5+0.8cmp_whole.png Graphic file (type png)
 <use 1.5+0.8cmp_whole.png>
-Package pdftex.def Info: 1.5+0.8cmp_whole.png  used on input line 162.
+Package pdftex.def Info: 1.5+0.8cmp_whole.png  used on input line 167.
 (pdftex.def)             Requested size: 527.57014pt x 133.12279pt.
 <1.5+0.8cmp_pt.png, id=49, 1074.414pt x 274.1442pt>
 File: 1.5+0.8cmp_pt.png Graphic file (type png)
 <use 1.5+0.8cmp_pt.png>
-Package pdftex.def Info: 1.5+0.8cmp_pt.png  used on input line 169.
+Package pdftex.def Info: 1.5+0.8cmp_pt.png  used on input line 174.
 (pdftex.def)             Requested size: 527.57014pt x 134.61627pt.
  [6 <./7+1ebcmp.png>] [7 <./yamaguchi-1.5+0.8.png>] [8 <./1.5+0.8results.png> <
 ./1.5+0.8cmp_whole.png>]
 <stable_hi_log.png, id=64, 735.7086pt x 265.4718pt>
 File: stable_hi_log.png Graphic file (type png)
 <use stable_hi_log.png>
-Package pdftex.def Info: stable_hi_log.png  used on input line 190.
+Package pdftex.def Info: stable_hi_log.png  used on input line 195.
 (pdftex.def)             Requested size: 395.6776pt x 142.77742pt.
  [9 <./1.5+0.8cmp_pt.png> <./stable_hi_log.png>]
 <stable7+1ex.png, id=70, 745.1037pt x 265.4718pt>
 File: stable7+1ex.png Graphic file (type png)
 <use stable7+1ex.png>
-Package pdftex.def Info: stable7+1ex.png  used on input line 199.
+Package pdftex.def Info: stable7+1ex.png  used on input line 204.
 (pdftex.def)             Requested size: 395.6776pt x 140.97482pt.
 <pre-spike-spike.png, id=71, 2178.1375pt x 903.375pt>
 File: pre-spike-spike.png Graphic file (type png)
 <use pre-spike-spike.png>
-Package pdftex.def Info: pre-spike-spike.png  used on input line 217.
+Package pdftex.def Info: pre-spike-spike.png  used on input line 222.
 (pdftex.def)             Requested size: 527.57014pt x 218.79938pt.
 
 [10 <./stable7+1ex.png>]
 <sharp-inc-bpp.png, id=76, 2111.89pt x 845.1575pt>
 File: sharp-inc-bpp.png Graphic file (type png)
 <use sharp-inc-bpp.png>
-Package pdftex.def Info: sharp-inc-bpp.png  used on input line 226.
+Package pdftex.def Info: sharp-inc-bpp.png  used on input line 231.
 (pdftex.def)             Requested size: 527.57014pt x 211.1212pt.
 <merge-after-merge.png, id=77, 2204.235pt x 614.295pt>
 File: merge-after-merge.png Graphic file (type png)
 <use merge-after-merge.png>
-Package pdftex.def Info: merge-after-merge.png  used on input line 245.
+Package pdftex.def Info: merge-after-merge.png  used on input line 250.
 (pdftex.def)             Requested size: 527.57014pt x 147.02138pt.
  [11 <./pre-spike-spike.png>] [12 <./sharp-inc-bpp.png> <./merge-after-merge.pn
 g>]
 <theory-observed.png, id=87, 1975.38pt x 1314.9125pt>
 File: theory-observed.png Graphic file (type png)
 <use theory-observed.png>
-Package pdftex.def Info: theory-observed.png  used on input line 258.
+Package pdftex.def Info: theory-observed.png  used on input line 263.
 (pdftex.def)             Requested size: 527.57014pt x 351.15878pt.
- (./june-summary.bbl [13 <./theory-observed.png>])
-[14] (./june-summary.aux) ) 
+ [13 <./theory-observed.png>]
+<sample-distribution.png, id=93, 867.24pt x 289.08pt>
+File: sample-distribution.png Graphic file (type png)
+<use sample-distribution.png>
+Package pdftex.def Info: sample-distribution.png  used on input line 277.
+(pdftex.def)             Requested size: 527.57014pt x 175.86656pt.
+<Mwd-P scatter.png, id=94, 462.528pt x 346.896pt>
+File: Mwd-P scatter.png Graphic file (type png)
+<use Mwd-P scatter.png>
+Package pdftex.def Info: Mwd-P scatter.png  used on input line 288.
+(pdftex.def)             Requested size: 263.78506pt x 197.84921pt.
+<kstar-map-rearr.png, id=95, 1780.6525pt x 949.5475pt>
+File: kstar-map-rearr.png Graphic file (type png)
+<use kstar-map-rearr.png>
+Package pdftex.def Info: kstar-map-rearr.png  used on input line 297.
+(pdftex.def)             Requested size: 527.57014pt x 281.33115pt.
+ [14 <./sample-distribution.png>] [15 <./Mwd-P scatter.png> <./kstar-map-rearr.
+png>]
+<dif-kstar map.png, id=105, 462.528pt x 346.896pt>
+File: dif-kstar map.png Graphic file (type png)
+<use dif-kstar map.png>
+Package pdftex.def Info: dif-kstar map.png  used on input line 308.
+(pdftex.def)             Requested size: 263.78506pt x 197.84921pt.
+<dif-kstar two plot.png, id=106, 2059.695pt x 770.88pt>
+File: dif-kstar two plot.png Graphic file (type png)
+<use dif-kstar two plot.png>
+Package pdftex.def Info: dif-kstar two plot.png  used on input line 317.
+(pdftex.def)             Requested size: 527.57014pt x 197.44812pt.
+
+(./june-summary.bbl [16 <./dif-kstar map.png>]) [17 <./dif-kstar two plot.png>]
+(./june-summary.aux) ) 
 Here is how much of TeX's memory you used:
- 7768 strings out of 478268
- 171953 string characters out of 5846347
- 444206 words of memory out of 5000000
- 25908 multiletter control sequences out of 15000+600000
- 479305 words of font info for 49 fonts, out of 8000000 for 9000
+ 7815 strings out of 478268
+ 172931 string characters out of 5846347
+ 444287 words of memory out of 5000000
+ 25948 multiletter control sequences out of 15000+600000
+ 480835 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,6n,79p,1165b,512s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/
-cm-super/cm-super-t1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1
-200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx144
-0.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1728.
-pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pf
-b></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb>
-</usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></
-usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></us
-r/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on june-summary.pdf (14 pages, 6526424 bytes).
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-su
+per/cm-super-t1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8
+.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.p
+fb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb
+></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><
+/usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></u
+sr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr
+/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/l
+ocal/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/loc
+al/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on june-summary.pdf (17 pages, 7964740 bytes).
 PDF statistics:
- 164 PDF objects out of 1000 (max. 8388607)
- 83 compressed objects within 1 object stream
+ 183 PDF objects out of 1000 (max. 8388607)
+ 89 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 81 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 106 words of extra memory for PDF output out of 10000 (max. 10000000)
 
