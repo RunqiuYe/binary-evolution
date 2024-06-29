@@ -19,8 +19,6 @@
 \newcommand{\Eth}{E_{\mathrm{th}}}
 \newcommand{\Erec}{E_{\mathrm{rec}}}
 \newcommand{\Porb}{P_{\mathrm{orb}}}
-\newcommand{\Mwd}{M_{\mathrm{WD}}}
-
 \newcommand{\au}{\, \mathrm{au}}
 
 \title{Wide Post-Mass Transfer White-Dwarf Binaries}
@@ -31,11 +29,16 @@
 
 \maketitle
 
+\section{Introduction}
+Common envelope (CE) is the outcome of unstable mass transfer. During CE, both stars orbit inside an envelope and spiral inward. If the energy liberated in this process is enough to eject the CE, then the result of CE process is a close binary. If, on the contrary, the liberated energy is not enough to eject the envelope, then the result of the process is a merger. In observation results, a number of WD+MS binaries are wider than expected, and CE is expected to be the main channel to form these white dwarf binaries \cite{yamaguchi_hi, yamaguchi_lo}. In the MESA model utilized by \cite{yamaguchi_hi, yamaguchi_lo}, wide post-CE WD+MS binaries can be formed in a certain range of initial separation with only gravitational and internal energy included in the calculation. 
+
+In this paper, we are going to explore the formation of these wide post-mass transfer WD+MS binaries with COSMIC model. We perform COSMIC simulation on both individual binary star systems and sampled population to explore the formation of WD+MS binaries under different conditions. In section 2, we are going to investigate formation of individual wide WD+MS binaries through CE for a variety of variables, including initial mass, initial separation, common envelope efficiency, and the energy budget of the CE. In section 3, we are going to explore the formation of individual wide WD+MS binaries through stable mass transfer. In section 4, we will research on how different COSMIC model affect simulation results of a sample population of binary star systems, and how the formation of post WD+MS binaries depends on various parameters.
+
 \section{Common Envelope}
 
 As argued in \cite{yamaguchi_hi,yamaguchi_lo}, unstable mass transfer is expect to be the main channel to form wide WD+MS binaries. In the MESA model, wide post-CE WD+MS binaries can be formed in certain range of initial separation. We hope to explore similar models in COSMIC.
 
-In \cite{yamaguchi_hi}, the lower limit of WD mass $M_{\mathrm{MD, min}}$ in the observational sample is calculated to be $1.244\Msun \sim 1.418\Msun$. The corresponding mass of MS progenitor is expected to be in the range of $6 \sim 9 \Msun$, and the companion mass has median around $1\Msun$ In \cite{yamaguchi_lo}, the WD mass in the Gaia sample ranges from $0.5\Msun$ to $0.8\Msun$, which corresponds to progenitor mass of $1 \Msun$ to $3 \Msun$. The companions mass $\Mstar$ has a median of $0.85 \Msun$. Hence, we consider high mass systems using a $7\Msun + 1\Msun$ binary and low mass systems using a $1.5\Msun + 0.85\Msun$
+In \cite{yamaguchi_hi}, the lower limit of WD mass $M_{\mathrm{MD, min}}$ in the observational sample is calculated to be $1.244\Msun \sim 1.418\Msun$. The corresponding mass of MS progenitor is expected to be in the range of $6 \sim 9 \Msun$, and the companion mass has median around $1\Msun$. In \cite{yamaguchi_lo}, the WD mass in the Gaia sample ranges from $0.5\Msun$ to $0.8\Msun$, which corresponds to progenitor mass of $1 \Msun$ to $3 \Msun$. The companions mass $\Mstar$ has a median of $0.85 \Msun$. Hence, we consider high mass systems using a $7\Msun + 1\Msun$ binary and low mass systems using a $1.5\Msun + 0.85\Msun$
 
 \subsection{High mass systems ($7\Msun + 1\Msun$)}
 In \cite{yamaguchi_hi}, the authors discussed currently observed wide post-mass transfer binary star systems. The MS progenitor of the WD star is expected to be in the range of $6 \sim 9 \Msun$. Therefore, MESA model of a $7\Msun$ star is run, and the evolution up to AGB is followed. After that, the change of separation through common envelope is calculated with
@@ -79,7 +82,7 @@ We write the resulting final separations into \verb|csv| files and create four h
     \caption{COSMIC results of how final separation $a_f$ depends on initial separation $a_i$ and common envelope flag "lambdaf" for different common envelope efficiencies $\alphace$, where the black and red contour corresponds to $0.01 \au$ and $0.15 \au$ as in Figure \ref{yam_hi} respectively. Outside the black contour no desired system forms.}
     \label{res_hi}
 \end{figure}
-
+% =========================== Current Position ===========================
 \subsubsection{Discussions}
 Taking a closer look as the heatmap in Figure \ref{res_hi}, we notice a few interesting points. 
 
@@ -96,16 +99,16 @@ Also notice that the final separation $a_f$ jumps obviously at about $2.9 \au$, 
     \label{jump-zoom}
 \end{figure}
 
-Inspecting more closely, we find that the final separation $a_f$ jumps at about $5.2 \sim 5.4 \au$. This is especially obvious with $\alphace = 0.3$. To illustrate, we zoom in the simulation results of $\alphace = 0.3$, and present the change of final separation $a_f$ as initial separation $a_i$ increases in Figure \ref{jump-zoom}. From here, we can clearly see two jumps — one between $5.1\au$ and $5.2\au$, the other at $5.34\au$. To explain this, we again go to the \verb|bpp| array of these systems. We notice that the first jump is probably because the evolution process changes from \textbf{3-7-8-4-3-7-8-4} to \textbf{3-7-8-7-8-4}. This means that the mass transfer changes from dynamically stable to dynamically unstable, leading to more mass loss during a shorter timescale and thus larger final separation. Also, the second jump is probably because \verb|kstar_1| changes from \verb|8| (Naked Helium Star Hertzsprung Gap) to \verb|9| (Naked Helium Star Giant Branch) at the start of the second common envelope. This changes the binding energy of the common evenlope and thus changes the final separation.
+Inspecting more closely, we find that the final separation $a_f$ jumps at about $5.2 \sim 5.4 \au$. This is especially obvious with $\alphace = 0.3$. To illustrate, we zoom in the simulation results of $\alphace = 0.3$, and present the change of final separation $a_f$ as initial separation $a_i$ increases in Figure \ref{jump-zoom}. From here, we can clearly see two jumps — one between $5.1\au$ and $5.2\au$, the other at $5.34\au$. To explain this, we again go to the \verb|bpp| array of these systems. We notice that the first jump is probably because the evolution process changes from \textbf{3-7-8-4-3-7-8-4} to \textbf{3-7-8-7-8-4}. This means that for relatively larger initial separation $a_i$, the primary fills its Roche lobe all the time, leading to more mass loss during a shorter timescale and thus larger final separation. Also, the second jump is probably because \verb|kstar_1| changes from \verb|8| (Naked Helium Star Hertzsprung Gap) to \verb|9| (Naked Helium Star Giant Branch) at the start of the second common envelope. This changes the binding energy of the common envelope and thus changes the final separation.
 
 Finally, notice that a small triangular gap in the figure for $\alphace = 1$. This is because \verb|kstar_1| becomes a neutron star and no rows in the \verb|bpp| gets selected.
 
 In conclusion, with a large \verb|lambdaf|, it is possible to create wide post-mass transfer WD+MS systems with final separation $a_f > 0.15 \au$, which is the minimal separation of our observed objects.
 
 \subsubsection{Comparison}
-After we have obtained the simulation results for different initial conditions, now we can calculate the effective $\lambda$ that matches with results in \cite{yamaguchi_hi}. We use the following method to build the connection between COSMIC model and MESA model. For each fixed initial selaration $a_i$, we loop through the COSMIC results with the same initial separation, and find the \verb|lambdaf| value that results in a final separation closest to MESA model results, documented in the figures of \cite{yamaguchi_hi}. We record this \verb|lambdaf| as the effective $\lambda$ that matches the binding energy formalism at initial separation $a_i$.
+After we have obtained the simulation results for different initial conditions, now we can calculate the effective $\lambda$ that matches with results in \cite{yamaguchi_hi}. We use the following method to build the connection between COSMIC model and MESA model. For each fixed initial separation $a_i$, we loop through the COSMIC results with the same initial separation, and find the \verb|lambdaf| value that results in a final separation closest to MESA model results, documented in the figures of \cite{yamaguchi_hi}. We record this \verb|lambdaf| as the effective $\lambda$ that matches the binding energy formalism at initial separation $a_i$.
 
-For $\Ebind = \Egrav + \Eint$, the fitting results is presented in Figure \ref{fit_hi}, where each line corresponds to different common envelope efficiencies $\alphace$ and differnt energy budgets (either $\Egrav$ only or $\Egrav + \Eint$).
+For $\Ebind = \Egrav + \Eint$, the fitting results is presented in Figure \ref{fit_hi}, where each line corresponds to different common envelope efficiencies $\alphace$ and different energy budgets (either $\Egrav$ only or $\Egrav + \Eint$).
 
 \begin{figure}
     \centering
@@ -116,7 +119,7 @@ For $\Ebind = \Egrav + \Eint$, the fitting results is presented in Figure \ref{f
 
 Notice that there is a small bump in the blue line. This is because at $6 \sim 7 \au$, we cannot reach such low final separation in COSMIC while forming a WD+MS binary at the same time. In the left panel which shows the MESA results documented in \cite{yamaguchi_hi}, we notice that even with low common envelope efficiencies, it is possible to create WD+MS binaries with final separation $>0.15 \au$ in MESA as long as internal energy $\Eint$ is included. However, in the right panel we show that this correspond to very large \verb|lambdaf| in COSMIC ($\lambda > \sim 20$).
 
-To furthur compare with the default $\lambda$ value in COSMIC, we include in the right panel an extra line which represents the default $\lambda$ value in COSMIC. This default $\lambda$ in the COSMIC model is calculated following Appendix A of \cite{claeys2014theoretical}. For all of our case, we have $M_{\mathrm{env}} > 1$. The results is shown in Figure \ref{fit_cmp_hi}. Notice that the dafult $\lambda$ value is at order $\sim 1$, far smaller than the effective $\lambda$ needed to recreate results in \cite{yamaguchi_hi}.
+To further compare with the default $\lambda$ value in COSMIC, we include in the right panel an extra line which represents the default $\lambda$ value in COSMIC. This default $\lambda$ in the COSMIC model is calculated following Appendix A of \cite{claeys2014theoretical}. For all of our case, we have $M_{\mathrm{env}} > 1$. The results is shown in Figure \ref{fit_cmp_hi}. Notice that the default $\lambda$ value is at order $\sim 1$, far smaller than the effective $\lambda$ needed to recreate results in \cite{yamaguchi_hi}.
 
 \begin{figure}
     \centering
@@ -279,38 +282,38 @@ First of all, we sample the binary population using the independent sampler in C
 	\label{sample-distribution}
 \end{figure}
 
-Now to investigate how the final white dwarf mass and orbital period depends on \verb|lambdaf|, we simulation the sampled population with five different \verb|lambdaf| values, $-5$, $-15$, $-25$, $-35$, and $-45$, which corresponds to $\lambda = 5$, $15$, $25$, $35$ and $45$ in Equation \ref{ebind}. After that, for each binary star system in the population, we select the moment when CE is finished and when the system is a WD+MS one to record the white dwarf mass $\Mwd$ and final orbital period $P_{\mathrm{orb}, f}$. We also select the moment when the first RLOF started to record the initial orbital separation $P_{\mathrm{orb}, i}$. This will later on help us compare the difference and how much the orbit widens.
+Now to investigate how the final white dwarf mass and orbital period depends on \verb|lambdaf|, we simulation the sampled population with five different \verb|lambdaf| values, $-5$, $-15$, $-25$, $-35$, and $-45$, which corresponds to $\lambda = 5$, $15$, $25$, $35$ and $45$ in Equation \ref{ebind}. After that, for each binary star system in the population, we select the moment when CE is finished and when the system is a WD+MS one to record the white dwarf mass $\MWD$ and final orbital period $P_{\mathrm{orb}, f}$. We also select the moment when the first RLOF started to record the initial orbital separation $P_{\mathrm{orb}, i}$. This will later on help us compare the difference and how much the orbit widens.
 
 \subsection{Results}
 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.5\linewidth]{Mwd-P scatter.png}
-	\caption{Scatter plot of white dwarf mass $\Mwd$ and final orbital period after common envelope in log scale $\log_{10}\Porb$. Different colors indicates results for different $\lambda$ values. For each different $\lambda$ value the same initial population is used.}
+	\caption{Scatter plot of white dwarf mass $\MWD$ and final orbital period after common envelope in log scale $\log_{10}\Porb$. Different colors indicates results for different $\lambda$ values. For each different $\lambda$ value the same initial population is used.}
 	\label{Mwd-P-scatter}
 \end{figure}
 
-To show how the change in $\lambda$ affects the final orbital period, a scatter plot presenting the correlation of final orbital period $\Porb$ and white dwarf mass $\Mwd$ is presented in Figure \ref{Mwd-P-scatter}. We can see from the figure that when $\lambda$ increases, the final orbital period also increases. This is obvious for low $\Mwd$. This correlation is expected since for larger $\lambda$, less energy is require to unbind the common envelope.
+To show how the change in $\lambda$ affects the final orbital period, a scatter plot presenting the correlation of final orbital period $\Porb$ and white dwarf mass $\MWD$ is presented in Figure \ref{Mwd-P-scatter}. We can see from the figure that when $\lambda$ increases, the final orbital period also increases. This is obvious for low $\MWD$. This correlation is expected since for larger $\lambda$, less energy is require to unbind the common envelope.
 
 \begin{figure}
 	\centering
 	\includegraphics[width=\linewidth]{kstar-map-rearr.png}
-	\caption{Each panel: for this $\lambda$ value, scatter plot of white dwarf mass $\Mwd$ and final orbital period after common envelope in log scale $\log_{10}\Porb$. Different colors represent different kstar type of the primary at the start of mass transfer.}
+	\caption{Each panel: for this $\lambda$ value, scatter plot of white dwarf mass $\MWD$ and final orbital period after common envelope in log scale $\log_{10}\Porb$. Different colors represent different kstar type of the primary at the start of mass transfer.}
 	\label{kstar-map}
 \end{figure}
 
-To also show how the final orbital separation $\Porb$ depends on the \verb|kstar_1| type at the start of first RLOF, we plot final orbital period $\Porb$ against white dwarf mass $\Mwd$ for each \verb|lambdaf| separately, and use different color to distinguish between different \verb|kstar_1| type at the start of mass transfer. The plot is shown in Figure \ref{kstar-map}. We can see that if the star is at later stages of evolution (\verb|kstar| large) when mass transfer starts, then the resulting white dwarf mass $\Mwd$ and orbital period $\Porb$ is also larger. Notice that few systems start the mass transfer at \verb|kstar_1 = 2| (Hertzsprung Gap) and \verb|kstar_1 = 4| (Core Helium Burning). This is because stars crosses Hertzsprung gap in a short timescale, leaving little time for interaction. Also, stellar radius is small when going through Core Helium Burning, reducing the possibility of interactions that starts when \verb|kstar_1 = 4|.
+To also show how the final orbital separation $\Porb$ depends on the \verb|kstar_1| type at the start of first RLOF, we plot final orbital period $\Porb$ against white dwarf mass $\MWD$ for each \verb|lambdaf| separately, and use different color to distinguish between different \verb|kstar_1| type at the start of mass transfer. The plot is shown in Figure \ref{kstar-map}. We can see that if the star is at later stages of evolution (\verb|kstar| large) when mass transfer starts, then the resulting white dwarf mass $\MWD$ and orbital period $\Porb$ is also larger. Notice that few systems start the mass transfer at \verb|kstar_1 = 2| (Hertzsprung Gap) and \verb|kstar_1 = 4| (Core Helium Burning). This is because stars crosses Hertzsprung gap in a short timescale, leaving little time for interaction. Also, stellar radius is small when going through Core Helium Burning, reducing the possibility of interactions that starts when \verb|kstar_1 = 4|.
 
-To visualize the difference in final orbital period $\Porb$, and how they corresponds to different \verb|kstar_1| type at the start of RLOF, we create scatter plot in Figure \ref{dif-kstar map} of the difference in orbital period $\Delta P = P_{\mathrm{orb}}^{\lambda = 35} - P_{\mathrm{orb}}^{\lambda = 5}$ against the white dwarf mass $\Mwd$.
+To visualize the difference in final orbital period $\Porb$, and how they corresponds to different \verb|kstar_1| type at the start of RLOF, we create scatter plot in Figure \ref{dif-kstar map} of the difference in orbital period $\Delta P = P_{\mathrm{orb}}^{\lambda = 35} - P_{\mathrm{orb}}^{\lambda = 5}$ against the white dwarf mass $\MWD$.
 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.5\linewidth]{dif-kstar map.png}
-	\caption{Scatter plot of difference in orbital period $\Delta P = P_{\mathrm{orb}}^{\lambda = 35} - P_{\mathrm{orb}}^{\lambda = 5}$ against the white dwarf mass $\Mwd$. Different colors indicates different kstar type of the primary at the start of mass transfer.}
+	\caption{Scatter plot of difference in orbital period $\Delta P = P_{\mathrm{orb}}^{\lambda = 35} - P_{\mathrm{orb}}^{\lambda = 5}$ against the white dwarf mass $\MWD$. Different colors indicates different kstar type of the primary at the start of mass transfer.}
 	\label{dif-kstar map}
 \end{figure}
 
-From Figure \ref{dif-kstar map}, we can see that for large \verb|kstar_1| type at the start of RLOF, $\Delta P = P_{\mathrm{orb}}^{\lambda = 35} - P_{\mathrm{orb}}^{\lambda = 5}$ is also larger. To explain this, we plot the how final white dwarf mass $\Mwd$, difference in final orbital period $\Delta \Porb$, and orbital period before mass transfer $P_{\mathrm{orb}, i}$ related to each other in Figure \ref{dif-kstar-exp}. We see that the larger initial orbital period $P_{\mathrm{orb}, i}$, the more significant effect does $\lambda$ have on the final orbital period. This is not unexpected since during mass transfer, the separation changes as $\dot{a} / a = \text{const}$. Hence $\dot{\Porb} / \Porb = \text{const}$. Therefore, the larger the initial orbital period, the larger it changes, and thus the larger effect does $\lambda$ have.
+From Figure \ref{dif-kstar map}, we can see that for large \verb|kstar_1| type at the start of RLOF, $\Delta P = P_{\mathrm{orb}}^{\lambda = 35} - P_{\mathrm{orb}}^{\lambda = 5}$ is also larger. To explain this, we plot the how final white dwarf mass $\MWD$, difference in final orbital period $\Delta \Porb$, and orbital period before mass transfer $P_{\mathrm{orb}, i}$ related to each other in Figure \ref{dif-kstar-exp}. We see that the larger initial orbital period $P_{\mathrm{orb}, i}$, the more significant effect does $\lambda$ have on the final orbital period. This is not unexpected since during mass transfer, the separation changes as $\dot{a} / a = \text{const}$. Hence $\dot{\Porb} / \Porb = \text{const}$. Therefore, the larger the initial orbital period, the larger it changes, and thus the larger effect does $\lambda$ have.
 
 \begin{figure}
 	\centering

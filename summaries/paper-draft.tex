@@ -1,271 +1,55 @@
-%% Beginning of file 'sample631.tex'
-%%
-%% Modified 2022 May  
-%%
-%% This is a sample manuscript marked up using the
-%% AASTeX v6.31 LaTeX 2e macros.
-%%
-%% AASTeX is now based on Alexey Vikhlinin's emulateapj.cls 
-%% (Copyright 2000-2015).  See the classfile for details.
-
-%% AASTeX requires revtex4-1.cls and other external packages such as
-%% latexsym, graphicx, amssymb, longtable, and epsf.  Note that as of 
-%% Oct 2020, APS now uses revtex4.2e for its journals but remember that 
-%% AASTeX v6+ still uses v4.1. All of these external packages should 
-%% already be present in the modern TeX distributions but not always.
-%% For example, revtex4.1 seems to be missing in the linux version of
-%% TexLive 2020. One should be able to get all packages from www.ctan.org.
-%% In particular, revtex v4.1 can be found at 
-%% https://www.ctan.org/pkg/revtex4-1.
-
-%% The first piece of markup in an AASTeX v6.x document is the \documentclass
-%% command. LaTeX will ignore any data that comes before this command. The 
-%% documentclass can take an optional argument to modify the output style.
-%% The command below calls the preprint style which will produce a tightly 
-%% typeset, one-column, single-spaced document.  It is the default and thus
-%% does not need to be explicitly stated.
-%%
-%% using aastex version 6.3
 \documentclass[linenumbers]{aastex631}
 
-%% The default is a single spaced, 10 point font, single spaced article.
-%% There are 5 other style options available via an optional argument. They
-%% can be invoked like this:
-%%
-%% \documentclass[arguments]{aastex631}
-%% 
-%% where the layout options are:
-%%
-%%  twocolumn   : two text columns, 10 point font, single spaced article.
-%%                This is the most compact and represent the final published
-%%                derived PDF copy of the accepted manuscript from the publisher
-%%  manuscript  : one text column, 12 point font, double spaced article.
-%%  preprint    : one text column, 12 point font, single spaced article.  
-%%  preprint2   : two text columns, 12 point font, single spaced article.
-%%  modern      : a stylish, single text column, 12 point font, article with
-%% 		  wider left and right margins. This uses the Daniel
-%% 		  Foreman-Mackey and David Hogg design.
-%%  RNAAS       : Supresses an abstract. Originally for RNAAS manuscripts 
-%%                but now that abstracts are required this is obsolete for
-%%                AAS Journals. Authors might need it for other reasons. DO NOT
-%%                use \begin{abstract} and \end{abstract} with this style.
-%%
-%% Note that you can submit to the AAS Journals in any of these 6 styles.
-%%
-%% There are other optional arguments one can invoke to allow other stylistic
-%% actions. The available options are:
-%%
-%%   astrosymb    : Loads Astrosymb font and define \astrocommands. 
-%%   tighten      : Makes baselineskip slightly smaller, only works with 
-%%                  the twocolumn substyle.
-%%   times        : uses times font instead of the default
-%%   linenumbers  : turn on lineno package.
-%%   trackchanges : required to see the revision mark up and print its output
-%%   longauthor   : Do not use the more compressed footnote style (default) for 
-%%                  the author/collaboration/affiliations. Instead print all
-%%                  affiliation information after each name. Creates a much 
-%%                  longer author list but may be desirable for short 
-%%                  author papers.
-%% twocolappendix : make 2 column appendix.
-%%   anonymous    : Do not show the authors, affiliations and acknowledgments 
-%%                  for dual anonymous review.
-%%
-%% these can be used in any combination, e.g.
-%%
-%% \documentclass[twocolumn,linenumbers,trackchanges]{aastex631}
-%%
-%% AASTeX v6.* now includes \hyperref support. While we have built in specific
-%% defaults into the classfile you can manually override them with the
-%% \hypersetup command. For example,
-%%
-%% \hypersetup{linkcolor=red,citecolor=green,filecolor=cyan,urlcolor=magenta}
-%%
-%% will change the color of the internal links to red, the links to the
-%% bibliography to green, the file links to cyan, and the external links to
-%% magenta. Additional information on \hyperref options can be found here:
-%% https://www.tug.org/applications/hyperref/manual.html#x1-40003
-%%
-%% Note that in v6.3 "bookmarks" has been changed to "true" in hyperref
-%% to improve the accessibility of the compiled pdf file.
-%%
-%% If you want to create your own macros, you can do so
-%% using \newcommand. Your macros should appear before
-%% the \begin{document} command.
-%%
 \newcommand{\vdag}{(v)^\dagger}
 \newcommand\aastex{AAS\TeX}
 \newcommand\latex{La\TeX}
+\newcommand{\Msun}{\mathrm{M_{\odot}}}
+\newcommand{\Rsun}{\mathrm{R_{\odot}}}
+\newcommand{\MWD}{M_{\mathrm{WD}}}
+\newcommand{\Mstar}{M_{\star}}
+\newcommand{\alphace}{\alpha_{\mathrm{CE}}}
+\newcommand{\alphath}{\alpha_{\mathrm{th}}}
+\newcommand{\alpharec}{\alpha_{\mathrm{rec}}}
+\newcommand{\Ebind}{E_{\mathrm{bind}}}
+\newcommand{\Egrav}{E_{\mathrm{grav}}}
+\newcommand{\Eint}{E_{\mathrm{int}}}
+\newcommand{\Eth}{E_{\mathrm{th}}}
+\newcommand{\Erec}{E_{\mathrm{rec}}}
+\newcommand{\Porb}{P_{\mathrm{orb}}}
+\newcommand{\au}{\, \mathrm{au}}
 
-%% Reintroduced the \received and \accepted commands from AASTeX v5.2
-%\received{March 1, 2021}
-%\revised{April 1, 2021}
-%\accepted{\today}
-
-%% Command to document which AAS Journal the manuscript was submitted to.
-%% Adds "Submitted to " the argument.
-%\submitjournal{PSJ}
-
-%% For manuscript that include authors in collaborations, AASTeX v6.31
-%% builds on the \collaboration command to allow greater freedom to 
-%% keep the traditional author+affiliation information but only show
-%% subsets. The \collaboration command now must appear AFTER the group
-%% of authors in the collaboration and it takes TWO arguments. The last
-%% is still the collaboration identifier. The text given in this
-%% argument is what will be shown in the manuscript. The first argument
-%% is the number of author above the \collaboration command to show with
-%% the collaboration text. If there are authors that are not part of any
-%% collaboration the \nocollaboration command is used. This command takes
-%% one argument which is also the number of authors above to show. A
-%% dashed line is shown to indicate no collaboration. This example manuscript
-%% shows how these commands work to display specific set of authors 
-%% on the front page.
-%%
-%% For manuscript without any need to use \collaboration the 
-%% \AuthorCollaborationLimit command from v6.2 can still be used to 
-%% show a subset of authors.
-%
-%\AuthorCollaborationLimit=2
-%
-%% will only show Schwarz & Muench on the front page of the manuscript
-%% (assuming the \collaboration and \nocollaboration commands are
-%% commented out).
-%%
-%% Note that all of the author will be shown in the published article.
-%% This feature is meant to be used prior to acceptance to make the
-%% front end of a long author article more manageable. Please do not use
-%% this functionality for manuscripts with less than 20 authors. Conversely,
-%% please do use this when the number of authors exceeds 40.
-%%
-%% Use \allauthors at the manuscript end to show the full author list.
-%% This command should only be used with \AuthorCollaborationLimit is used.
-
-%% The following command can be used to set the latex table counters.  It
-%% is needed in this document because it uses a mix of latex tabular and
-%% AASTeX deluxetables.  In general it should not be needed.
-%\setcounter{table}{1}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%
-%% The following section outlines numerous optional output that
-%% can be displayed in the front matter or as running meta-data.
-%%
-%% If you wish, you may supply running head information, although
-%% this information may be modified by the editorial offices.
-%\shorttitle{AASTeX v6.3.1 Sample article}
-%\shortauthors{Schwarz et al.}
-%%
-%% You can add a light gray and diagonal water-mark to the first page 
-%% with this command:
-%% \watermark{text}
-%% where "text", e.g. DRAFT, is the text to appear.  If the text is 
-%% long you can control the water-mark size with:
-%% \setwatermarkfontsize{dimension}
-%% where dimension is any recognized LaTeX dimension, e.g. pt, in, etc.
-%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\graphicspath{{./}{figures/}}
-%% This is the end of the preamble.  Indicate the beginning of the
-%% manuscript itself with \begin{document}.
 
 \begin{document}
 
-\title{Template \aastex Article with Examples: 
-v6.3.1\footnote{Released on March, 1st, 2021}}
+\title{Wide Post-Mass Transfer White Dwarf Binaries}
 
-%% LaTeX will automatically break titles if they run longer than
-%% one line. However, you may use \\ to force a line break if
-%% you desire. In v6.31 you can include a footnote in the title.
+%\author[0000-0002-0786-7307]{Greg J. Schwarz}
+%\affiliation{American Astronomical Society \\
+%1667 K Street NW, Suite 800 \\
+%Washington, DC 20006, USA}
 
-%% A significant change from earlier AASTEX versions is in the structure for 
-%% calling author and affiliations. The change was necessary to implement 
-%% auto-indexing of affiliations which prior was a manual process that could 
-%% easily be tedious in large author manuscripts.
-%%
-%% The \author command is the same as before except it now takes an optional
-%% argument which is the 16 digit ORCID. The syntax is:
-%% \author[xxxx-xxxx-xxxx-xxxx]{Author Name}
-%%
-%% This will hyperlink the author name to the author's ORCID page. Note that
-%% during compilation, LaTeX will do some limited checking of the format of
-%% the ID to make sure it is valid. If the "orcid-ID.png" image file is 
-%% present or in the LaTeX pathway, the OrcID icon will appear next to
-%% the authors name.
-%%
-%% Use \affiliation for affiliation information. The old \affil is now aliased
-%% to \affiliation. AASTeX v6.31 will automatically index these in the header.
-%% When a duplicate is found its index will be the same as its previous entry.
-%%
-%% Note that \altaffilmark and \altaffiltext have been removed and thus 
-%% can not be used to document secondary affiliations. If they are used latex
-%% will issue a specific error message and quit. Please use multiple 
-%% \affiliation calls for to document more than one affiliation.
-%%
-%% The new \altaffiliation can be used to indicate some secondary information
-%% such as fellowships. This command produces a non-numeric footnote that is
-%% set away from the numeric \affiliation footnotes.  NOTE that if an
-%% \altaffiliation command is used it must come BEFORE the \affiliation call,
-%% right after the \author command, in order to place the footnotes in
-%% the proper location.
-%%
-%% Use \email to set provide email addresses. Each \email will appear on its
-%% own line so you can put multiple email address in one \email call. A new
-%% \correspondingauthor command is available in V6.31 to identify the
-%% corresponding author of the manuscript. It is the author's responsibility
-%% to make sure this name is also in the author list.
-%%
-%% While authors can be grouped inside the same \author and \affiliation
-%% commands it is better to have a single author for each. This allows for
-%% one to exploit all the new benefits and should make book-keeping easier.
-%%
-%% If done correctly the peer review system will be able to
-%% automatically put the author and affiliation information from the manuscript
-%% and save the corresponding author the trouble of entering it by hand.
+\author{Runqiu Ye}
+\affiliation{Carnegie Mellon University}
 
-%\correspondingauthor{August Muench}
-%\email{greg.schwarz@aas.org, gus.muench@aas.org}
+%\collaboration{20}{(AAS Journals Data Editors)}
+%
+%\author{F.X Timmes}
+%\affiliation{Arizona State University}
+%\affiliation{AAS Journals Associate Editor-in-Chief}
+%
+%\author{Amy Hendrickson}
+%\altaffiliation{AASTeX v6+ programmer}
+%\affiliation{TeXnology Inc.}
+%
+%\author{Julie Steffen}
+%\affiliation{AAS Director of Publishing}
+%\affiliation{American Astronomical Society \\
+%1667 K Street NW, Suite 800 \\
+%Washington, DC 20006, USA}
 
-\author[0000-0002-0786-7307]{Greg J. Schwarz}
-\affiliation{American Astronomical Society \\
-1667 K Street NW, Suite 800 \\
-Washington, DC 20006, USA}
-
-\author{August Muench}
-\affiliation{American Astronomical Society \\
-1667 K Street NW, Suite 800 \\
-Washington, DC 20006, USA}
-
-\collaboration{20}{(AAS Journals Data Editors)}
-
-\author{F.X Timmes}
-\affiliation{Arizona State University}
-\affiliation{AAS Journals Associate Editor-in-Chief}
-
-\author{Amy Hendrickson}
-\altaffiliation{AASTeX v6+ programmer}
-\affiliation{TeXnology Inc.}
-
-\author{Julie Steffen}
-\affiliation{AAS Director of Publishing}
-\affiliation{American Astronomical Society \\
-1667 K Street NW, Suite 800 \\
-Washington, DC 20006, USA}
-
-%% Note that the \and command from previous versions of AASTeX is now
-%% depreciated in this version as it is no longer necessary. AASTeX 
-%% automatically takes care of all commas and "and"s between authors names.
-
-%% AASTeX 6.31 has the new \collaboration and \nocollaboration commands to
-%% provide the collaboration status of a group of authors. These commands 
-%% can be used either before or after the list of corresponding authors. The
-%% argument for \collaboration is the collaboration identifier. Authors are
-%% encouraged to surround collaboration identifiers with ()s. The 
-%% \nocollaboration command takes no argument and exists to indicate that
-%% the nearby authors are not part of surrounding collaborations.
-
-%% Mark off the abstract in the ``abstract'' environment. 
 \begin{abstract}
 
-This example manuscript is intended to serve as a tutorial and template for
+(***TO-DO***) This example manuscript is intended to serve as a tutorial and template for
 authors to use when writing their own AAS Journal articles. The manuscript
 includes a history of \aastex\ and includes figure and table examples to illustrate these features. Information on features not explicitly mentioned in the article can be viewed in the manuscript comments or more extensive online
 documentation. Authors are welcome replace the text, tables, figures, and
@@ -280,474 +64,123 @@ Editorial office will ask you to shorten it. This abstract has 161 words.
 
 \end{abstract}
 
-%% Keywords should appear after the \end{abstract} command. 
-%% The AAS Journals now uses Unified Astronomy Thesaurus concepts:
-%% https://astrothesaurus.org
-%% You will be asked to selected these concepts during the submission process
-%% but this old "keyword" functionality is maintained in case authors want
-%% to include these concepts in their preprints.
-\keywords{Classical Novae (251) --- Ultraviolet astronomy(1736) --- History of astronomy(1868) --- Interdisciplinary astronomy(804)}
 
-%% From the front matter, we move on to the body of the paper.
-%% Sections are demarcated by \section and \subsection, respectively.
-%% Observe the use of the LaTeX \label
-%% command after the \subsection to give a symbolic KEY to the
-%% subsection for cross-referencing in a \ref command.
-%% You can use LaTeX's \ref and \label commands to keep track of
-%% cross-references to sections, equations, tables, and figures.
-%% That way, if you change the order of any elements, LaTeX will
-%% automatically renumber them.
-%%
-%% We recommend that authors also use the natbib \citep
-%% and \citet commands to identify citations.  The citations are
-%% tied to the reference list via symbolic KEYs. The KEY corresponds
-%% to the KEY in the \bibitem in the reference list below. 
+\keywords{(***TO-DO***) Classical Novae (251) --- Ultraviolet astronomy(1736) --- History of astronomy(1868) --- Interdisciplinary astronomy(804)}
 
 \section{Introduction} \label{sec:intro}
 
-\latex\ \footnote{\url{http://www.latex-project.org/}} is a document markup
-language that is particularly well suited for the publication of
-mathematical and scientific articles \citep{lamport94}. \latex\ was written
-in 1985 by Leslie Lamport who based it on the \TeX\ typesetting language
-which itself was created by Donald E. Knuth in 1978.  In 1988 a suite of
-\latex\ macros were developed to investigate electronic submission and
-publication of AAS Journal articles \citep{1989BAAS...21..780H}.  Shortly
-afterwards, Chris Biemesdefer merged these macros and more into a \latex\
-2.08 style file called \aastex.  These early \aastex\ versions introduced
-many common commands and practices that authors take for granted today.
-Substantial revisions
-were made by Lee Brotzman and Pierre Landau when the package was updated to
-v4.0.  AASTeX v5.0, written in 1995 by Arthur Ogawa, upgraded to \latex\ 2e
-which uses the document class in lieu of a style file.  Other improvements
-to version 5 included hypertext support, landscape deluxetables and
-improved figure support to facilitate electronic submission.  
-\aastex\ v5.2 was released in 2005 and introduced additional graphics
-support plus new mark up to identifier astronomical objects, datasets and
-facilities.
+Common envelope (CE) is the outcome of unstable mass transfer. During CE, both stars orbit inside an envelope and spiral inward. If the energy liberated in this process is enough to eject the CE, then the result of CE process is a close binary. If, on the contrary, the liberated energy is not enough to eject the envelope, then the result of the process is a merger. In observation results, a number of WD+MS binaries are wider than expected, and CE is expected to be the main channel to form these white dwarf binaries \cite{yamaguchi_hi, yamaguchi_lo}. In the MESA model utilized by \cite{yamaguchi_hi, yamaguchi_lo}, wide post-CE WD+MS binaries can be formed in a certain range of initial separation with only gravitational and internal energy included in the calculation. 
 
-In 1996 Maxim Markevitch modified the AAS preprint style file, aaspp4.sty,
-to closely emulate the very tight, two column style of a typeset
-Astrophysical Journal article.  The result was emulateapj.sty.  A year
-later Alexey Vikhlinin took over development and maintenance.  In 2001 he
-converted emulateapj into a class file in \latex\ 2e and in 2003 Vikhlinin
-completely rewrote emulateapj based on the APS Journal's RevTEX class.
+In this paper, we are going to explore the formation of these wide post-mass transfer WD+MS binaries with COSMIC model. We perform COSMIC simulation on both individual binary star systems and sampled population to explore the formation of WD+MS binaries under different conditions. In section \ref{sec:ce}, we are going to investigate formation of individual wide WD+MS binaries through CE for a variety of variables, including initial mass, initial separation, CE efficiency, and the energy budget of the CE. In section \ref{sec:stable}, we are going to explore the formation of individual wide WD+MS binaries through stable mass transfer. In section \ref{sec:population}, we will research on how different COSMIC model affect simulation results of a sample population of binary star systems, and how the formation of post WD+MS binaries depends on various parameters.
 
-During this time emulateapj gained growing acceptance in the astronomical
-community as it filled an author need to obtain an approximate number of
-manuscript pages prior to submission for cost and length estimates. The
-tighter typeset also had the added advantage of saving paper when printing
-out hard copies.
+\section{Common Envelope} \label{sec:ce}
+In \cite{yamaguchi_hi, yamaguchi_lo}, the author discussed the formation of WD+MS binaries through CE for both high-mass and low-mass systems, and it was found that wide WD+MS systems can be formed for certain energy budgets and certain initial separation in the MESA model. We hope to explore similar models in COSMIC.
 
-Even though author publication charges are no longer based on print pages
-\footnote{see Section \ref{sec:pubcharge} in the Appendix for more details
-about how current article costs are calculated.} the emulateapj class file
-has proven to be extremely popular with AAS Journal authors.  An 
-analysis of submitted \latex\ manuscripts in 2015 revealed that $\sim$65\%
-either called emulateapj or have a commented emulateapj classfile call
-indicating it was used at some stage of the manuscript construction.
-Clearly authors want to have access to a tightly typeset version of the
-article when corresponding with co-authors and for preprint submissions.
+In \cite{yamaguchi_hi, yamaguchi_lo}, to explore the dependency of the final separation $a_f$ in the post-CE binary on the initial separation $a_i$ in the pre-MT binary, the author first run a stellar evolution model of the primary star using MESA. Its evolution up to AGB phase is followed. With the model, the binding energy of the CE is calculated as
 
-When planning the next \aastex\ release the popularity of emulateapj played
-an important roll in the decision to drop the old base code and adopt and
-modify emulateapj for \aastex\ v6.+ instead.  The change brings \aastex\
-inline with what the majority of authors are already using while still
-delivering new and improved features.  \aastex\ v6.0 through v6.31 were
-written by Amy Hendrickson. The release dates were January 2016 (v6.0),
-October 2016 (v6.1), January 2018 (v6.2), June 2019 (v6.3), and March 2020
-(v6.31) respectively.
+\begin{equation}
+	E_{\mathrm{bind}} = E_{\mathrm{grav}} + E_{\mathrm{int}} = \int_{M_{\mathrm{core}}}^{M_{\mathrm{tot}}} -\frac{Gm}{r(m)} + U(m) dm,
+	\label{budget-int}
+\end{equation}
+or
+\begin{equation}
+	E_{\mathrm{bind}} = E_{\mathrm{grav}} + \alphath E_{\mathrm{th}} + \alpharec E_{\mathrm{rec}}.
+	\label{budget-th-rec}
+\end{equation}
+After that, the change of separation through CE evolution is calculated using
+\begin{equation}
+	E_{\mathrm{bind}} = \alphace \left(-\frac{G\MWD \Mstar}{2a_f}+\frac{GM_i \Mstar}{2a_i}\right).
+	\label{ebind-sep}
+\end{equation}
 
-The rest of this article provides information and examples on how to create
-your own AAS Journal manuscript with v6.31. The next section describes
-the different manuscript styles available and how they differ from past
-releases.  Section \ref{sec:floats} describes table and figure placement. 
-Specific examples of a table, Section \ref{subsec:tables}, and a figure,
-Section \ref{subsec:figures}, are also provided.  The last section,
-\ref{sec:cite}, shows how recognize software and external data as first
-class references in the manuscript bibliography.  An appendix is included
-for additional information readers might find useful.
-More documentation is embedded in the comments of this \latex\ file and in the online documentation at
-\url{http://journals.aas.org/authors/aastex.html}.
+In COSMIC, the CE is modeled using a structural parameter $\lambda$, where
+\begin{equation}
+	\Ebind = \frac{G M_i M_{\mathrm{env}}}{\lambda R_i}.   
+	\label{ebind}
+\end{equation}
+This $\lambda$ is represented in COSMIC as the \verb|lambdaf| flag in \verb|BSEDict|. To compare MESA model with COSMIC, we intend to compare how the energy budget utilized by \cite{yamaguchi_hi, yamaguchi_lo} matches with the CE model in COSMIC. We approach this by calculating the effective $\lambda$ value for each of the energy budget used in \cite{yamaguchi_hi, yamaguchi_lo}. 
 
-\section{Manuscript styles} \label{sec:style}
+\subsection{High Mass Systems $(7 \Msun + 1 \Msun)$} \label{subsec:high}
 
-The default style in \aastex\ v6.31 is a tight single column style, e.g. 10
-point font, single spaced.  The single column style is very useful for
-article with wide equations. It is also the easiest to style to work with
-since figures and tables, see Section \ref{sec:floats}, will span the
-entire page, reducing the need for address float sizing.
+\subsubsection{Methods and results}
 
-To invoke a two column style similar to the what is produced in
-the published PDF copy use \\
+In \cite{yamaguchi_hi}, the lower limit of WD mass $M_{\mathrm{MD, min}}$ in the observational sample is calculated to be $1.244\Msun \sim 1.418\Msun$. The corresponding mass of MS progenitor is expected to be in the range of $6 \sim 9 \Msun$, and the companion mass has median around $1\Msun$. MESA results for $7\Msun + 1\Msun$ systems is documented in \cite{yamaguchi_hi}. Hence, we also consider a $7\Msun + 1\Msun$ evolution model in COSMIC and compare the results with those in \cite{yamaguchi_hi}.
 
-\noindent {\tt\string\documentclass[twocolumn]\{aastex631\}}. \\
+We run COSMIC binary evolution simulation of a $7\Msun + 1\Msun$ system and investigate how the final separation $a_f$ depends on the initial separation $a_i$ and the CE parameter $\lambda$. We vary the initial separation in range $2 \sim 8 \au$ with $400$ steps. We vary the CE flag \verb|lambdaf| in range $0 \sim -100$, which corresponds to $\lambda = 0 \sim 100$, with $2000$ steps. Also, we run these parameters with four different CE efficiencies — $\alphace = 1$, $\alphace = 0.9$, $\alphace = 0.6$, and $\alphace = 0.3$, the same as documented in \cite{yamaguchi_hi}. In total, for $4$ different CE efficiency $\alphace$, we run a grid of $80000$ binary star systems with different initial separation $a_i$ and CE parameter $\lambda$.
 
-\noindent Note that in the two column style figures and tables will only
-span one column unless specifically ordered across both with the ``*'' flag,
-e.g. \\
+After simulation is finished, we select the time-step when the system finished CE for the first time (\verb|evol_type = 8|). At this moment, if the system is a WD+MS system, we record their separation as the final separation $a_f$. Otherwise, we set $a_f = 0$ and consider this initial condition unable to produce a WD+MS system.
 
-\noindent{\tt\string\begin\{figure*\}} ... {\tt\string\end\{figure*\}}, \\
-\noindent{\tt\string\begin\{table*\}} ... {\tt\string\end\{table*\}}, and \\
-\noindent{\tt\string\begin\{deluxetable*\}} ... {\tt\string\end\{deluxetable*\}}. \\
+We create four heat maps for the four different CE efficiencies. In Figure \ref{res_hi}, we plot the final separation $a_f$ of the WD+MS systems against initial separation $a_i$ and the CE flag \verb|lambdaf|$= - \lambda$.
 
-\noindent This option is ignored in the onecolumn style.
-
-Some other style options are outlined in the commented sections of this 
-article.  Any combination of style options can be used.
-
-Authors are required to provide line numbering in the manuscript. Line numbering makes it easier for the review to references specific places in the manuscript.
-This functionality has been built into AASTeX since v6.0.  The {\tt\string linenumbers} style option invokes the lineno style file to number each article line in the left margin.
-
-There is also a new {\tt\string modern} option that uses a Daniel
-Foreman-Mackey and David Hogg design to produce stylish, single column
-output that has wider left and right margins. It is designed to have fewer
-words per line to improve reader retention. It also looks better on devices
-with smaller displays such as smart phones.
-
-The {\tt\string anonymous} option will prevent the author and affiliations
-from being shown in the compiled pdf copy. This option allows the author 
-to keep this critical information in the latex file but prevent the reviewer
-from seeing it during peer review if dual anonymous review (DAR) is requested. 
-Likewise, acknowledgments can also be hidden if placed in the new 
-{\tt\string\begin\{acknowledgments\}} ... {\tt\string\end\{acknowledgments\}}
-environment. The use of this option is highly recommended for PSJ submissions. 
-Advice for anonymizing your manuscript for DAR is provided at 
-\url{https://journals.aas.org/manuscript-preparation/#dar}.
-
-\section{Floats} \label{sec:floats}
-
-Floats are non-text items that generally can not be split over a page.
-They also have captions and can be numbered for reference.  Primarily these
-are figures and tables but authors can define their own. \latex\ tries to
-place a float where indicated in the manuscript but will move it later if
-there is not enough room at that location, hence the term ``float''.
-
-Authors are encouraged to embed their tables and figures within the text as
-they are mentioned.  Please do not place the figures and text at the end of
-the article as was the old practice.  Editors and the vast majority of
-referees find it much easier to read a manuscript with embedded figures and
-tables.
-
-Depending on the number of floats and the particular amount of text and
-equations present in a manuscript the ultimate location of any specific
-float can be hard to predict prior to compilation. It is recommended that
-authors textbf{not} spend significant time trying to get float placement
-perfect for peer review.  The AAS Journal's publisher has sophisticated
-typesetting software that will produce the optimal layout during
-production.
-
-Note that authors of Research Notes are only allowed one float, either one
-table or one figure.
-
-For authors that do want to take the time to optimize the locations of
-their floats there are some techniques that can be used.  The simplest
-solution is to placing a float earlier in the text to get the position
-right but this option will break down if the manuscript is altered.
-A better method is to force \latex\ to place a
-float in a general area with the use of the optional {\tt\string [placement
-specifier]} parameter for figures and tables. This parameter goes after
-{\tt\string \begin\{figure\}}, {\tt\string \begin\{table\}}, and
-{\tt\string \begin\{deluxetable\}}.  The main arguments the specifier takes
-are ``h'', ``t'', ``b'', and ``!''.  These tell \latex\ to place the float
-\underline{h}ere (or as close as possible to this location as possible), at
-the \underline{t}op of the page, and at the \underline{b}ottom of the page.
-The last argument, ``!'', tells \latex\ to override its internal method of
-calculating the float position.  A sequence of rules can be created by
-using multiple arguments.  For example, {\tt\string \begin\{figure\}[htb!]}
-tells \latex\ to try the current location first, then the top of the page
-and finally the bottom of the page without regard to what it thinks the
-proper position should be.  Many of the tables and figures in this article
-use a placement specifier to set their positions.
-
-Note that the \latex\ {\tt\string tabular} environment is not a float.  Only
-when a {\tt\string tabular} is surrounded by {\tt\string\begin\{table\}} ...
-{\tt\string\end\{table\}} is it a true float and the rules and suggestions
-above apply.
-
-In AASTeX v6.31 all deluxetables are float tables and thus if they are
-longer than a page will spill off the bottom. Long deluxetables should
-begin with the {\tt\string\startlongtable} command. This initiates a
-longtable environment.  Authors might have to use {\tt\string\clearpage} to
-isolate a long table or optimally place it within the surrounding text.
-
-\subsection{Tables} \label{subsec:tables}
-
-Tables can be constructed with \latex's standard table environment or the
-\aastex's deluxetable environment. The deluxetable construct handles long
-tables better but has a larger overhead due to the greater amount of
-defined mark up used set up and manipulate the table structure.  The choice
-of which to use is up to the author. 
-
-Tables longer than 250 data lines and complex tables should only have a
-short example table with the full data set available in the machine
-readable format.  The machine readable table will be available in the HTML
-version of the article with just a short example in the PDF. Authors are
-required to indicate in the table comments that the data in machine 
-readable format in the full article.
-Authors are encouraged to create their own machine
-readable tables using the online tool at
-\url{http://authortools.aas.org/MRT/upload.html} but the data editors will review and edit all submissions prior to publication.
-
-Full details on how to create the different types of tables are given in the AASTeX guidelines at \url{http://journals.aas.org/authors/aastex.html}
-
-\subsubsection{Splitting a table into multiple horizontal components}
-
-Since the AAS Journals are now all electronic with no print version there is
-no reason why tables can not be as wide as authors need them to be.
-However, there are some artificial limitations based on the width of a
-print page.  The old way around this limitation was to rotate into 
-landscape mode and use the smallest available table font
-sizes, e.g. {\tt\string\tablewidth}, to get the table to fit.
-Unfortunately, this was not always enough but now there is a new way to break
-a table into two or three components so that it flows down a page by
-invoking a new table type, splittabular or splitdeluxetable. Within these
-tables a new ``B'' column separator is introduced.  Much like the vertical
-bar option, ``$\vert$'', that produces a vertical table lines 
-the new ``B'' separator indicates where to \underline{B}reak
-a table.  Up to two ``B''s may be included.
-
-Table \ref{tab:deluxesplit} 
-shows how to split a wide deluxetable into three parts with
-the {\tt\string\splitdeluxetable} command.  The {\tt\string\colnumbers}
-option is on to show how the automatic column numbering carries through the
-second table component.
-
-\begin{splitdeluxetable*}{lccccBcccccBcccc}
-\tabletypesize{\scriptsize}
-\tablewidth{0pt} 
-%\tablenum{1}
-\tablecaption{Measurements of Emission Lines: two breaks \label{tab:deluxesplit}}
-\tablehead{
-\colhead{Model} & \colhead{Component}& \colhead{Shift} & \colhead{FWHM} &
-\multicolumn{10}{c}{Flux} \\
-\colhead{} & \colhead{} & \colhead{($\rm
-km~s^{-1}$)}& \colhead{($\rm km~s^{-1}$)} & \multicolumn{10}{c}{($\rm
-10^{-17}~erg~s^{-1}~cm^{-2}$)} \\
-\cline{5-14}
-\colhead{} & \colhead{} &
-\colhead{} & \colhead{} & \colhead{Ly$\alpha$} & \colhead{N\,{\footnotesize
-V}} & \colhead{Si\,{\footnotesize IV}} & \colhead{C\,{\footnotesize IV}} &
-\colhead{Mg\,{\footnotesize II}} & \colhead{H$\gamma$} & \colhead{H$\beta$}
-& \colhead{H$\alpha$} & \colhead{He\,{\footnotesize I}} &
-\colhead{Pa$\gamma$}
-} 
-\colnumbers
-\startdata 
-{       }& BELs& -97.13 &    9117$\pm      38$&    1033$\pm      33$&$< 35$&$<     166$&     637$\pm      31$&    1951$\pm      26$&     991$\pm 30$&    3502$\pm      42$&   20285$\pm      80$&    2025$\pm     116$& 1289$\pm     107$\\ 
-{Model 1}& IELs& -4049.123 & 1974$\pm      22$&    2495$\pm      30$&$<     42$&$<     109$&     995$\pm 186$&      83$\pm      30$&      75$\pm      23$&     130$\pm      25$& 357$\pm      94$&     194$\pm      64$& 36$\pm      23$\\
-{       }& NELs& \nodata &     641$\pm       4$&     449$\pm 23$&$<      6$&$<       9$&       --            &     275$\pm      18$& 150$\pm      11$&     313$\pm      12$&     958$\pm      43$&     318$\pm 34$& 151$\pm       17$\\
-\hline
-{       }& BELs& -85 &    8991$\pm      41$& 988$\pm      29$&$<     24$&$<     173$&     623$\pm      28$&    1945$\pm 29$&     989$\pm      27$&    3498$\pm      37$&   20288$\pm      73$& 2047$\pm     143$& 1376$\pm     167$\\
-{Model 2}& IELs& -51000 &    2025$\pm      26$& 2494$\pm      32$&$<     37$&$<     124$&    1005$\pm     190$&      72$\pm 28$&      72$\pm      21$&     113$\pm      18$&     271$\pm      85$& 205$\pm      72$& 34$\pm      21$\\
-{       }& NELs& 52 &     637$\pm      10$&     477$\pm 17$&$<      4$&$<       8$&       --            &     278$\pm      17$& 153$\pm      10$&     317$\pm      15$&     969$\pm      40$&     325$\pm 37$&
-     147$\pm       22$\\
-\enddata
-\tablecomments{This is an example of how to split a deluxetable. You can
-split any table with this command into two or three parts.  The location of
-the split is given by the author based on the placement of the ``B''
-indicators in the column identifier preamble.  For more information please
-look at the new \aastex\ instructions.}
-\end{splitdeluxetable*}
-
-\subsection{Figures\label{subsec:figures}}
-
-%% The "ht!" tells LaTeX to put the figure "here" first, at the "top" next
-%% and to override the normal way of calculating a float position
-\begin{figure}[ht!]
-\plotone{samplefig.png}
-\caption{The cost for an author to publish an article has trended downward
-over time. This figure shows the average cost of an article from 1990 to 2020 in 2021 adjusted dollars. 
-\label{fig:general}}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\linewidth]{7+1results.png}
+	\caption{ Heat map of final separation $a_f$ against initial separation $a_i$ and CE flag lambdaf$=-\lambda$. Different panels represent four different CE efficiencies $\alphace = 1$, $0.9$, $0.6$, and $0.3$. The white and yellow contour corresponds to $a_f = 0.01 \au$ and $a_f = 0.15 \au$ respectively. WD+MS binaries is not possible for separation smaller than $0.01 \au$, and $0.15 \au$ is the minimum separation of wide WD+MS binaries in observational results. Outside the white contour no desired system forms.}
+	\label{res_hi}
 \end{figure}
 
-Authors can include a wide number of different graphics with their articles
-but encapsulated postscript (EPS) or portable document format (PDF) are
-encouraged. These range from general figures all authors are familiar with
-to new enhanced graphics that can only be fully experienced in HTML.  The
-later include figure sets, animations and interactive figures.  All
-enhanced graphics require a static two dimensional representation in the
-manuscript to serve as the example for the reader. All figures should
-include detailed and descriptive captions.  These captions are absolutely
-critical for readers for whom the enhanced figure is inaccessible either
-due to a disability or offline access.  
+\subsubsection{Discussions}
 
-Figure \ref{fig:general} shows the changes in the author publication charges (APCs) from 1990 to 2020 in the AAS Journals. The primary command for creating figures is the {\tt\string\includegraphics} command. Full details can be found \break
-\url{https://en.wikibooks.org/wiki/LaTeX/Importing\_Graphics\#Including\_graphics}.
+There are several interesting points of the results. First of all, as $\alphace$ decreases, the final separation decreases in general. This can be explained by Equation \ref{ebind-sep}. Qualitatively, note that more energy from the orbit is needed to eject the envelope for low $\alphace$, so the resulting $a_f$ is expected to be smaller. 
 
-\subsection{Enhanced graphics}
+It is worth noting that most of these systems experience two mass transfer phases in COSMIC before reaching WD+MS. That is, during the evolution process, two CE processes take place, between which there is a period of time. By checking the \verb|bpp| array, which documents the evolution processes of the binary star systems, we found that (***TO-DO***) fraction of all our simulated binaries experience two CE processes before reaching WD+MS. When the primary loses too much mass during the first CE, the CE process ends. After the primary fills its Roche lobe and has a large enough envelope again, the CE process resumes and causes two CE processes in total.
 
-Enhanced graphics have an example figure to serve as an example for the
-reader and the full graphical item available in the published HTML article.
-This includes Figure sets, animations, and interactive figures. The 
-Astronomy Image Explorer (\url{http://www.astroexplorer.org/}) provides 
-access to all the figures published in the AAS Journals since they offered
-an electronic version which was in the mid 1990s. You can filter image
-searches by specific terms, year, journal, or type. The type filter is 
-particularly useful for finding all published enhanced graphics. As of
-May 2022 there are over 4500 videos, 1600 figure sets, and 125 interactive
-figures. Authors should review the AASTeX guidebook at \url{http://journals.aas.org/authors/aastex/aasguide.html} to see how to represent these enhanced graphics in their own manuscripts.
+From Figure \ref{res_hi}, we also notice that the final separation $a_f$ jumps obviously at about $2.9 \au$, and $7.1 \au$. After investigating the \verb|bpp| array of these simulations, we find out the jump at about $2.9 \au$ and $7.1 \au$ is likely due to the difference of \verb|kstar_1| at the start of RLOF. For $a_i < 2.9 \au$, RLOF starts when the primary is on the giant branch (GB) with \verb|kstar_1 3|. For $a_i = 2.9 \au$, RLOF starts when the primary is experiencing core Helium burning (CHeB) with \verb|kstar_1 = 4|. For $2.9 \au < a_i < 7.1 \au$, RLOF starts when the primary is on E-AGB with \verb|kstar_1 = 5|. For $a_i > 7.1 \au$, RLOF starts when the primary is on TP-AGB with \verb|kstar_1 = 6|. For different star type, the structure and mass of the envelope is different, leading to different binding energy $\Ebind$ and thus different final separation $a_f$.
 
-\section{Software and third party data repository citations} \label{sec:cite}
+\begin{figure}
+	\centering
+	\includegraphics[width = 0.5\linewidth]{jump-zoom.png}
+	\caption{Dependence of final separation $a_f$ on initial separation $a_i$ for $\alphace = 0.3$. Simulation results of $\lambda_f = 60$, $70$, and $80$ are shown. The red circles emphasizes the jump of final separation as initial separation increases.}
+	\label{jump-zoom}
+\end{figure}
 
-The AAS Journals would like to encourage authors to change software and
-third party data repository references from the current standard of a
-footnote to a first class citation in the bibliography.  As a bibliographic
-citation these important references will be more easily captured and credit
-will be given to the appropriate people.
+Inspecting more closely, we find that the final separation $a_f$ jumps at about $5.2 \sim 5.4 \au$. This is especially obvious with $\alphace = 0.3$. To illustrate, we zoom in the simulation results of $\alphace = 0.3$, and present the change of final separation $a_f$ as initial separation $a_i$ increases in Figure \ref{jump-zoom}. From here, we can clearly see two jumps — one between $5.1\au$ and $5.2\au$, the other at $5.34\au$. To explain this, we again go to the \verb|bpp| array of these systems. We notice that the first jump is probably because the evolution process changes from \textbf{3-7-8-4-3-7-8-4} to \textbf{3-7-8-7-8-4}. This means that for relatively larger initial separation $a_i$, the primary fills its Roche lobe all the time, leading to more mass loss during a shorter timescale and thus larger final separation. Also, the second jump is probably because \verb|kstar_1| changes from \verb|8| (Naked Helium Star Hertzsprung Gap) to \verb|9| (Naked Helium Star Giant Branch) at the start of the second common envelope. This changes the binding energy of the common envelope and thus changes the final separation.
 
-The first step to making this happen is to have the data or software in
-a long term repository that has made these items available via a persistent
-identifier like a Digital Object Identifier (DOI).  A list of repositories
-that satisfy this criteria plus each one's pros and cons are given at \break
-\url{https://github.com/AASJournals/Tutorials/tree/master/Repositories}.
+Finally, notice that there exists a small triangular gap in the figure for $\alphace = 1$. This is because \verb|kstar_1| becomes a neutron star and no rows in the \verb|bpp| gets selected.
 
-In the bibliography the format for data or code follows this format: \\
+In conclusion, with a large \verb|lambdaf|, it is possible to create wide post-mass transfer WD+MS systems with final separation $a_f > 0.15 \au$, which is the minimal separation of our observed objects. In next section, we will compare these results with default settings in COSMIC and with results in \cite{yamaguchi_hi}, in order to investigate the possibility of forming wide WD+MS systems through CE.
 
-\noindent author year, title, version, publisher, prefix:identifier\\
+\subsubsection{Comparison}
+After we have obtained the simulation results for different initial conditions, now we can calculate the effective $\lambda$ that matches with results in \cite{yamaguchi_hi}. For each fixed initial separation $a_i$, we loop through the COSMIC results with the same initial separation, and find the \verb|lambdaf| value that results in a final separation closest to MESA model results. We record this \verb|lambdaf| as the effective $\lambda$ that matches the binding energy formalism at initial separation $a_i$.
 
-\citet{2015ApJ...805...23C} provides a example of how the citation in the
-article references the external code at
-\doi{10.5281/zenodo.15991}.  Unfortunately, bibtex does
-not have specific bibtex entries for these types of references so the
-``@misc'' type should be used.  The Repository tutorial explains how to
-code the ``@misc'' type correctly.  The most recent aasjournal.bst file,
-available with \aastex\ v6, will output bibtex ``@misc'' type properly.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.9\linewidth]{7+1fit.png}
+	\caption{Effective $\lambda$ fitting results of a $7\Msun + 1\Msun$ system for common envelope structure in MESA. Left panel: MESA results in \cite{yamaguchi_hi} of how final separation $a_f$ depends on initial separation $a_i$. Central panel: COSMIC results of how final separation $a_f$ depends on initial separation $a_i$, produced by the effective $\lambda$ calculated. Right panel: effective $\lambda$ in COSMIC that corresponds to the MESA results for each initial separation $a_i$. The red dashed line in the left and middle panel represents $0.15 \au$, which is the minimal separation for observed wide post-CE WD+MS binaries.}
+	\label{fit_hi}
+\end{figure}
 
-%% IMPORTANT! The old "\acknowledgment" command has be depreciated. It was
-%% not robust enough to handle our new dual anonymous review requirements and
-%% thus been replaced with the acknowledgment environment. If you try to 
-%% compile with \acknowledgment you will get an error print to the screen
-%% and in the compiled pdf.
-%% 
-%% Also note that the akcnowlodgment environment does not support long amounts of text. If you have a lot of people and institutions to acknowledge, do not use this command. Instead, create a new \section{Acknowledgments}.
-\begin{acknowledgments}
-We thank all the people that have made this AASTeX what it is today.  This
-includes but not limited to Bob Hanisch, Chris Biemesderfer, Lee Brotzman,
-Pierre Landau, Arthur Ogawa, Maxim Markevitch, Alexey Vikhlinin and Amy
-Hendrickson. Also special thanks to David Hogg and Daniel Foreman-Mackey
-for the new "modern" style design. Considerable help was provided via bug
-reports and hacks from numerous people including Patricio Cubillos, Alex
-Drlica-Wagner, Sean Lake, Michele Bannister, Peter Williams, and Jonathan
-Gagne.
-\end{acknowledgments}
+We present the fitting results for energy budget $\Ebind = \Egrav + \Eint$ in Figure \ref{fit_hi}. Notice that in the central panel, there is a small bump of the blue line. This is because at $6 \sim 7 \au$, we cannot reach such low final separation in COSMIC while forming a WD+MS binary at the same time. From the left panel, we can see that it is possible to create WD+MS binaries with final separation $>0.15 \au$ in MESA as long as internal energy $\Eint$ is included. However, in the right panel we show that this correspond to very large \verb|lambdaf| in COSMIC ($\lambda > \sim 20$).
 
-%% To help institutions obtain information on the effectiveness of their 
-%% telescopes the AAS Journals has created a group of keywords for telescope 
-%% facilities.
-%
-%% Following the acknowledgments section, use the following syntax and the
-%% \facility{} or \facilities{} macros to list the keywords of facilities used 
-%% in the research for the paper.  Each keyword is check against the master 
-%% list during copy editing.  Individual instruments can be provided in 
-%% parentheses, after the keyword, but they are not verified.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.9\linewidth]{7+1cmp.png}
+	\caption{Same as Figure \ref{fit_hi}, but with default $\lambda$ in COSMIC model included in the right panel.}
+	\label{fit_cmp_hi}
+\end{figure}
 
-\vspace{5mm}
-\facilities{HST(STIS), Swift(XRT and UVOT), AAVSO, CTIO:1.3m,
-CTIO:1.5m,CXO}
+To further compare with the default $\lambda$ value in COSMIC, we include in the right panel an extra line which represents the default $\lambda$ value in COSMIC. This default $\lambda$ in the COSMIC model is calculated following Appendix A of \cite{claeys2014theoretical}. For all of our case, we have $M_{\mathrm{env}} > 1$. The results is shown in Figure \ref{fit_cmp_hi}. Notice that the default $\lambda$ value is at order $\sim 1$, far smaller than the effective $\lambda$ needed to recreate results in \cite{yamaguchi_hi}.
 
-%% Similar to \facility{}, there is the optional \software command to allow 
-%% authors a place to specify which programs were used during the creation of 
-%% the manuscript. Authors should list each code and include either a
-%% citation or url to the code inside ()s when available.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.9\linewidth]{7+1ebcmp.png}
+	\caption{Same as Figure \ref{fit_cmp_hi}, but with a different energy budget — $\Ebind = \Egrav + \alphath \Eth + \alpharec \Erec$.}
+	\label{fit_cmp_eb_hi}
+\end{figure}
 
-\software{astropy \citep{2013A&A...558A..33A,2018AJ....156..123A},  
-          Cloudy \citep{2013RMxAA..49..137F}, 
-          Source Extractor \citep{1996A&AS..117..393B}
-          }
+In Figure \ref{fit_cmp_eb_hi}, we present the same results for another energy budget of the CE process — $\Ebind = \Egrav + \alphath \Eth + \alpharec \Erec$.
 
-%% Appendix material should be preceded with a single \appendix command.
-%% There should be a \section command for each appendix. Mark appendix
-%% subsections with the same markup you use in the main body of the paper.
+\subsection{Low Mass Systems $(1.5 \Msun + 0.85 \Msun)$} \label{subsec:low}
+In \cite{yamaguchi_lo}, the WD mass in the Gaia sample ranges from $0.5\Msun$ to $0.8\Msun$, which corresponds to progenitor mass of $1 \Msun$ to $3 \Msun$. The companions mass has a median of $0.85 \Msun$. MESA results for $1.5\Msun + 0.85\Msun$ systems is documented in \cite{yamaguchi_hi}. Hence, we consider a $1.5\Msun + 0.85\Msun$ evolution model in COSMIC and compare the results with those in \cite{yamaguchi_hi}.
 
-%% Each Appendix (indicated with \section) will be lettered A, B, C, etc.
-%% The equation counter will reset when it encounters the \appendix
-%% command and will number appendix equations (A1), (A2), etc. The
-%% Figure and Table counter will not reset.
 
-\appendix
+\section{Stable Mass Transfer} \label{sec:stable}
 
-\section{Appendix information}
+\section{Population} \label{sec:population}
 
-Appendices can be broken into separate sections just like in the main text.
-The only difference is that each appendix section is indexed by a letter
-(A, B, C, etc.) instead of a number.  Likewise numbered equations have
-the section letter appended.  Here is an equation as an example.
-\begin{equation}
-I = \frac{1}{1 + d_{1}^{P (1 + d_{2} )}}
-\end{equation}
-Appendix tables and figures should not be numbered like equations. Instead
-they should continue the sequence from the main article body.
 
-\section{Gold Open Access}
-
-As of January 1st, 2022, all of the AAS Journals articles became open access, meaning that all content, past, present and future, is available to anyone to read and download. A page containing frequently asked questions is available at \url{https://journals.aas.org/oa/}.
-
-\section{Author publication charges} \label{sec:pubcharge}
-
-In April 2011 the traditional way of calculating author charges based on 
-the number of printed pages was changed.  The reason for the change
-was due to a recognition of the growing number of article items that could not 
-be represented in print. Now author charges are determined by a number of
-digital ``quanta''.  A single quantum is 350 words, one figure, one table,
-and one enhanced digital item.  For the latter this includes machine readable
-tables, figure sets, animations, and interactive figures.  The current cost
-for the different quanta types is available at 
-\url{https://journals.aas.org/article-charges-and-copyright/#author_publication_charges}. 
-Authors may use the online length calculator to get an estimate of 
-the number of word and float quanta in their manuscript. The calculator 
-is located at \url{https://authortools.aas.org/Quanta/newlatexwordcount.html}.
-
-\section{Rotating tables} \label{sec:rotate}
-
-The process of rotating tables into landscape mode is slightly different in
-\aastex v6.31. Instead of the {\tt\string\rotate} command, a new environment
-has been created to handle this task. To place a single page table in a
-landscape mode start the table portion with
-{\tt\string\begin\{rotatetable\}} and end with
-{\tt\string\end\{rotatetable\}}.
-
-Tables that exceed a print page take a slightly different environment since
-both rotation and long table printing are required. In these cases start
-with {\tt\string\begin\{longrotatetable\}} and end with
-{\tt\string\end\{longrotatetable\}}. Table \ref{chartable} is an
-example of a multi-page, rotated table. The {\tt\string\movetabledown}
-command can be used to help center extremely wide, landscape tables. The
-command {\tt\string\movetabledown=1in} will move any rotated table down 1
-inch. 
-
-A handy "cheat sheet" that provides the necessary \latex\ to produce 17 
-different types of tables is available at \url{http://journals.aas.org/authors/aastex/aasguide.html#table_cheat_sheet}.
-
-\section{Using Chinese, Japanese, and Korean characters}
-
-Authors have the option to include names in Chinese, Japanese, or Korean (CJK) 
-characters in addition to the English name. The names will be displayed 
-in parentheses after the English name. The way to do this in AASTeX is to 
-use the CJK package available at \url{https://ctan.org/pkg/cjk?lang=en}.
-Further details on how to implement this and solutions for common problems,
-please go to \url{https://journals.aas.org/nonroman/}.
-
-%% For this sample we use BibTeX plus aasjournals.bst to generate the
-%% the bibliography. The sample631.bib file was populated from ADS. To
-%% get the citations to show in the compiled file do the following:
-%%
-%% pdflatex sample631.tex
-%% bibtext sample631
-%% pdflatex sample631.tex
-%% pdflatex sample631.tex
-
-\bibliography{sample631}{}
+\bibliography{reference.bib}
 \bibliographystyle{aasjournal}
-
-%% This command is needed to show the entire author+affiliation list when
-%% the collaboration and author truncation commands are used.  It has to
-%% go at the end of the manuscript.
-%\allauthors
-
-%% Include this line if you are using the \added, \replaced, \deleted
-%% commands to see a summary list of all changes at the end of the article.
-%\listofchanges
 
 \end{document}
 
-% End of file `sample631.tex'.
