@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex paper-draft-plain"] 1720468765 "paper-draft-plain.aux" "paper-draft-plain.bbl" "paper-draft-plain" 1720468769
-  "/usr/local/texlive/2022/texmf-dist/bibtex/bst/base/apalike.bst" 1292289607 24635 604dafcc79f521a11ea73e506e1fbd98 ""
-  "paper-draft-plain.aux" 1720468768 4710 50cac704783110c3e373c1296ed66995 "pdflatex"
+["bibtex paper-draft-plain"] 1720472072 "paper-draft-plain.aux" "paper-draft-plain.bbl" "paper-draft-plain" 1720472108
+  "/usr/local/texlive/2022/texmf-dist/bibtex/bst/base/alpha.bst" 1292289607 23907 a5f93555796fb564b924339521f10a7c ""
+  "paper-draft-plain.aux" 1720472107 5096 06c9aff55516af4dce6fd59c66f7ff4b "pdflatex"
   "reference.bib" 1718233134 1566 5f85590df1385ebe0cdf473ccbaa3b49 ""
   (generated)
   "paper-draft-plain.bbl"
   "paper-draft-plain.blg"
-["pdflatex"] 1720468765 "/Users/runqiuye/Desktop/studies/undergraduate/research/binary evolution/mass transfer/summaries/paper-draft-plain.tex" "paper-draft-plain.pdf" "paper-draft-plain" 1720468769
-  "/Users/runqiuye/Desktop/studies/undergraduate/research/binary evolution/mass transfer/summaries/paper-draft-plain.tex" 1720468756 14760 42c2c07b85036ad72063f225d606e500 ""
+["pdflatex"] 1720472104 "/Users/runqiuye/Desktop/studies/undergraduate/research/binary evolution/mass transfer/summaries/paper-draft-plain.tex" "paper-draft-plain.pdf" "paper-draft-plain" 1720472108
+  "/Users/runqiuye/Desktop/studies/undergraduate/research/binary evolution/mass transfer/summaries/paper-draft-plain.tex" 1720472104 15972 e0d2abdbce6ecfcfccccbd0394aa9c11 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm" 1136768653 3584 402da0b29eafbad07963b1224b222f18 ""
@@ -57,6 +57,8 @@
   "/usr/local/texlive/2022/texmf-dist/tex/latex/base/inputenc.sty" 1622581934 5049 969aec05d5f39c43f8005910498fcf90 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/base/size12.clo" 1636758526 8449 bc7344e882df4d7e51c046514dee83e4 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/base/t1cmtt.fd" 1622581934 2443 6dd9a5deeddddfcceb01d1932590ebad ""
+  "/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption.sty" 1647548653 54291 b8e5c600d4aa37b48a740dd2a6c26163 ""
+  "/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption3.sty" 1647548653 71241 d2cd3a1c5acef9cb31f945b93c0bb6e3 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1579991033 13886 d1306dcf79a944f6988e688c1785f9ce ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/etoolbox/etoolbox.sty" 1601931149 46845 3b58f70c6e861a13d927bff09d35ecbc ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/geometry/geometry.sty" 1578002852 41601 9cf6c5257b1bc7af01a58859749dd37a ""
@@ -88,9 +90,9 @@
   "fig/7+1fit.png" 1717508207 369806 de475a4413bc41e181c5e8c8e83cbb7f ""
   "fig/7+1results.png" 1717691568 1081693 968a6c4e463e4747375c98076f1460e5 ""
   "fig/jump-zoom.png" 1718290127 147366 ef1553cbb57ecd0ea041dadb9223775e ""
-  "paper-draft-plain.aux" 1720468768 4710 50cac704783110c3e373c1296ed66995 "pdflatex"
-  "paper-draft-plain.bbl" 1720468765 1033 f230433d7e14fb4d14f12aca40a6a4d9 "bibtex paper-draft-plain"
-  "paper-draft-plain.tex" 1720468756 14760 42c2c07b85036ad72063f225d606e500 ""
+  "paper-draft-plain.aux" 1720472107 5096 06c9aff55516af4dce6fd59c66f7ff4b "pdflatex"
+  "paper-draft-plain.bbl" 1720472073 1118 108ca5e8bf4ac55d20c84c51aff0f318 "bibtex paper-draft-plain"
+  "paper-draft-plain.tex" 1720472104 15972 e0d2abdbce6ecfcfccccbd0394aa9c11 ""
   (generated)
   "paper-draft-plain.aux"
   "paper-draft-plain.log"

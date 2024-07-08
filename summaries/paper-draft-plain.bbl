@@ -1,24 +1,26 @@
-\begin{thebibliography}{}
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{YEBR{\etalchar{+}}24}
 
-\bibitem[Claeys et~al., 2014]{claeys2014theoretical}
-Claeys, J., Pols, O., Izzard, R., Vink, J., and Verbunt, F. (2014).
+\bibitem[CPI{\etalchar{+}}14]{claeys2014theoretical}
+JSW Claeys, OR~Pols, RG~Izzard, J~Vink, and FWM Verbunt.
 \newblock Theoretical uncertainties of the type ia supernova rate.
-\newblock {\em Astronomy \& Astrophysics}, 563:A83.
+\newblock {\em Astronomy \& Astrophysics}, 563:A83, 2014.
 
-\bibitem[Yamaguchi et~al., 2024a]{yamaguchi_hi}
-Yamaguchi, N., El-Badry, K., Fuller, J., Latham, D.~W., Cargile, P.~A., Mazeh,
-  T., Shahaf, S., Bieryla, A., Buchhave, L.~A., and Hobson, M. (2024a).
+\bibitem[YEBF{\etalchar{+}}24]{yamaguchi_hi}
+Natsuko Yamaguchi, Kareem El-Badry, Jim Fuller, David~W Latham, Phillip~A
+  Cargile, Tsevi Mazeh, Sahar Shahaf, Allyson Bieryla, Lars~A Buchhave, and
+  Melissa Hobson.
 \newblock Wide post-common envelope binaries containing ultramassive white
   dwarfs: evidence for efficient envelope ejection in massive asymptotic giant
   branch stars.
 \newblock {\em Monthly Notices of the Royal Astronomical Society},
-  527(4):11719--11739.
+  527(4):11719--11739, 2024.
 
-\bibitem[Yamaguchi et~al., 2024b]{yamaguchi_lo}
-Yamaguchi, N., El-Badry, K., Rees, N., Shahaf, S., Mazeh, T., and Andrae, R.
-  (2024b).
+\bibitem[YEBR{\etalchar{+}}24]{yamaguchi_lo}
+Natsuko Yamaguchi, Kareem El-Badry, Natalie Rees, Sahar Shahaf, Tsevi Mazeh,
+  and Ren{\'e} Andrae.
 \newblock Wide post-common envelope binaries from gaia: orbit validation and
   formation models.
-\newblock {\em arXiv preprint arXiv:2405.06020}.
+\newblock {\em arXiv preprint arXiv:2405.06020}, 2024.
 
 \end{thebibliography}
