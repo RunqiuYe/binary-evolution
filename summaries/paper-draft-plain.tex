@@ -39,7 +39,7 @@ In this paper, we are going to explore the formation possibility of these wide p
 \section{Formation Through Common Envelope} \label{sec:ce}
 In \cite{yamaguchi_hi, yamaguchi_lo}, the author discussed the formation of WD+MS binaries through CE for both high-mass and low-mass systems, and it was found that wide WD+MS systems can be formed for certain energy budgets and certain initial separation in the MESA model. We hope to explore similar models in COSMIC.
 
-In \cite{yamaguchi_hi, yamaguchi_lo}, to explore the dependency of the final separation $a_f$ in the post-CE binary on the initial separation $a_i$ in the pre-MT binary, the author first run a stellar evolution model of the primary star using MESA. Its evolution up to AGB phase is followed. With the model, the binding energy of the CE is calculated as
+In \cite{yamaguchi_hi, yamaguchi_lo}, to explore the dependency of the final separation $a_f$ in the post-CE binary on the initial separation $a_i$ in the pre-MT binary, the author first ran a stellar evolution model of the primary star using MESA. Its evolution up to AGB phase is followed. With the model, the binding energy of the CE is calculated as
 
 \begin{equation}
   E_{\mathrm{bind}} = E_{\mathrm{grav}} + E_{\mathrm{int}} = \int_{M_{\mathrm{core}}}^{M_{\mathrm{tot}}} -\frac{Gm}{r(m)} + U(m) dm,
@@ -61,7 +61,7 @@ In COSMIC, the CE is modeled using a structural parameter $\lambda$, where
   \Ebind = \frac{G M_i M_{\mathrm{env}}}{\lambda R_i}.   
   \label{ebind}
 \end{equation}
-This $\lambda$ is represented in COSMIC as the \verb|lambdaf| flag in \verb|BSEDict|. To compare MESA model with COSMIC, we intend to compare how the energy budget utilized by \cite{yamaguchi_hi, yamaguchi_lo} matches with the CE model in COSMIC. We approach this by calculating the effective $\lambda$ value for each of the common envelope energy budget used in \cite{yamaguchi_hi, yamaguchi_lo}. 
+This $\lambda$ is represented in COSMIC as the \verb|lambdaf| flag in \verb|BSEDict|. To compare MESA model with COSMIC, we intend to compare how the energy budget utilized in past papers matches with the CE model in COSMIC. We approach this by calculating the effective $\lambda$ value for each of the common envelope energy budget used in \cite{yamaguchi_hi, yamaguchi_lo}. 
 
 \subsection{High Mass Systems $(7 \Msun + 1 \Msun)$} \label{subsec:high}
 
@@ -69,14 +69,14 @@ This $\lambda$ is represented in COSMIC as the \verb|lambdaf| flag in \verb|BSED
 
 According to \cite{yamaguchi_hi}, the lower limit of WD mass $M_{\mathrm{MD, min}}$ in the observational sample is calculated to be $1.244\Msun \sim 1.418\Msun$. The corresponding mass of MS progenitor is expected to be in the range of $6 \sim 9 \Msun$, and the companion mass has median around $1\Msun$. MESA results for $7\Msun + 1\Msun$ systems is documented in \cite{yamaguchi_hi}. Hence, we also consider a $7\Msun + 1\Msun$ evolution model in COSMIC and compare the results with those in \cite{yamaguchi_hi}.
 
-We run COSMIC binary evolution simulation of a $7\Msun + 1\Msun$ system and investigate how the final separation $a_f$ depends on the initial separation $a_i$ and the CE parameter $\lambda$. The initial separation is a linear grid in range $2 \sim 8 \au$ with $400$ points. The CE flag \verb|lambdaf| is a linear grid in range $0 \sim -100$ with $2000$ steps, which corresponds to $0 \sim 100$ for CE parameter $\lambda$. Also, we run these parameters with four different CE efficiencies — $\alphace = 1$, $\alphace = 0.9$, $\alphace = 0.6$, and $\alphace = 0.3$, the same as recorded in \cite{yamaguchi_hi}. In total, for each of the $4$ different CE efficiency $\alphace$, we run a grid of $80000$ binary star systems with different initial separation $a_i$ and CE parameter $\lambda$.
+We ran COSMIC binary evolution simulation of a $7\Msun + 1\Msun$ system and investigate how the final separation $a_f$ depends on the initial separation $a_i$ and the CE parameter $\lambda$. The initial separation is a linear grid in range $2 \sim 8 \au$ with $400$ points. The CE flag \verb|lambdaf| is a linear grid in range $0 \sim -100$ with $2000$ steps, which corresponds to $0 \sim 100$ for CE parameter $\lambda$. Also, we ran these parameters with four different CE efficiencies — $\alphace = 1$, $\alphace = 0.9$, $\alphace = 0.6$, and $\alphace = 0.3$, the same as recorded in \cite{yamaguchi_hi}. In total, for each of the $4$ different CE efficiency $\alphace$, we ran a grid of $80000$ binary star systems with different initial separation $a_i$ and CE parameter $\lambda$.
 
-After simulation is finished, we select the time-step when the system finished CE for the first time (\verb|evol_type=8|). At this moment, if the system is a WD+MS system, we record their separation as the final separation $a_f$. Otherwise, we set $a_f = 0$ and consider this initial condition unable to produce a WD+MS system. We create four heat maps for the four different CE efficiencies. In Figure \ref{res_hi}, we plot the final separation $a_f$ of the WD+MS systems against initial separation $a_i$ and the CE flag $- \lambda$.
+After simulation is finished, we select the time-step when the system finished CE for the first time (\verb|evol_type = 8|). At this moment, if the system is a WD+MS system, we record their separation as the final separation $a_f$. Otherwise, we set $a_f = 0$ and consider this initial condition unable to produce a WD+MS system. We create four heat maps for the four different CE efficiencies. In Figure \ref{res_hi}, we plot the final separation $a_f$ of the WD+MS systems against initial separation $a_i$ and the CE flag $- \lambda$.
 
 \begin{figure}
   \centering
   \includegraphics[width=\linewidth]{fig/7+1results.png}
-  \caption{ Heat map of final separation $a_f$ against initial separation $a_i$ and CE flag $-\lambda$. Different panels represent four different CE efficiencies $\alphace = 1$, $0.9$, $0.6$, and $0.3$. The white and yellow contour corresponds to $a_f = 0.01 \au$ and $a_f = 0.15 \au$ respectively. WD+MS binaries is not possible for separation smaller than $0.01 \au$, and $0.15 \au$ is the minimum separation of wide WD+MS binaries in observational results. Outside the white contour no desired system forms.}
+  \caption{Heat map of final separation $a_f$ against initial separation $a_i$ and CE flag $-\lambda$. Different panels represent four different CE efficiencies $\alphace = 1$, $0.9$, $0.6$, and $0.3$. The white and yellow contour corresponds to $a_f = 0.01 \au$ and $a_f = 0.15 \au$ respectively. WD+MS binaries is not possible for separation smaller than $0.01 \au$, and $0.15 \au$ is the minimum separation of wide WD+MS binaries in observational results. Outside the white contour no desired system forms.}
   \label{res_hi}
 \end{figure}
 
@@ -86,7 +86,7 @@ There are several interesting points of the results. First of all, comparing the
 
 It is worth noting that most of these systems experience two mass transfer phases in COSMIC before reaching WD+MS. That is, during the evolution process, two CE processes take place, between which there is a period of time. A typical change of \verb|evol_type| through the evolution is \textbf{\dots-3-7-8-4-\dots-3-7-8-4-\dots}, where WD+MS is reached during the second mass transfer process. Another possible change of \verb|evol_type| through the volution is \textbf{\dots-3-7-8-7-8-4-\dots}, which will be mentioned in the next paragraph. Statistically, we found that \textbf{(***TO-DO***)} fraction of all our $320000$ simulated binaries experience two CE processes before reaching WD+MS. To explain this qualitatively, we notice that when the primary loses too much mass during the first CE, the CE process ends, as the radius of the primary becomes smaller than the Roche Lobe. After the primary fills its Roche lobe and has a large enough envelope again, the CE process resumes and causes two CE processes in total.
 
-From Figure \ref{res_hi}, we also notice that final separation $a_f$ jumps obviously at about $2.9 \au$, and $7.1 \au$. After investigating the \verb|bpp| array of these simulations, we find out the jump at about $2.9 \au$ and $7.1 \au$ is likely due to the difference of \verb|kstar_1| at the start of RLOF. For $a_i < 2.9 \au$, RLOF starts when \verb|kstar_1=3|. For $a_i = 2.9 \au$, RLOF starts when \verb|kstar_1=4|. For $2.9 \au < a_i < 7.1 \au$, RLOF starts when \verb|kstar_1=5|. For $a_i > 7.1 \au$, RLOF starts when \verb|kstar_1=6|. For different star type, the structure and mass of the envelope is different, leading to different binding energy $\Ebind$ and thus different final separation $a_f$.
+From Figure \ref{res_hi}, we also notice that final separation $a_f$ jumps obviously at about $2.9 \au$, and $7.1 \au$. After investigating the \verb|bpp| array of these simulations, we find out the jump at about $2.9 \au$ and $7.1 \au$ is likely due to the difference of \verb|kstar_1| at the start of RLOF. For $a_i < 2.9 \au$, RLOF starts when \verb|kstar_1 = 3|. For $a_i = 2.9 \au$, RLOF starts when \verb|kstar_1 = 4|. For $2.9 \au < a_i < 7.1 \au$, RLOF starts when \verb|kstar_1 = 5|. For $a_i > 7.1 \au$, RLOF starts when \verb|kstar_1 = 6|. For different star type, the structure and mass of the envelope is different, leading to different binding energy $\Ebind$ and thus different final separation $a_f$.
 
 \begin{figure}
   \centering
@@ -99,24 +99,24 @@ Inspecting more closely, we found that the final separation $a_f$ jumps at about
 
 Finally, notice that there exists a small triangular gap in the figure for $\alphace = 1$. This is because \verb|kstar_1| becomes a neutron star and no rows in the \verb|bpp| gets selected.
 
-In conclusion, with a large \verb|lambdaf|, it is possible to create wide post-mass transfer WD+MS systems with final separation $a_f > 0.15 \au$, which is the minimal separation of our observed objects. In next section, we will compare these results with default settings in COSMIC and with results in \cite{yamaguchi_hi}, in order to investigate the possibility of forming wide WD+MS systems through CE.
+In conclusion, with a large $\lambda$, it is possible to create wide post-mass transfer WD+MS systems with final separation $a_f > 0.15 \au$, which is the minimal separation of our observed objects. In next section, we will compare these results with default settings in COSMIC and with results in \cite{yamaguchi_hi}, in order to investigate the possibility of forming wide WD+MS systems through CE.
 
 \subsubsection{Comparison}
-After we have obtained the simulation results for different initial conditions, now we can calculate the effective $\lambda$ that matches with results in \cite{yamaguchi_hi}. For each fixed initial separation $a_i$, we loop through the COSMIC results with the same initial separation, and find the \verb|lambdaf| value that results in a final separation closest to MESA model results. We record this \verb|lambdaf| as the effective $\lambda$ that matches the binding energy formalism at initial separation $a_i$.
+After we have obtained the simulation results for different initial conditions, now we can calculate the effective $\lambda$ that matches with results in \cite{yamaguchi_hi}. For each fixed initial separation $a_i$, we loop through the COSMIC results with the same initial separation, and find the $\lambda$ value that results in a final separation closest to MESA model results. We record this $\lambda$ as the effective $\lambda$ that matches the binding energy formalism at initial separation $a_i$.
 
 \begin{figure}
   \centering
   \includegraphics[width=\linewidth]{fig/7+1fit.png}
-  \caption{Effective $\lambda$ fitting results of a $7\Msun + 1\Msun$ system for common envelope structure in MESA. Different lines represent different $\alphace$ and different common envelope energy budget, as shown in the legend. Left panel: MESA results in \cite{yamaguchi_hi} of how final separation $a_f$ depends on initial separation $a_i$. Central panel: COSMIC results of how final separation $a_f$ depends on initial separation $a_i$, produced by the effective $\lambda$ calculated. Right panel: effective $\lambda$ in COSMIC that corresponds to the MESA results for each initial separation $a_i$. The red dashed line in the left and middle panel represents $0.15 \au$, which is the minimal separation for observed wide post-CE WD+MS binaries.}
+  \caption{Effective $\lambda$ fitting results of a $7\Msun + 1\Msun$ system for common envelope structure in MESA. Different lines represent different $\alphace$ and different common envelope energy budget, as shown in the legend. Left panel: recreation of MESA results in \cite{yamaguchi_hi} of how final separation $a_f$ depends on initial separation $a_i$. Central panel: COSMIC results of how final separation $a_f$ depends on initial separation $a_i$, produced by the effective $\lambda$ calculated. Right panel: effective $\lambda$ in COSMIC that corresponds to the MESA results for each initial separation $a_i$. The red dashed line in the left and middle panel represents $0.15 \au$, which is the minimal separation for observed wide post-CE WD+MS binaries.}
   \label{fit_hi}
 \end{figure}
 
-We present the fitting results for energy budget $\Ebind = \Egrav + \Eint$ in Figure \ref{fit_hi}. Notice that in the central panel, there is a small bump of the blue line. This is because at $6 \sim 7 \au$, we cannot reach such low final separation in COSMIC while forming a WD+MS binary at the same time. From the left panel, we can see that it is possible to create WD+MS binaries with final separation $>0.15 \au$ in MESA as long as internal energy $\Eint$ is included. However, in the right panel we show that this correspond to very large \verb|lambdaf| in COSMIC ($\lambda > \sim 20$).
+We present the fitting results for energy budget $\Ebind = \Egrav + \Eint$ in Figure \ref{fit_hi}. Notice that in the central panel, there is a small bump of the blue line. This is because at $6 \sim 7 \au$, we cannot reach such low final separation in COSMIC while forming a WD+MS binary at the same time. From the left panel, we can see that it is possible to create WD+MS binaries with final separation $>0.15 \au$ in MESA as long as internal energy $\Eint$ is included. However, in the right panel we show that this correspond to very large $\lambda$ in COSMIC ($\lambda > \sim 20$).
 
 \begin{figure}
   \centering
   \includegraphics[width=\linewidth]{fig/7+1cmp.png}
-  \caption{Same as Figure \ref{fit_hi}, but with default $\lambda$ in COSMIC model included in the right panel.}
+  \caption{Same as Figure \ref{fit_hi}, but with default $\lambda$ in COSMIC model included in the right panel with the purple line.}
   \label{fit_cmp_hi}
 \end{figure}
 
@@ -125,7 +125,7 @@ To further compare with the default $\lambda$ value in COSMIC, we include in the
 \begin{figure}
   \centering
   \includegraphics[width=\linewidth]{fig/7+1ebcmp.png}
-  \caption{Same as Figure \ref{fit_cmp_hi}, but with a different common envelope energy budget. For results shown in these figures, $\Ebind = \Egrav + \alphath \Eth + \alpharec \Erec$, where the coefficients $\alphath$ and $\alpharec$ for different line is shown in the legend.}
+  \caption{Same as Figure \ref{fit_cmp_hi}, but with a different common envelope energy budget. For results shown in these figures, $\Ebind = \Egrav + \alphath \Eth + \alpharec \Erec$, where the coefficients $\alphath$ and $\alpharec$ for different line is shown in the legend. The red line in the right panel indicates default $\lambda$ in COSMIC.}
   \label{fit_cmp_eb_hi}
 \end{figure}
 
@@ -135,8 +135,24 @@ In Figure \ref{fit_cmp_eb_hi}, we present the same results for another energy bu
 \]
 We notice that the effective $\lambda$ now gets with in the order of $\sim 10$. However, none of these initial separation and $\lambda$ results in wide WD+MS system with final separation $a_f > 0.15 \au$. Therefore, we conclude that with the new energy budget, it is not practical to form wide WD+MS binaries either.
 
-\subsection{Low Mass Systems $(1.5 \Msun + 0.85 \Msun)$} \label{subsec:low}
-In \cite{yamaguchi_lo}, the WD mass in the Gaia sample ranges from $0.5\Msun$ to $0.8\Msun$, which corresponds to progenitor mass of $1 \Msun$ to $3 \Msun$. The companions mass has a median of $0.85 \Msun$. MESA results for $1.5\Msun + 0.85\Msun$ systems is documented in \cite{yamaguchi_hi}. Hence, we consider a $1.5\Msun + 0.85\Msun$ evolution model in COSMIC and compare the results with those in \cite{yamaguchi_hi}.
+\subsection{Low Mass Systems ($1.5 \Msun + 0.85 \Msun$)} \label{subsec:low}
+
+\subsubsection{Methods and results}
+According to \cite{yamaguchi_lo}, the WD mass in the Gaia sample ranges from $0.5\Msun$ to $0.8\Msun$, which corresponds to progenitor mass of $1 \Msun$ to $3 \Msun$. The companions mass has a median of $0.85 \Msun$. MESA results for $1.5\Msun + 0.85\Msun$ systems is documented in \cite{yamaguchi_hi}. Hence, we consider a $1.5\Msun + 0.85\Msun$ evolution model in COSMIC and compare the results with those in \cite{yamaguchi_hi}. For the common envelope, we include all thermal energy $\Eth$ into the binding energy $\Ebind$, while the recombination energy $\Erec$ is included in part with a parameter $\alpharec$. That is,
+\[
+  \Ebind = \Egrav + \Eth + \alpharec \Erec.
+\]
+
+We take the same approach as high mass systems to investigate the effective value of $\lambda$ in COSMIC that matches with the results in MESA. The initial separation is a linear grid in range $0.5 \sim 6 \au$ with $400$ points. The CE flag \verb|lambdaf| is a linear grid in range $0 \sim -100$ with $2000$ steps, which corresponds to $0 \sim 100$ for CE parameter $\lambda$. Also, we ran these parameters with four different CE efficiencies — $\alphace = 1$, $\alphace = 0.9$, $\alphace = 0.6$, and $\alphace = 0.3$, the same as recorded in \cite{yamaguchi_lo}. In total, for each of the $4$ different CE efficiency $\alphace$, we ran a grid of $80000$ binary star systems with different initial separation $a_i$ and CE parameter $\lambda$.
+
+After simulation is finished, we again select the time-step when the system finished CE for the first time, and record the final separation if the system is a desried WD+MS system. The result is presented in Figure \ref{res_lo}.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\linewidth]{fig/1.5+0.8results.png}
+  \caption{Heat map of final separation $a_f$ against initial separation $a_i$ and CE flag $-\lambda$. Different panels represent four different CE efficiencies $\alphace = 1$, $0.9$, $0.6$, and $0.3$. The white and yellow contour corresponds to $a_f = 0.01 \au$ and $a_f = 0.15 \au$ respectively. WD+MS binaries is not possible for separation smaller than $0.01 \au$, and $0.15 \au$ is the minimum separation of wide WD+MS binaries in observational results. Outside the white contour no desired system forms.}
+  \label{res_lo}
+\end{figure}
 
 
 \section{Formation Through Stable Mass Transfer} \label{sec:stable}
@@ -145,7 +161,7 @@ In \cite{yamaguchi_lo}, the WD mass in the Gaia sample ranges from $0.5\Msun$ to
 
 
 \bibliography{reference.bib}
-\bibliographystyle{alpha}
+\bibliographystyle{apalike}
 
 \end{document}
 

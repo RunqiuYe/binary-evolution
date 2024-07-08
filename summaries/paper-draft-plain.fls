@@ -398,6 +398,11 @@ INPUT ./fig/7+1ebcmp.png
 INPUT fig/7+1ebcmp.png
 INPUT ./fig/7+1ebcmp.png
 INPUT ./fig/7+1ebcmp.png
+INPUT ./fig/1.5+0.8results.png
+INPUT ./fig/1.5+0.8results.png
+INPUT fig/1.5+0.8results.png
+INPUT ./fig/1.5+0.8results.png
+INPUT ./fig/1.5+0.8results.png
 INPUT ./paper-draft-plain.bbl
 INPUT paper-draft-plain.bbl
 INPUT ./paper-draft-plain.bbl
