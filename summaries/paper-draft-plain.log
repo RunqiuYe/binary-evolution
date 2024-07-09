@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.10)  9 JUL 2024 09:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.10)  9 JUL 2024 11:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -256,67 +256,82 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <14.4> on input line 31.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 31.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 42.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 42.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 42.
- [1
-
-{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 64.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 39.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-<fig/7+1results.png, id=17, 1746.525pt x 1214.5375pt>
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 41.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 41.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 41.
+ [1
+
+{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
+<fig/7+1results.png, id=22, 1746.525pt x 1214.5375pt>
 File: fig/7+1results.png Graphic file (type png)
 <use fig/7+1results.png>
-Package pdftex.def Info: fig/7+1results.png  used on input line 78.
+Package pdftex.def Info: fig/7+1results.png  used on input line 101.
 (pdftex.def)             Requested size: 527.57014pt x 366.86592pt.
- [2] [3 <./fig/7+1results.png>]
-<fig/jump-zoom.png, id=30, 462.528pt x 346.896pt>
+<fig/jump-zoom.png, id=24, 462.528pt x 346.896pt>
 File: fig/jump-zoom.png Graphic file (type png)
 <use fig/jump-zoom.png>
-Package pdftex.def Info: fig/jump-zoom.png  used on input line 93.
+Package pdftex.def Info: fig/jump-zoom.png  used on input line 116.
 (pdftex.def)             Requested size: 316.5453pt x 237.42117pt.
- [4 <./fig/jump-zoom.png>]
-<fig/7+1fit.png, id=35, 1085.7363pt x 280.8894pt>
+ [3] [4 <./fig/7+1results.png>]
+<fig/7+1fit.png, id=34, 1085.7363pt x 280.8894pt>
 File: fig/7+1fit.png Graphic file (type png)
 <use fig/7+1fit.png>
-Package pdftex.def Info: fig/7+1fit.png  used on input line 109.
+Package pdftex.def Info: fig/7+1fit.png  used on input line 132.
 (pdftex.def)             Requested size: 527.57014pt x 136.49265pt.
-<fig/7+1cmp.png, id=36, 1077.5457pt x 274.626pt>
+<fig/7+1cmp.png, id=35, 1077.5457pt x 274.626pt>
 File: fig/7+1cmp.png Graphic file (type png)
 <use fig/7+1cmp.png>
-Package pdftex.def Info: fig/7+1cmp.png  used on input line 118.
+Package pdftex.def Info: fig/7+1cmp.png  used on input line 141.
 (pdftex.def)             Requested size: 527.57014pt x 134.46315pt.
- [5 <./fig/7+1fit.png> <./fig/7+1cmp.png>]
-<fig/7+1ebcmp.png, id=42, 1083.0864pt x 275.3487pt>
+ [5 <./fig/jump-zoom.png>]
+<fig/7+1ebcmp.png, id=40, 1083.0864pt x 275.3487pt>
 File: fig/7+1ebcmp.png Graphic file (type png)
 <use fig/7+1ebcmp.png>
-Package pdftex.def Info: fig/7+1ebcmp.png  used on input line 127.
+Package pdftex.def Info: fig/7+1ebcmp.png  used on input line 150.
 (pdftex.def)             Requested size: 527.57014pt x 134.12375pt.
- [6 <./fig/7+1ebcmp.png>]
-<fig/1.5+0.8results.png, id=47, 1778.645pt x 1200.485pt>
+ [6 <./fig/7+1fit.png> <./fig/7+1cmp.png>]
+<fig/1.5+0.8results.png, id=46, 1736.4875pt x 1184.425pt>
 File: fig/1.5+0.8results.png Graphic file (type png)
 <use fig/1.5+0.8results.png>
-Package pdftex.def Info: fig/1.5+0.8results.png  used on input line 152.
-(pdftex.def)             Requested size: 527.57014pt x 356.08171pt.
- (./paper-draft-plain.bbl [7 <./fig/1.5+0.8results.png>]) [8] (./paper-draft-plain.aux) ) 
+Package pdftex.def Info: fig/1.5+0.8results.png  used on input line 175.
+(pdftex.def)             Requested size: 527.57014pt x 359.84845pt.
+<fig/1.5+0.8cmp_whole.png, id=47, 1084.5318pt x 273.6624pt>
+File: fig/1.5+0.8cmp_whole.png Graphic file (type png)
+<use fig/1.5+0.8cmp_whole.png>
+Package pdftex.def Info: fig/1.5+0.8cmp_whole.png  used on input line 184.
+(pdftex.def)             Requested size: 527.57014pt x 133.12279pt.
+<fig/1.5+0.8cmp_pt.png, id=48, 1074.414pt x 274.1442pt>
+File: fig/1.5+0.8cmp_pt.png Graphic file (type png)
+<use fig/1.5+0.8cmp_pt.png>
+Package pdftex.def Info: fig/1.5+0.8cmp_pt.png  used on input line 191.
+(pdftex.def)             Requested size: 527.57014pt x 134.61627pt.
+ [7 <./fig/7+1ebcmp.png>] [8 <./fig/1.5+0.8results.png>] [9 <./fig/1.5+0.8cmp_whole.png> <./fig/1.5+0.8cmp_pt.png>]
+<fig/theory-observed.png, id=64, 1654.18pt x 926.46124pt>
+File: fig/theory-observed.png Graphic file (type png)
+<use fig/theory-observed.png>
+Package pdftex.def Info: fig/theory-observed.png  used on input line 204.
+(pdftex.def)             Requested size: 422.05772pt x 236.37878pt.
+ (./paper-draft-plain.bbl [10 <./fig/theory-observed.png>]) [11] (./paper-draft-plain.aux) ) 
 Here is how much of TeX's memory you used:
- 9015 strings out of 478268
- 196463 string characters out of 5846347
- 467812 words of memory out of 5000000
- 27157 multiletter control sequences out of 15000+600000
+ 9040 strings out of 478268
+ 197093 string characters out of 5846347
+ 470867 words of memory out of 5000000
+ 27179 multiletter control sequences out of 15000+600000
  479305 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,7n,79p,1189b,512s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 71i,9n,79p,1254b,512s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on paper-draft-plain.pdf (8 pages, 2119694 bytes).
+Output written on paper-draft-plain.pdf (11 pages, 2677678 bytes).
 PDF statistics:
- 125 PDF objects out of 1000 (max. 8388607)
- 70 compressed objects within 1 object stream
+ 140 PDF objects out of 1000 (max. 8388607)
+ 76 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

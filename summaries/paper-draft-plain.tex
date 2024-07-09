@@ -36,6 +36,29 @@ Common envelope (CE) is the outcome of unstable mass transfer. During CE, both s
 
 In this paper, we are going to explore the formation possibility of these wide post-mass transfer WD+MS binaries with COSMIC model. We perform COSMIC simulation on both individual binary star systems and sampled population to explore the formation of WD+MS binaries under different conditions. In section \ref{sec:ce}, we are going to investigate formation of individual wide WD+MS binaries through CE for a variety of variables, including initial mass, initial separation, CE efficiency, and the energy budget of the CE. In section \ref{sec:stable}, we are going to explore the formation of individual wide WD+MS binaries through stable mass transfer. In section \ref{sec:population}, we will research on how different COSMIC model affect simulation results of a sample population of binary star systems, and how the formation of post WD+MS binaries depends on various parameters.
 
+Throughout the paper, the stellar type and evolution type follows the BSE conventions. \verb|kstar| values specify the evolutionary state of the star, and \verb|evol_type| values specify the evolutionary changes of the binary systems:
+
+\begin{tabular}{cl|cl}
+  \verb|kstar| & evolutionary state & \verb|evol_type| & evolutionary change\\
+  \hline
+  0 & MS $<0.7 \Msun$ & 1 & initial state \\
+  1 & MS $>0.7 \Msun$ & 2 & kstar change \\
+  2 & Hertzprung Gap & 3 & begin Roche lobe overflow\\
+  3 & First Giant Branch & 4 & end Roche lobe overflow\\
+  4 & Core Helium Burning & 5 & contact \\
+  5 & Early AGB & 6 & coalescence \\
+  6 & TP-AGB & 7 & begin common envelope \\
+  7 & Naked Helium Star MS & 8 & end common envelope \\
+  8 & Naked Helium Star Hertzprung Gap & 9 & no remnant leftover \\
+  9 & Naked Helium Star Giant Branch & 10 & max evolution time \\
+  10 & Helium White Dwarf & 11 & binary disruption \\
+  11 & Carbon/Oxygen White Dwarf & 12 & begin symbiotic phase \\
+  12 & Oxygen/Neon White Dwarf & 13 & end symbiotic phase \\
+  13 & Neutron Star & 14 & blue straggler \\
+  14 & Black Hole & 15 & supernova of primary \\
+  15 & Massless Remnant & 16 & supernova of secondary
+\end{tabular}
+
 \section{Formation Through Common Envelope} \label{sec:ce}
 In \cite{yamaguchi_hi, yamaguchi_lo}, the author discussed the formation of WD+MS binaries through CE for both high-mass and low-mass systems, and it was found that wide WD+MS systems can be formed for certain energy budgets and certain initial separation in the MESA model. We hope to explore similar models in COSMIC.
 
@@ -84,7 +107,7 @@ After simulation is finished, we select the time-step when the system finished C
 
 There are several interesting points of the results. First of all, comparing the four panels, we found that as $\alphace$ decreases, the final separation decreases in general. This can be explained by Equation \ref{ebind-sep}. Qualitatively, note that more energy from the orbit is needed to eject the envelope for low $\alphace$, so the resulting $a_f$ is expected to be smaller. 
 
-It is worth noting that most of these systems experience two mass transfer phases in COSMIC before reaching WD+MS. That is, during the evolution process, two CE processes take place, between which there is a period of time. A typical change of \verb|evol_type| through the evolution is \textbf{\dots-3-7-8-4-\dots-3-7-8-4-\dots}, where WD+MS is reached during the second mass transfer process. Another possible change of \verb|evol_type| through the volution is \textbf{\dots-3-7-8-7-8-4-\dots}, which will be mentioned in the next paragraph. Statistically, we found that \textbf{(***TO-DO***)} fraction of all our $320000$ simulated binaries experience two CE processes before reaching WD+MS. To explain this qualitatively, we notice that when the primary loses too much mass during the first CE, the CE process ends, as the radius of the primary becomes smaller than the Roche Lobe. After the primary fills its Roche lobe and has a large enough envelope again, the CE process resumes and causes two CE processes in total.
+It is worth noting that most of these systems experience two mass transfer phases in COSMIC before reaching WD+MS. That is, during the evolution process, two CE processes take place, between which there is a period of time. A typical change of \verb|evol_type| through the evolution is \textbf{\dots-3-7-8-4-\dots-3-7-8-4-\dots}, where WD+MS is reached during the second mass transfer process. Another possible change of \verb|evol_type| through the volution is \textbf{\dots-3-7-8-7-8-4-\dots}, which will be mentioned in the next paragraph. Statistically, we found that \textbf{(***TO-DO***)} fraction of all our $320000$ simulated binaries experience two CE processes before reaching WD+MS. To explain this qualitatively, we notice that when the primary loses too much mass during the first CE, the CE process ends, as the radius of the primary becomes smaller than the Roche lobe. After the primary fills its Roche lobe and has a large enough envelope again, the CE process resumes and causes two CE processes in total.
 
 From Figure \ref{res_hi}, we also notice that final separation $a_f$ jumps obviously at about $2.9 \au$, and $7.1 \au$. After investigating the \verb|bpp| array of these simulations, we find out the jump at about $2.9 \au$ and $7.1 \au$ is likely due to the difference of \verb|kstar_1| at the start of RLOF. For $a_i < 2.9 \au$, RLOF starts when \verb|kstar_1 = 3|. For $a_i = 2.9 \au$, RLOF starts when \verb|kstar_1 = 4|. For $2.9 \au < a_i < 7.1 \au$, RLOF starts when \verb|kstar_1 = 5|. For $a_i > 7.1 \au$, RLOF starts when \verb|kstar_1 = 6|. For different star type, the structure and mass of the envelope is different, leading to different binding energy $\Ebind$ and thus different final separation $a_f$.
 
@@ -111,7 +134,7 @@ After we have obtained the simulation results for different initial conditions, 
   \label{fit_hi}
 \end{figure}
 
-We present the fitting results for energy budget $\Ebind = \Egrav + \Eint$ in Figure \ref{fit_hi}. Notice that in the central panel, there is a small bump of the blue line. This is because at $6 \sim 7 \au$, we cannot reach such low final separation in COSMIC while forming a WD+MS binary at the same time. From the left panel, we can see that it is possible to create WD+MS binaries with final separation $>0.15 \au$ in MESA as long as internal energy $\Eint$ is included. However, in the right panel we show that this correspond to very large $\lambda$ in COSMIC ($\lambda > \sim 20$).
+We present the fitting results for energy budget $\Ebind = \Egrav + \Eint$ in Figure \ref{fit_hi}. Notice that in the central panel, there is a small bump of the blue line. This is because at $6 \sim 7 \au$, we cannot reach such low final separation in COSMIC while forming a WD+MS binary at the same time. From the left panel, we can see that it is possible to create WD+MS binaries with $a_f > 0.15 \au$ in MESA as long as internal energy $\Eint$ is included, with initial separation $a_i > 3.5 \au$. However, in the right panel we show that this correspond to very large $\lambda$ in COSMIC ($\lambda > \sim 20$).
 
 \begin{figure}
   \centering
@@ -154,8 +177,37 @@ After simulation is finished, we again select the time-step when the system fini
   \label{res_lo}
 \end{figure}
 
+To compare the results with \cite{yamaguchi_lo}, we use the same approach as that for high mass systems. In Figure \ref{fit_cmp_lo_whole}, we compare COSMIC with MESA model that includes binding energy of the entire envelope. In Figure \ref{fit_cmp_lo_pt}, we compare COSMIC with MESA model that includes only binding energy of the outer envelope. Notice that we do not have fitting results for $a_i > 4 \au$. This is because no WD+MS binaries form in COSMIC for such initial separation range.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\linewidth]{fig/1.5+0.8cmp_whole.png}
+  \caption{Effective $\lambda$ fitting results of a $1.5\Msun + 0.85\Msun$ system for common envelope structure in MESA. Binding energy of the \emph{entire envelope} is considered. Left Panel: MESA results in \cite{yamaguchi_lo} of how final separation $a_f$ depends on initial separation $a_i$. Central Panel: COSMIC results of how final separation $a_f$ depends on initial separation $a_i$, produced by the effective $\lambda$. Right Panel: effective $\lambda$ in COSMIC that corresponds to the MESA results for each initial separation $a_i$. The purple line represents default $\lambda$ calculated using \cite{claeys2014theoretical}. The red dashed line and the blue dashed line in the left and central panel represents $0.15 \au$ and $0.7 \au$ respectively. $0.15 \au$ is the minimal separation for observed wide post-CE WD+MS binaries, while $0.7 \au$ is the typical separation for wide post-CE WD+MS binaries.}
+  \label{fit_cmp_lo_whole}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\linewidth]{fig/1.5+0.8cmp_pt.png}
+  \caption{Same as Figure \ref{fit_cmp_lo_pt} but only binding enregy of the \emph{outer envelope} is considered.}
+  \label{fit_cmp_lo_pt}
+\end{figure}
+
+From the left panel of Figure \ref{fit_cmp_lo_whole}, we can see that wide WD+MS systems can form in MESA model when $a_i > 2.5 \au$. This is reproduced in COSMIC with $\lambda \sim 1$.Hence, wide WD+MS can form for $a_i > 2.5 \au$ with parameter $\lambda$ about the same as default. Recall that for high mass system, wide WD+MS systems cannot form without $\lambda \sim 10^2$. This is a significant difference between high mass systems and low mass systems.
 
 \section{Formation Through Stable Mass Transfer} \label{sec:stable}
+
+After exploring the formation of WD+MS binaries through common envelope, we investigate the possibility of forming WD+MS binaries through stable mass transfer. In \cite{yamaguchi_lo}, the author plot the $\MWD - \Porb$ relation of observed wide WD+MS bianries, and argues that it is not possible to form wide WD+MS binaries through stable mass. The plot is recreated in Figure \ref{theory-observed}, and from the figure, we can see that the observed wide post-mass transfer WD+MS bianries do not match the theoretical $\MWD - \Porb$ relation for stable mass transfer calculated in \cite{rappaport1995relation}. Also, the author aruges that stable mass transfer requires donors on SGB at the onset of mass transfer. However, this will not lead to WDs with masses observed \cite{yamaguchi_lo}.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\linewidth]{fig/theory-observed.png}
+  \caption{$M_{\mathrm{WD}} - P_{\mathrm{orb}}$ relation of observed wide post-mass transfer binaries. White dwarf mass $\MWD$ correspond to The colors of the points represent the masses of the luminous companion, $\Mstar$. On the right axis, we show the minimum orbital separation $a_{\mathrm{peri}}$, corresponding to the period assuming companion mass $\Mstar = 1 \Msun$ and white dwarf mass $\MWD = 0.6 \Msun$. The dashed line and the grey region is the track along which binaries undergoing stable MT are expected to evolve according to \cite{rappaport1995relation}}.
+  \label{theory-observed}
+\end{figure}
+
+As in the common envelope section, we investigate how the formation of WD+MS binaries depends on various parameters in high mass systems using $7\Msun + 1 \Msun$ binaries, and in low mass systems using $1.5\Msun + 0.85\Msun$ binaries.
+
 
 \section{Population Synthesis Results} \label{sec:population}
 
