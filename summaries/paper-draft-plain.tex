@@ -38,8 +38,8 @@ In this paper, we are going to explore the formation possibility of these wide p
 
 Throughout the paper, the stellar type and evolution type follows the BSE conventions. \verb|kstar| values specify the evolutionary state of the star, and \verb|evol_type| values specify the evolutionary changes of the binary systems:
 
-\begin{tabular}{cl|cl}
-  \verb|kstar| & evolutionary state & \verb|evol_type| & evolutionary change\\
+\begin{tabular}{cl | cl}
+  \verb|kstar| & \textbf{evolutionary state} & \verb|evol_type| & \textbf{evolutionary change} \\
   \hline
   0 & MS $<0.7 \Msun$ & 1 & initial state \\
   1 & MS $>0.7 \Msun$ & 2 & kstar change \\
@@ -96,6 +96,8 @@ We ran COSMIC binary evolution simulation of a $7\Msun + 1\Msun$ system and inve
 
 After simulation is finished, we select the time-step when the system finished CE for the first time (\verb|evol_type = 8|). At this moment, if the system is a WD+MS system, we record their separation as the final separation $a_f$. Otherwise, we set $a_f = 0$ and consider this initial condition unable to produce a WD+MS system. We create four heat maps for the four different CE efficiencies. In Figure \ref{res_hi}, we plot the final separation $a_f$ of the WD+MS systems against initial separation $a_i$ and the CE flag $- \lambda$.
 
+It is worth noting that most of these systems experience two mass transfer phases in COSMIC before reaching WD+MS. That is, during the evolution process, two CE processes take place, between which there is a period of time. A typical change of \verb|evol_type| through the evolution is \textbf{\dots-3-7-8-4-\dots-3-7-8-4-\dots}, where WD+MS is reached during the second mass transfer process. Another possible change of \verb|evol_type| through the volution is \textbf{\dots-3-7-8-7-8-4-\dots}, which will be mentioned in the next paragraph. Statistically, we found that \textbf{(***TO-DO***)} fraction of all our $320000$ simulated binaries experience two CE processes before reaching WD+MS. To explain this qualitatively, we notice that when the primary loses too much mass during the first CE, the CE process ends, as the radius of the primary becomes smaller than the Roche lobe. After the primary fills its Roche lobe and has a large enough envelope again, the CE process resumes and causes two CE processes in total.
+
 \begin{figure}
   \centering
   \includegraphics[width=\linewidth]{fig/7+1results.png}
@@ -106,8 +108,6 @@ After simulation is finished, we select the time-step when the system finished C
 \subsubsection{Discussions}
 
 There are several interesting points of the results. First of all, comparing the four panels, we found that as $\alphace$ decreases, the final separation decreases in general. This can be explained by Equation \ref{ebind-sep}. Qualitatively, note that more energy from the orbit is needed to eject the envelope for low $\alphace$, so the resulting $a_f$ is expected to be smaller. 
-
-It is worth noting that most of these systems experience two mass transfer phases in COSMIC before reaching WD+MS. That is, during the evolution process, two CE processes take place, between which there is a period of time. A typical change of \verb|evol_type| through the evolution is \textbf{\dots-3-7-8-4-\dots-3-7-8-4-\dots}, where WD+MS is reached during the second mass transfer process. Another possible change of \verb|evol_type| through the volution is \textbf{\dots-3-7-8-7-8-4-\dots}, which will be mentioned in the next paragraph. Statistically, we found that \textbf{(***TO-DO***)} fraction of all our $320000$ simulated binaries experience two CE processes before reaching WD+MS. To explain this qualitatively, we notice that when the primary loses too much mass during the first CE, the CE process ends, as the radius of the primary becomes smaller than the Roche lobe. After the primary fills its Roche lobe and has a large enough envelope again, the CE process resumes and causes two CE processes in total.
 
 From Figure \ref{res_hi}, we also notice that final separation $a_f$ jumps obviously at about $2.9 \au$, and $7.1 \au$. After investigating the \verb|bpp| array of these simulations, we find out the jump at about $2.9 \au$ and $7.1 \au$ is likely due to the difference of \verb|kstar_1| at the start of RLOF. For $a_i < 2.9 \au$, RLOF starts when \verb|kstar_1 = 3|. For $a_i = 2.9 \au$, RLOF starts when \verb|kstar_1 = 4|. For $2.9 \au < a_i < 7.1 \au$, RLOF starts when \verb|kstar_1 = 5|. For $a_i > 7.1 \au$, RLOF starts when \verb|kstar_1 = 6|. For different star type, the structure and mass of the envelope is different, leading to different binding energy $\Ebind$ and thus different final separation $a_f$.
 
@@ -160,7 +160,7 @@ We notice that the effective $\lambda$ now gets with in the order of $\sim 10$. 
 
 \subsection{Low Mass Systems ($1.5 \Msun + 0.85 \Msun$)} \label{subsec:low}
 
-\subsubsection{Methods and results}
+\subsubsection{Methods and Results}
 According to \cite{yamaguchi_lo}, the WD mass in the Gaia sample ranges from $0.5\Msun$ to $0.8\Msun$, which corresponds to progenitor mass of $1 \Msun$ to $3 \Msun$. The companions mass has a median of $0.85 \Msun$. MESA results for $1.5\Msun + 0.85\Msun$ systems is documented in \cite{yamaguchi_hi}. Hence, we consider a $1.5\Msun + 0.85\Msun$ evolution model in COSMIC and compare the results with those in \cite{yamaguchi_hi}. For the common envelope, we include all thermal energy $\Eth$ into the binding energy $\Ebind$, while the recombination energy $\Erec$ is included in part with a parameter $\alpharec$. That is,
 \[
   \Ebind = \Egrav + \Eth + \alpharec \Erec.
@@ -197,7 +197,7 @@ From the left panel of Figure \ref{fit_cmp_lo_whole}, we can see that wide WD+MS
 
 \section{Formation Through Stable Mass Transfer} \label{sec:stable}
 
-After exploring the formation of WD+MS binaries through common envelope, we investigate the possibility of forming WD+MS binaries through stable mass transfer. In \cite{yamaguchi_lo}, the author plot the $\MWD - \Porb$ relation of observed wide WD+MS bianries, and argues that it is not possible to form wide WD+MS binaries through stable mass. The plot is recreated in Figure \ref{theory-observed}, and from the figure, we can see that the observed wide post-mass transfer WD+MS bianries do not match the theoretical $\MWD - \Porb$ relation for stable mass transfer calculated in \cite{rappaport1995relation}. Also, the author aruges that stable mass transfer requires donors on SGB at the onset of mass transfer. However, this will not lead to WDs with masses observed \cite{yamaguchi_lo}.
+After exploring the formation of WD+MS binaries through common envelope, we investigate the possibility of forming WD+MS binaries through stable mass transfer. In \cite{yamaguchi_lo}, the author plot the $\MWD - \Porb$ relation of observed wide WD+MS bianries, and argues that it is not possible to form wide WD+MS binaries through stable mass. The plot is recreated in Figure \ref{theory-observed}, and from the figure, we can see that the observed wide post-mass transfer WD+MS bianries do not match the theoretical $\MWD - \Porb$ relation for stable mass transfer calculated in \cite{rappaport1995relation}. Also, the author aruges that stable mass transfer requires donors on SGB at the onset of mass transfer. However, this will not lead to WDs with masses observed \cite{yamaguchi_lo}. We will verfiy this idea in this section using $7\Msun + 1 \Msun$ binaries.
 
 \begin{figure}
   \centering
@@ -206,8 +206,30 @@ After exploring the formation of WD+MS binaries through common envelope, we inve
   \label{theory-observed}
 \end{figure}
 
-As in the common envelope section, we investigate how the formation of WD+MS binaries depends on various parameters in high mass systems using $7\Msun + 1 \Msun$ binaries, and in low mass systems using $1.5\Msun + 0.85\Msun$ binaries.
+\subsection{Methods and Results}
+First of all, to ensure stable mass transfer in COSMIC, we modify every entry of \verb|qcrit_array| in \verb|BSEDict| from the default $0.0$ to $20.0$. This changes the critical mass ratio for onset of unstable mass transfer to $20.0$ Based on our initial mass ratio $7:1$, this will make the actual mass raio of our system below this critical throughout the evolutionary process.
 
+Secondly, a parameter on which stable mass transfer process depends is the accrection efficiency $\beta$, which in COSMIC is represented by \verb|acc_lim| in \verb|BSEDict|. Accretion efficiency is the fraction $\beta$ of all transfered materials that is accreted by the accretor. That is, $\dot{M_a} = -\beta\dot{M_d}$ where $M_d$ is the mass of donor and $M_a$ is the mass of accretor.
+
+In our simulation, we investigate how accretion efficiency $\beta$ and initial separation $a_i$ affects the final separation $a_f$. We run a grid of three different $\beta$ — $\beta = 0.0$, $0.5$ and $1.0$, and a linear grid of $a_i$ from $2 \au$ to $8 \au$ with $400$ steps. In total, we simulate $1200$ binaries with different accretion limit and initial separation. For each system, after the simulation is finished, we select the first timestep, if any, that shows a WD+MS binary. We record the separation at this moment as the final separation $a_f$, and we compare them with the observed minimum separation $0.15 \au$ for post-mass transfer WD binaries.
+
+The results are presented in Figure \ref{stable_hi}. Notice the gap for $a_i$ ranges in $3 \sim 4.5 \au$. This means no WD+MS forms for this initial separation. In fact, for these initial separations and accretion efficiencies, two star merges.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.75\linewidth]{fig/stable_hi_log.png}
+  \caption{COSMIC results of WD+MS binaries after stable mass transfer for $7\Msun + 1\Msun$ systems, with accretion efficiency $\beta = 0$, $\beta = 0.5$, and $\beta = 1$ respectively. Left panel: dependence of final separation $a_f$ of the WD+MS binary on initial separation $a_i$. Right panel: The corresponding companion mass in solar units in the WD+MS binary. The gap in both figure represents that no WD+MS system forms for that initial separation.}
+  \label{stable_hi}
+\end{figure}
+
+Notice that the majority of these systems have final separation $a_f > 0.15 \au$. However, this is \textbf{not the correct approach}, since the companion mass in our observed wide WD+MS binaries has median mass $\sim 1\Msun$. However, in the simulation results shown in Figure \ref{stable_hi}, the final companion mass is about $4 \Msun$ and $6.5 \Msun$ for $\beta = 0.5$ and $\beta = 1.0$ respectively. Hence, we need to adjust the  initial companion mass $M_{\star, i}$ and the accretion efficiency \verb|acc_lim|, in order to make the final companion mass $M_{\star, f}$ close to $1\Msun$. Therefore, we lower the initial companion mass $M_{\star, i}$ and adjust the accretion efficiency $\beta$ and re-run the simulation. The results for $7\Msun + 0.7\Msun$ with $\beta = 0.1$, and $7\Msun + 0.5\Msun$ with $\beta = 0.2$ is shown in Figure \ref{stable_hi_ex}. After adjusting the initial mass of companion and the accretion efficiency, now the final mass of the companion is about $1\Msun$ and we get systems similar to our observed sample.
+
+\begin{figure}
+  \centering
+  \includegraphics[width = 0.75\linewidth]{fig/stable7+1ex.png}
+  \caption{COSMIC results of WD+MS binaries after stable mass transfer for two systems — $7\Msun + 0.7\Msun$ with accretion efficiency $\beta = 0.1$, and $7\Msun + 0.5\Msun$ with accretion efficiency $\beta = 0.2$. The left and right panel presents the same content as in Figure \ref{stable_hi}.}
+  \label{stable_hi_ex}
+\end{figure}
 
 \section{Population Synthesis Results} \label{sec:population}
 
