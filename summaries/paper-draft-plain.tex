@@ -5,6 +5,7 @@
 \usepackage{graphicx}
 \usepackage{siunitx}
 \usepackage{listings}
+\usepackage{amsmath}
 \usepackage[labelfont=bf]{caption}
 
 \newcommand{\Msun}{\,\mathrm{M_{\odot}}}
@@ -38,7 +39,8 @@ In this paper, we are going to explore the formation possibility of these wide p
 
 Throughout the paper, the stellar type and evolution type follows the BSE conventions. \verb|kstar| values specify the evolutionary state of the star, and \verb|evol_type| values specify the evolutionary changes of the binary systems:
 
-\begin{tabular}{cl | cl}
+\begin{tabular}{|cl|cl|}
+  \hline
   \verb|kstar| & \textbf{evolutionary state} & \verb|evol_type| & \textbf{evolutionary change} \\
   \hline
   0 & MS $<0.7 \Msun$ & 1 & initial state \\
@@ -56,7 +58,8 @@ Throughout the paper, the stellar type and evolution type follows the BSE conven
   12 & Oxygen/Neon White Dwarf & 13 & end symbiotic phase \\
   13 & Neutron Star & 14 & blue straggler \\
   14 & Black Hole & 15 & supernova of primary \\
-  15 & Massless Remnant & 16 & supernova of secondary
+  15 & Massless Remnant & 16 & supernova of secondary \\
+  \hline
 \end{tabular}
 
 \section{Formation Through Common Envelope} \label{sec:ce}
@@ -96,8 +99,6 @@ We ran COSMIC binary evolution simulation of a $7\Msun + 1\Msun$ system and inve
 
 After simulation is finished, we select the time-step when the system finished CE for the first time (\verb|evol_type = 8|). At this moment, if the system is a WD+MS system, we record their separation as the final separation $a_f$. Otherwise, we set $a_f = 0$ and consider this initial condition unable to produce a WD+MS system. We create four heat maps for the four different CE efficiencies. In Figure \ref{res_hi}, we plot the final separation $a_f$ of the WD+MS systems against initial separation $a_i$ and the CE flag $- \lambda$.
 
-It is worth noting that most of these systems experience two mass transfer phases in COSMIC before reaching WD+MS. That is, during the evolution process, two CE processes take place, between which there is a period of time. A typical change of \verb|evol_type| through the evolution is \textbf{\dots-3-7-8-4-\dots-3-7-8-4-\dots}, where WD+MS is reached during the second mass transfer process. Another possible change of \verb|evol_type| through the volution is \textbf{\dots-3-7-8-7-8-4-\dots}, which will be mentioned in the next paragraph. Statistically, we found that \textbf{(***TO-DO***)} fraction of all our $320000$ simulated binaries experience two CE processes before reaching WD+MS. To explain this qualitatively, we notice that when the primary loses too much mass during the first CE, the CE process ends, as the radius of the primary becomes smaller than the Roche lobe. After the primary fills its Roche lobe and has a large enough envelope again, the CE process resumes and causes two CE processes in total.
-
 \begin{figure}
   \centering
   \includegraphics[width=\linewidth]{fig/7+1results.png}
@@ -106,6 +107,8 @@ It is worth noting that most of these systems experience two mass transfer phase
 \end{figure}
 
 \subsubsection{Discussions}
+
+A typical change of \verb|evol_type| through the evolution is $\boxed{\text{\textbf{*-3-7-8-4-*-3-7-8-4-*}}}$ (refer to Section \ref{sec:intro} for correspondence between \verb|evol_type| and evolutionary changes), where WD+MS is reached during the second mass transfer process. Another possible change of \verb|evol_type| through the volution is $\boxed{\text{\textbf{*-3-7-8-7-8-4-*}}}$. It is worth noting that most of these systems experience two mass transfer phases in COSMIC before reaching WD+MS. That is, during the evolution process, two CE processes take place, between which there is a period of time. Statistically, we found that \textbf{(***TO-DO***)} fraction of all our $320000$ simulated binaries experience two CE processes before reaching WD+MS. To explain this qualitatively, we notice that when the primary loses too much mass during the first CE, the CE process ends, as the radius of the primary becomes smaller than the Roche lobe. After the primary fills its Roche lobe and has a large enough envelope again, the CE process resumes and causes two CE processes in total.
 
 There are several interesting points of the results. First of all, comparing the four panels, we found that as $\alphace$ decreases, the final separation decreases in general. This can be explained by Equation \ref{ebind-sep}. Qualitatively, note that more energy from the orbit is needed to eject the envelope for low $\alphace$, so the resulting $a_f$ is expected to be smaller. 
 
@@ -118,7 +121,7 @@ From Figure \ref{res_hi}, we also notice that final separation $a_f$ jumps obvio
   \label{jump-zoom}
 \end{figure}
 
-Inspecting more closely, we found that the final separation $a_f$ jumps at about $5.2 \sim 5.4 \au$. This is especially obvious with $\alphace = 0.3$. To illustrate, we zoom in the simulation results of $\alphace = 0.3$, and present the change of final separation $a_f$ as initial separation $a_i$ increases in Figure \ref{jump-zoom}. From here, we can clearly see two jumps — one between $5.1\au$ and $5.2\au$, the other at $5.34\au$. To explain this, we again go to the \verb|bpp| array of these systems. The first jump is because the evolution process changes from \textbf{3-7-8-4-3-7-8-4} to \textbf{3-7-8-7-8-4}. This means that for relatively larger initial separation $a_i$, the primary fills its Roche lobe all the time, leading to more mass loss during a shorter timescale and thus larger final separation. For the second jump, it is because \verb|kstar_1| changes from \verb|8| to \verb|9| at the start of the second common envelope. This changes the binding energy of the common envelope and thus changes the final separation.
+Inspecting more closely, we found that the final separation $a_f$ jumps at about $5.2 \sim 5.4 \au$. This is especially obvious with $\alphace = 0.3$. To illustrate, we zoom in the simulation results of $\alphace = 0.3$, and present the change of final separation $a_f$ as initial separation $a_i$ increases in Figure \ref{jump-zoom}. From here, we can clearly see two jumps — one between $5.1\au$ and $5.2\au$, the other at $5.34\au$. To explain this, we again go to the \verb|bpp| array of these systems. The first jump is because the evolution process changes from $\boxed{\text{\textbf{3-7-8-4-3-7-8-4}}}$ to $\boxed{\text{\textbf{3-7-8-7-8-4}}}$. This means that for relatively larger initial separation $a_i$, the primary fills its Roche lobe all the time, leading to more mass loss during a shorter timescale and thus larger final separation. For the second jump, it is because \verb|kstar_1| changes from \verb|8| to \verb|9| at the start of the second common envelope. This changes the binding energy of the common envelope and thus changes the final separation.
 
 Finally, notice that there exists a small triangular gap in the figure for $\alphace = 1$. This is because \verb|kstar_1| becomes a neutron star and no rows in the \verb|bpp| gets selected.
 
@@ -222,7 +225,10 @@ The results are presented in Figure \ref{stable_hi}. Notice the gap for $a_i$ ra
   \label{stable_hi}
 \end{figure}
 
-Notice that the majority of these systems have final separation $a_f > 0.15 \au$. However, this is \textbf{not the correct approach}, since the companion mass in our observed wide WD+MS binaries has median mass $\sim 1\Msun$. However, in the simulation results shown in Figure \ref{stable_hi}, the final companion mass is about $4 \Msun$ and $6.5 \Msun$ for $\beta = 0.5$ and $\beta = 1.0$ respectively. Hence, we need to adjust the  initial companion mass $M_{\star, i}$ and the accretion efficiency \verb|acc_lim|, in order to make the final companion mass $M_{\star, f}$ close to $1\Msun$. Therefore, we lower the initial companion mass $M_{\star, i}$ and adjust the accretion efficiency $\beta$ and re-run the simulation. The results for $7\Msun + 0.7\Msun$ with $\beta = 0.1$, and $7\Msun + 0.5\Msun$ with $\beta = 0.2$ is shown in Figure \ref{stable_hi_ex}. After adjusting the initial mass of companion and the accretion efficiency, now the final mass of the companion is about $1\Msun$ and we get systems similar to our observed sample.
+Notice that the majority of these systems have final separation $a_f > 0.15 \au$. However, this is \textbf{not the correct approach}, since the companion mass in our observed wide WD+MS binaries has median mass $\sim 1\Msun$. However, in the simulation results shown in Figure \ref{stable_hi}, the final companion mass is about $4 \Msun$ and $6.5 \Msun$ for $\beta = 0.5$ and $\beta = 1.0$ respectively. Hence, we need to adjust the  initial companion mass $M_{\star, i}$ and the accretion efficiency $\beta$, in order to make the final companion mass $M_{\star, f}$ close to $1\Msun$. Therefore, we lower the initial companion mass $M_{\star, i}$ and adjust the accretion efficiency $\beta$ and re-run the simulation. The results for $7\Msun + 0.7\Msun$ with $\beta = 0.1$, and $7\Msun + 0.5\Msun$ with $\beta = 0.2$ is shown in Figure \ref{stable_hi_ex}. 
+
+After adjusting the initial mass of companion and the accretion efficiency, now the final mass of the companion is about $1\Msun$ and we get systems similar to our observed samples. 
+Also, in Figure \ref{stable_hi_ex}, we note that when initial separation $a_i$ lies in the range of $2.5 \sim 4.5 \au$, the final separation incerases sharply. Also, it is only in this region that $a_f$ goes larger than the observed minimum $0.15 \au$ for wide WD binaries. Hence, in the next subsection, we will try to explain this sharp increases qualitatively.
 
 \begin{figure}
   \centering
@@ -231,8 +237,25 @@ Notice that the majority of these systems have final separation $a_f > 0.15 \au$
   \label{stable_hi_ex}
 \end{figure}
 
-\section{Population Synthesis Results} \label{sec:population}
+\subsection{Discussions}
+In the previous section, we mentioned how $7\Msun + 1 \Msun$ systems with $\beta = 0$, $7 \Msun + 0.7\Msun$ systems with $\beta = 0.1$, and $7 \Msun + 0.5 \Msun$ systems with $\beta = 0.2$ produces WD+MS binaries with final separation $a_f > 0.15 \au$ and companion mass $\sim 1 \Msun$ in certain range of $a_i$.
 
+From figure \ref{stable_hi_ex}, we can see that the dependence of $a_f$ on $a_i$ can be roughly divided into four parts. The \textbf{pre-spike} part before the sharp increase with $a_i < 2.5 \au$, the \textbf{spike} part where the $a_f$ inrceases sharply with $2.5 \au < a_i < 3.5 \au$, the gap where the two stars merge with $3.5 \au < a_i < 4.5 \au$, and the part after that with $a_i > 4.5 \au$.
+
+Typical \textbf{pre-spike} and \textbf{spike} systems both follows the evolution path $\boxed{\text{\textbf{*-3-*-5-7-8-4-*-3-*-4-*}}}$ before reacing WD+MS. Note that the binaries come into contact (\verb|evol_type = 5|), which follows by a common enevelope phase. After inspecting the evolutionary process more closely, we found that the second stable mass transfer tends to widens the orbit significantly. \textbf{(***TO-DO***)}
+
+\section{Population Synthesis Results} \label{sec:population}
+After investigating how the final separation depends on various parameters in individual binary star systems, we now shift our focus onto the distribution of final orbital period in a population of binaries (equivalent to final separation since $\Porb^2 \sim a^3$).
+
+\subsection{Methods}
+First of all, we sample the binary population using the independent sampler in COSMIC. We set the primary mass model to \verb|korupa01|, eccentricity model to \verb|uniform|, and orbital period model, together with the binary fraction model to \verb|moe19|. We sample a total number of about $10000$ binaries with solar metallicity. The distribution of primary mass and the orbital period in the sampled population is shown in the Figure \ref{sample-distribution}.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\linewidth]{fig/sample-distribution.png}
+  \caption{The distribution of primary mass, companion mass, and orbital period in the sampled population using independent sampler. Left panel: Distribution of primary mass and companion mass in log scale. Right panel: Distribution of orbital period $\Porb$ in log scale.}
+  \label{sample-distribution}
+\end{figure}
 
 \bibliography{reference.bib}
 \bibliographystyle{apalike}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.10)  10 JUL 2024 10:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.10)  10 JUL 2024 11:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -150,42 +150,90 @@ File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
- (/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption.sty
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2021/10/15 v2.17l AMS math features
+\@mathmargin=\skip51
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen161
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2021/08/26 v2.02 operator names
+)
+\inf@bad=\count281
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count282
+\leftroot@=\count283
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count284
+\DOTSCASE@=\count285
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box62
+\strutbox@=\box63
+\big@size=\dimen162
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count286
+\c@MaxMatrixCols=\count287
+\dotsspace@=\muskip16
+\c@parentequation=\count288
+\dspbrk@lvl=\count289
+\tag@help=\toks23
+\row@=\count290
+\column@=\count291
+\maxfields@=\count292
+\andhelp@=\toks24
+\eqnshift@=\dimen163
+\alignsep@=\dimen164
+\tagshift@=\dimen165
+\tagwidth@=\dimen166
+\totwidth@=\dimen167
+\lineht@=\dimen168
+\@envbody=\toks25
+\multlinegap=\skip52
+\multlinetaggap=\skip53
+\mathdisplay@stack=\toks26
+LaTeX Info: Redefining \[ on input line 2938.
+LaTeX Info: Redefining \] on input line 2939.
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2022/03/01 v3.6b Customizing captions (AR)
  (/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
-\caption@tempdima=\dimen161
-\captionmargin=\dimen162
-\caption@leftmargin=\dimen163
-\caption@rightmargin=\dimen164
-\caption@width=\dimen165
-\caption@indent=\dimen166
-\caption@parindent=\dimen167
-\caption@hangindent=\dimen168
+\caption@tempdima=\dimen169
+\captionmargin=\dimen170
+\caption@leftmargin=\dimen171
+\caption@rightmargin=\dimen172
+\caption@width=\dimen173
+\caption@indent=\dimen174
+\caption@parindent=\dimen175
+\caption@hangindent=\dimen176
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count281
-\c@continuedfloat=\count282
+\c@caption@flags=\count293
+\c@continuedfloat=\count294
 Package caption Info: listings package is loaded.
 )
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 29.
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 30.
  (./paper-draft-plain.aux)
 \openout1 = `paper-draft-plain.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -223,17 +271,17 @@ LaTeX Font Info:    ... okay on input line 29.
 
 (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count283
-\scratchdimen=\dimen169
-\scratchbox=\box62
-\nofMPsegments=\count284
-\nofMParguments=\count285
-\everyMPshowfont=\toks23
-\MPscratchCnt=\count286
-\MPscratchDim=\dimen170
-\MPnumerator=\count287
-\makeMPintoPDFobject=\count288
-\everyMPtoPDFconversion=\toks24
+\scratchcounter=\count295
+\scratchdimen=\dimen177
+\scratchbox=\box64
+\nofMPsegments=\count296
+\nofMParguments=\count297
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count298
+\MPscratchDim=\dimen178
+\MPnumerator=\count299
+\makeMPintoPDFobject=\count300
+\everyMPtoPDFconversion=\toks28
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -248,101 +296,96 @@ Package color Info: Driver file: pdftex.def on input line 149.
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 29.
-\c@lstlisting=\count289
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 30.
+\c@lstlisting=\count301
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 31.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 31.
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 39.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 40.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 41.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 41.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 41.
- [1
+) [1
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
 <fig/7+1results.png, id=23, 1746.525pt x 1214.5375pt>
 File: fig/7+1results.png Graphic file (type png)
 <use fig/7+1results.png>
-Package pdftex.def Info: fig/7+1results.png  used on input line 103.
+Package pdftex.def Info: fig/7+1results.png  used on input line 104.
 (pdftex.def)             Requested size: 527.57014pt x 366.86592pt.
 <fig/jump-zoom.png, id=25, 462.528pt x 346.896pt>
 File: fig/jump-zoom.png Graphic file (type png)
 <use fig/jump-zoom.png>
-Package pdftex.def Info: fig/jump-zoom.png  used on input line 116.
+Package pdftex.def Info: fig/jump-zoom.png  used on input line 119.
 (pdftex.def)             Requested size: 316.5453pt x 237.42117pt.
  [3] [4 <./fig/7+1results.png>]
 <fig/7+1fit.png, id=34, 1085.7363pt x 280.8894pt>
 File: fig/7+1fit.png Graphic file (type png)
 <use fig/7+1fit.png>
-Package pdftex.def Info: fig/7+1fit.png  used on input line 132.
+Package pdftex.def Info: fig/7+1fit.png  used on input line 135.
 (pdftex.def)             Requested size: 527.57014pt x 136.49265pt.
-<fig/7+1cmp.png, id=35, 1077.5457pt x 274.626pt>
+ [5 <./fig/jump-zoom.png>]
+<fig/7+1cmp.png, id=39, 1077.5457pt x 274.626pt>
 File: fig/7+1cmp.png Graphic file (type png)
 <use fig/7+1cmp.png>
-Package pdftex.def Info: fig/7+1cmp.png  used on input line 141.
+Package pdftex.def Info: fig/7+1cmp.png  used on input line 144.
 (pdftex.def)             Requested size: 527.57014pt x 134.46315pt.
- [5 <./fig/jump-zoom.png>]
 <fig/7+1ebcmp.png, id=40, 1083.0864pt x 275.3487pt>
 File: fig/7+1ebcmp.png Graphic file (type png)
 <use fig/7+1ebcmp.png>
-Package pdftex.def Info: fig/7+1ebcmp.png  used on input line 150.
+Package pdftex.def Info: fig/7+1ebcmp.png  used on input line 153.
 (pdftex.def)             Requested size: 527.57014pt x 134.12375pt.
  [6 <./fig/7+1fit.png> <./fig/7+1cmp.png>]
 <fig/1.5+0.8results.png, id=46, 1736.4875pt x 1184.425pt>
 File: fig/1.5+0.8results.png Graphic file (type png)
 <use fig/1.5+0.8results.png>
-Package pdftex.def Info: fig/1.5+0.8results.png  used on input line 175.
+Package pdftex.def Info: fig/1.5+0.8results.png  used on input line 178.
 (pdftex.def)             Requested size: 527.57014pt x 359.84845pt.
 <fig/1.5+0.8cmp_whole.png, id=47, 1084.5318pt x 273.6624pt>
 File: fig/1.5+0.8cmp_whole.png Graphic file (type png)
 <use fig/1.5+0.8cmp_whole.png>
-Package pdftex.def Info: fig/1.5+0.8cmp_whole.png  used on input line 184.
+Package pdftex.def Info: fig/1.5+0.8cmp_whole.png  used on input line 187.
 (pdftex.def)             Requested size: 527.57014pt x 133.12279pt.
 <fig/1.5+0.8cmp_pt.png, id=48, 1074.414pt x 274.1442pt>
 File: fig/1.5+0.8cmp_pt.png Graphic file (type png)
 <use fig/1.5+0.8cmp_pt.png>
-Package pdftex.def Info: fig/1.5+0.8cmp_pt.png  used on input line 191.
+Package pdftex.def Info: fig/1.5+0.8cmp_pt.png  used on input line 194.
 (pdftex.def)             Requested size: 527.57014pt x 134.61627pt.
  [7 <./fig/7+1ebcmp.png>] [8 <./fig/1.5+0.8results.png>] [9 <./fig/1.5+0.8cmp_whole.png> <./fig/1.5+0.8cmp_pt.png>]
 <fig/theory-observed.png, id=64, 1654.18pt x 926.46124pt>
 File: fig/theory-observed.png Graphic file (type png)
 <use fig/theory-observed.png>
-Package pdftex.def Info: fig/theory-observed.png  used on input line 204.
+Package pdftex.def Info: fig/theory-observed.png  used on input line 207.
 (pdftex.def)             Requested size: 422.05772pt x 236.37878pt.
  [10 <./fig/theory-observed.png>]
 <fig/stable_hi_log.png, id=69, 735.7086pt x 265.4718pt>
 File: fig/stable_hi_log.png Graphic file (type png)
 <use fig/stable_hi_log.png>
-Package pdftex.def Info: fig/stable_hi_log.png  used on input line 220.
+Package pdftex.def Info: fig/stable_hi_log.png  used on input line 223.
 (pdftex.def)             Requested size: 395.6776pt x 142.77742pt.
 <fig/stable7+1ex.png, id=70, 745.1037pt x 265.4718pt>
 File: fig/stable7+1ex.png Graphic file (type png)
 <use fig/stable7+1ex.png>
-Package pdftex.def Info: fig/stable7+1ex.png  used on input line 229.
+Package pdftex.def Info: fig/stable7+1ex.png  used on input line 235.
 (pdftex.def)             Requested size: 395.6776pt x 140.97482pt.
- (./paper-draft-plain.bbl [11 <./fig/stable_hi_log.png> <./fig/stable7+1ex.png>]) [12] (./paper-draft-plain.aux) ) 
+ [11 <./fig/stable_hi_log.png>]
+<fig/sample-distribution.png, id=75, 867.24pt x 289.08pt>
+File: fig/sample-distribution.png Graphic file (type png)
+<use fig/sample-distribution.png>
+Package pdftex.def Info: fig/sample-distribution.png  used on input line 255.
+(pdftex.def)             Requested size: 527.57014pt x 175.86656pt.
+ (./paper-draft-plain.bbl [12 <./fig/stable7+1ex.png>]) [13 <./fig/sample-distribution.png>] (./paper-draft-plain.aux) ) 
 Here is how much of TeX's memory you used:
- 9056 strings out of 478268
- 197452 string characters out of 5846347
- 470887 words of memory out of 5000000
- 27193 multiletter control sequences out of 15000+600000
- 479305 words of font info for 49 fonts, out of 8000000 for 9000
+ 9686 strings out of 478268
+ 205485 string characters out of 5846347
+ 482430 words of memory out of 5000000
+ 27807 multiletter control sequences out of 15000+600000
+ 483517 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,9n,79p,1254b,512s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on paper-draft-plain.pdf (12 pages, 2905166 bytes).
+Output written on paper-draft-plain.pdf (13 pages, 3012353 bytes).
 PDF statistics:
- 147 PDF objects out of 1000 (max. 8388607)
- 78 compressed objects within 1 object stream
+ 153 PDF objects out of 1000 (max. 8388607)
+ 81 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
