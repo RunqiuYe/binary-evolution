@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.10)  10 JUL 2024 11:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.10)  11 JUL 2024 10:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -372,20 +372,41 @@ File: fig/sample-distribution.png Graphic file (type png)
 <use fig/sample-distribution.png>
 Package pdftex.def Info: fig/sample-distribution.png  used on input line 255.
 (pdftex.def)             Requested size: 527.57014pt x 175.86656pt.
- (./paper-draft-plain.bbl [12 <./fig/stable7+1ex.png>]) [13 <./fig/sample-distribution.png>] (./paper-draft-plain.aux) ) 
+<fig/Mwd-P scatter.png, id=76, 462.528pt x 346.896pt>
+File: fig/Mwd-P scatter.png Graphic file (type png)
+<use fig/Mwd-P scatter.png>
+Package pdftex.def Info: fig/Mwd-P scatter.png  used on input line 265.
+(pdftex.def)             Requested size: 316.5453pt x 237.42117pt.
+ [12 <./fig/stable7+1ex.png>] [13 <./fig/sample-distribution.png> <./fig/Mwd-P scatter.png>]
+<fig/kstar-map-rearr.png, id=87, 1780.6525pt x 949.5475pt>
+File: fig/kstar-map-rearr.png Graphic file (type png)
+<use fig/kstar-map-rearr.png>
+Package pdftex.def Info: fig/kstar-map-rearr.png  used on input line 274.
+(pdftex.def)             Requested size: 527.57014pt x 281.33115pt.
+<fig/dif-kstar map.png, id=88, 462.528pt x 346.896pt>
+File: fig/dif-kstar map.png Graphic file (type png)
+<use fig/dif-kstar map.png>
+Package pdftex.def Info: fig/dif-kstar map.png  used on input line 283.
+(pdftex.def)             Requested size: 316.5453pt x 237.42117pt.
+<fig/dif-kstar two plot.png, id=89, 2059.695pt x 770.88pt>
+File: fig/dif-kstar two plot.png Graphic file (type png)
+<use fig/dif-kstar two plot.png>
+Package pdftex.def Info: fig/dif-kstar two plot.png  used on input line 290.
+(pdftex.def)             Requested size: 527.57014pt x 197.44812pt.
+ [14 <./fig/kstar-map-rearr.png>] [15 <./fig/dif-kstar map.png> <./fig/dif-kstar two plot.png>] (./paper-draft-plain.bbl) [16] (./paper-draft-plain.aux) ) 
 Here is how much of TeX's memory you used:
- 9686 strings out of 478268
- 205485 string characters out of 5846347
- 482430 words of memory out of 5000000
- 27807 multiletter control sequences out of 15000+600000
+ 9718 strings out of 478268
+ 206292 string characters out of 5846347
+ 482470 words of memory out of 5000000
+ 27835 multiletter control sequences out of 15000+600000
  483517 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,9n,79p,1254b,512s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 71i,9n,79p,1326b,512s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on paper-draft-plain.pdf (13 pages, 3012353 bytes).
+Output written on paper-draft-plain.pdf (16 pages, 4346248 bytes).
 PDF statistics:
- 153 PDF objects out of 1000 (max. 8388607)
- 81 compressed objects within 1 object stream
+ 170 PDF objects out of 1000 (max. 8388607)
+ 87 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 
