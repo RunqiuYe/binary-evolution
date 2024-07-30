@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.10)  11 JUL 2024 10:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.10)  30 JUL 2024 15:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -344,66 +344,67 @@ File: fig/1.5+0.8cmp_whole.png Graphic file (type png)
 <use fig/1.5+0.8cmp_whole.png>
 Package pdftex.def Info: fig/1.5+0.8cmp_whole.png  used on input line 187.
 (pdftex.def)             Requested size: 527.57014pt x 133.12279pt.
-<fig/1.5+0.8cmp_pt.png, id=48, 1074.414pt x 274.1442pt>
+ [7 <./fig/7+1ebcmp.png>] [8 <./fig/1.5+0.8results.png>]
+<fig/1.5+0.8cmp_pt.png, id=57, 1074.414pt x 274.1442pt>
 File: fig/1.5+0.8cmp_pt.png Graphic file (type png)
 <use fig/1.5+0.8cmp_pt.png>
 Package pdftex.def Info: fig/1.5+0.8cmp_pt.png  used on input line 194.
 (pdftex.def)             Requested size: 527.57014pt x 134.61627pt.
- [7 <./fig/7+1ebcmp.png>] [8 <./fig/1.5+0.8results.png>] [9 <./fig/1.5+0.8cmp_whole.png> <./fig/1.5+0.8cmp_pt.png>]
+ [9 <./fig/1.5+0.8cmp_whole.png> <./fig/1.5+0.8cmp_pt.png>]
 <fig/theory-observed.png, id=64, 1654.18pt x 926.46124pt>
 File: fig/theory-observed.png Graphic file (type png)
 <use fig/theory-observed.png>
 Package pdftex.def Info: fig/theory-observed.png  used on input line 207.
 (pdftex.def)             Requested size: 422.05772pt x 236.37878pt.
- [10 <./fig/theory-observed.png>]
-<fig/stable_hi_log.png, id=69, 735.7086pt x 265.4718pt>
+<fig/stable_hi_log.png, id=65, 735.7086pt x 265.4718pt>
 File: fig/stable_hi_log.png Graphic file (type png)
 <use fig/stable_hi_log.png>
 Package pdftex.def Info: fig/stable_hi_log.png  used on input line 223.
 (pdftex.def)             Requested size: 395.6776pt x 142.77742pt.
+ [10 <./fig/theory-observed.png>]
 <fig/stable7+1ex.png, id=70, 745.1037pt x 265.4718pt>
 File: fig/stable7+1ex.png Graphic file (type png)
 <use fig/stable7+1ex.png>
 Package pdftex.def Info: fig/stable7+1ex.png  used on input line 235.
 (pdftex.def)             Requested size: 395.6776pt x 140.97482pt.
- [11 <./fig/stable_hi_log.png>]
-<fig/sample-distribution.png, id=75, 867.24pt x 289.08pt>
+ [11 <./fig/stable_hi_log.png> <./fig/stable7+1ex.png>]
+<fig/sample-distribution.png, id=76, 867.24pt x 289.08pt>
 File: fig/sample-distribution.png Graphic file (type png)
 <use fig/sample-distribution.png>
 Package pdftex.def Info: fig/sample-distribution.png  used on input line 255.
 (pdftex.def)             Requested size: 527.57014pt x 175.86656pt.
-<fig/Mwd-P scatter.png, id=76, 462.528pt x 346.896pt>
+ [12 <./fig/sample-distribution.png>]
+<fig/Mwd-P scatter.png, id=81, 462.528pt x 346.896pt>
 File: fig/Mwd-P scatter.png Graphic file (type png)
 <use fig/Mwd-P scatter.png>
 Package pdftex.def Info: fig/Mwd-P scatter.png  used on input line 265.
 (pdftex.def)             Requested size: 316.5453pt x 237.42117pt.
- [12 <./fig/stable7+1ex.png>] [13 <./fig/sample-distribution.png> <./fig/Mwd-P scatter.png>]
-<fig/kstar-map-rearr.png, id=87, 1780.6525pt x 949.5475pt>
+<fig/kstar-map-rearr.png, id=82, 1780.6525pt x 949.5475pt>
 File: fig/kstar-map-rearr.png Graphic file (type png)
 <use fig/kstar-map-rearr.png>
 Package pdftex.def Info: fig/kstar-map-rearr.png  used on input line 274.
 (pdftex.def)             Requested size: 527.57014pt x 281.33115pt.
-<fig/dif-kstar map.png, id=88, 462.528pt x 346.896pt>
+<fig/dif-kstar map.png, id=83, 462.528pt x 346.896pt>
 File: fig/dif-kstar map.png Graphic file (type png)
 <use fig/dif-kstar map.png>
 Package pdftex.def Info: fig/dif-kstar map.png  used on input line 283.
 (pdftex.def)             Requested size: 316.5453pt x 237.42117pt.
-<fig/dif-kstar two plot.png, id=89, 2059.695pt x 770.88pt>
+<fig/dif-kstar two plot.png, id=84, 2059.695pt x 770.88pt>
 File: fig/dif-kstar two plot.png Graphic file (type png)
 <use fig/dif-kstar two plot.png>
 Package pdftex.def Info: fig/dif-kstar two plot.png  used on input line 290.
 (pdftex.def)             Requested size: 527.57014pt x 197.44812pt.
- [14 <./fig/kstar-map-rearr.png>] [15 <./fig/dif-kstar map.png> <./fig/dif-kstar two plot.png>] (./paper-draft-plain.bbl) [16] (./paper-draft-plain.aux) ) 
+ [13 <./fig/Mwd-P scatter.png>] [14 <./fig/kstar-map-rearr.png> <./fig/dif-kstar map.png>] [15 <./fig/dif-kstar two plot.png>] (./paper-draft-plain.bbl) [16] (./paper-draft-plain.aux) ) 
 Here is how much of TeX's memory you used:
  9718 strings out of 478268
  206292 string characters out of 5846347
- 482470 words of memory out of 5000000
+ 481469 words of memory out of 5000000
  27835 multiletter control sequences out of 15000+600000
  483517 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,9n,79p,1326b,512s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 71i,9n,79p,1637b,512s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on paper-draft-plain.pdf (16 pages, 4346248 bytes).
+Output written on paper-draft-plain.pdf (16 pages, 4346970 bytes).
 PDF statistics:
  170 PDF objects out of 1000 (max. 8388607)
  87 compressed objects within 1 object stream

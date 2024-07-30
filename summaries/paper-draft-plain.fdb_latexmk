@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex paper-draft-plain"] 1720709585 "paper-draft-plain.aux" "paper-draft-plain.bbl" "paper-draft-plain" 1720709593
+["bibtex paper-draft-plain"] 1722369262 "paper-draft-plain.aux" "paper-draft-plain.bbl" "paper-draft-plain" 1722369271
   "/usr/local/texlive/2022/texmf-dist/bibtex/bst/base/apalike.bst" 1292289607 24635 604dafcc79f521a11ea73e506e1fbd98 ""
-  "paper-draft-plain.aux" 1720709593 12744 8f99a55c21af1aa1eefc48dea946b85c "pdflatex"
+  "paper-draft-plain.aux" 1722369271 12742 d7b043092d014a2c0e0fc4309189058d "pdflatex"
   "reference.bib" 1718233134 1566 5f85590df1385ebe0cdf473ccbaa3b49 ""
   (generated)
   "paper-draft-plain.bbl"
   "paper-draft-plain.blg"
-["pdflatex"] 1720709585 "/Users/runqiuye/Desktop/studies/undergraduate/research/binary evolution/mass transfer/summaries/paper-draft-plain.tex" "paper-draft-plain.pdf" "paper-draft-plain" 1720709593
-  "/Users/runqiuye/Desktop/studies/undergraduate/research/binary evolution/mass transfer/summaries/paper-draft-plain.tex" 1720709576 35058 7117aee830d594a43348d533886d2776 ""
+["pdflatex"] 1722369262 "/Users/runqiuye/Desktop/studies/undergraduate/research/binary evolution/mass transfer/summaries/paper-draft-plain.tex" "paper-draft-plain.pdf" "paper-draft-plain" 1722369271
+  "/Users/runqiuye/Desktop/studies/undergraduate/research/binary evolution/mass transfer/summaries/paper-draft-plain.tex" 1722369246 35443 4b40353f67519a445eccb1af6c3e73de ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/ecbx0600.tfm" 1136768653 3584 ad9fcbc26a2a7bccd6d08b0a5792fbe0 ""
@@ -111,9 +111,9 @@
   "fig/stable7+1ex.png" 1717772325 233529 dd7692dec4f7aae94b916d7611da7325 ""
   "fig/stable_hi_log.png" 1717681758 178451 80eebd2e9d212ea658850261110f2563 ""
   "fig/theory-observed.png" 1720539471 175396 ae66498a7a29ddb42e79f37f324e2bfe ""
-  "paper-draft-plain.aux" 1720709593 12744 8f99a55c21af1aa1eefc48dea946b85c "pdflatex"
-  "paper-draft-plain.bbl" 1720709585 1355 bcd5739876cfbf6c2e8793c075427381 "bibtex paper-draft-plain"
-  "paper-draft-plain.tex" 1720709576 35058 7117aee830d594a43348d533886d2776 ""
+  "paper-draft-plain.aux" 1722369271 12742 d7b043092d014a2c0e0fc4309189058d "pdflatex"
+  "paper-draft-plain.bbl" 1722369262 1355 bcd5739876cfbf6c2e8793c075427381 "bibtex paper-draft-plain"
+  "paper-draft-plain.tex" 1722369246 35443 4b40353f67519a445eccb1af6c3e73de ""
   (generated)
   "paper-draft-plain.aux"
   "paper-draft-plain.log"
