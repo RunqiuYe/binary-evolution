@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex paper-draft-plain"] 1722369262 "paper-draft-plain.aux" "paper-draft-plain.bbl" "paper-draft-plain" 1722369271
+["bibtex paper-draft-plain"] 1722373502 "paper-draft-plain.aux" "paper-draft-plain.bbl" "paper-draft-plain" 1722373511
   "/usr/local/texlive/2022/texmf-dist/bibtex/bst/base/apalike.bst" 1292289607 24635 604dafcc79f521a11ea73e506e1fbd98 ""
-  "paper-draft-plain.aux" 1722369271 12742 d7b043092d014a2c0e0fc4309189058d "pdflatex"
+  "paper-draft-plain.aux" 1722373510 12724 01247feb0b9875cdecc62e54da8bd19e "pdflatex"
   "reference.bib" 1718233134 1566 5f85590df1385ebe0cdf473ccbaa3b49 ""
   (generated)
   "paper-draft-plain.bbl"
   "paper-draft-plain.blg"
-["pdflatex"] 1722369262 "/Users/runqiuye/Desktop/studies/undergraduate/research/binary evolution/mass transfer/summaries/paper-draft-plain.tex" "paper-draft-plain.pdf" "paper-draft-plain" 1722369271
-  "/Users/runqiuye/Desktop/studies/undergraduate/research/binary evolution/mass transfer/summaries/paper-draft-plain.tex" 1722369246 35443 4b40353f67519a445eccb1af6c3e73de ""
+["pdflatex"] 1722373503 "/Users/runqiuye/Desktop/studies/undergraduate/research/binary evolution/mass transfer/summaries/paper-draft-plain.tex" "paper-draft-plain.pdf" "paper-draft-plain" 1722373511
+  "/Users/runqiuye/Desktop/studies/undergraduate/research/binary evolution/mass transfer/summaries/paper-draft-plain.tex" 1722373493 38541 0dce162dfc626c8e771f8e3d926cf7c3 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/ecbx0600.tfm" 1136768653 3584 ad9fcbc26a2a7bccd6d08b0a5792fbe0 ""
@@ -83,10 +83,12 @@
   "/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def" 1644269979 29921 d0acc05a38bd4aa3af2017f0b7c137ce ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/l3kernel/expl3.sty" 1645736062 6107 e082261f9677386795d8bf6b6254fa9d ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty" 1642022539 4674 ac560df2ef76ab2c406a4948a48f79f8 ""
+  "/usr/local/texlive/2022/texmf-dist/tex/latex/l3packages/xparse/xparse.sty" 1642022539 6758 7d9d899cbbfc962fbc4bb93f4c69eec2 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg" 1279039959 678 4792914a8f45be57bb98413425e4c7af ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/listings/listings.cfg" 1585170648 1830 e31effa752c61538383451ae21332364 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/listings/listings.sty" 1585170648 80964 64e57373f36316e4a09b517cbf1aba2e ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstmisc.sty" 1585170648 77022 ee25ce086f4a79d8cf73bac6f94c02a5 ""
+  "/usr/local/texlive/2022/texmf-dist/tex/latex/physics/physics.sty" 1356048875 29610 a9597219b282d9c78b02393dcd7d4322 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/siunitx/siunitx.sty" 1645051452 279978 cedca7dfb41752631b136d1ed7f3debf ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/tools/array.sty" 1636758526 12694 6c23725d50ab9d1e2d3ce482c58ffcf3 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl" 1644096163 5588 0c1628daf15f4411ff1f463114c634a3 ""
@@ -111,9 +113,9 @@
   "fig/stable7+1ex.png" 1717772325 233529 dd7692dec4f7aae94b916d7611da7325 ""
   "fig/stable_hi_log.png" 1717681758 178451 80eebd2e9d212ea658850261110f2563 ""
   "fig/theory-observed.png" 1720539471 175396 ae66498a7a29ddb42e79f37f324e2bfe ""
-  "paper-draft-plain.aux" 1722369271 12742 d7b043092d014a2c0e0fc4309189058d "pdflatex"
-  "paper-draft-plain.bbl" 1722369262 1355 bcd5739876cfbf6c2e8793c075427381 "bibtex paper-draft-plain"
-  "paper-draft-plain.tex" 1722369246 35443 4b40353f67519a445eccb1af6c3e73de ""
+  "paper-draft-plain.aux" 1722373510 12724 01247feb0b9875cdecc62e54da8bd19e "pdflatex"
+  "paper-draft-plain.bbl" 1722373503 1355 bcd5739876cfbf6c2e8793c075427381 "bibtex paper-draft-plain"
+  "paper-draft-plain.tex" 1722373493 38541 0dce162dfc626c8e771f8e3d926cf7c3 ""
   (generated)
   "paper-draft-plain.aux"
   "paper-draft-plain.log"

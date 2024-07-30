@@ -6,6 +6,7 @@
 \usepackage{siunitx}
 \usepackage{listings}
 \usepackage{amsmath}
+\usepackage{physics}
 \usepackage[labelfont=bf]{caption}
 
 \newcommand{\Msun}{\,\mathrm{M_{\odot}}}
@@ -22,6 +23,9 @@
 \newcommand{\Erec}{E_{\mathrm{rec}}}
 \newcommand{\Porb}{P_{\mathrm{orb}}}
 \newcommand{\au}{\, \mathrm{au}}
+\newcommand{\Md}{M_{\mathrm{d}}}
+\newcommand{\MT}{M_{\mathrm{T}}}
+\newcommand{\Ma}{M_{\mathrm{a}}}
 
 \title{Wide Post-Mass Transfer White-Dwarf Binaries}
 \author{Runqiu Ye}
@@ -212,7 +216,7 @@ After exploring the formation of WD+MS binaries through common envelope, we inve
 \subsection{Methods and Results}
 First of all, to ensure stable mass transfer in COSMIC, we modify every entry of \verb|qcrit_array| in \verb|BSEDict| from the default $0.0$ to $20.0$. This changes the critical mass ratio for onset of unstable mass transfer to $20.0$ Based on our initial mass ratio $7:1$, this will make the actual mass raio of our system below this critical throughout the evolutionary process.
 
-Secondly, a parameter on which stable mass transfer process depends is the accrection efficiency $\beta$, which in COSMIC is represented by \verb|acc_lim| in \verb|BSEDict|. Accretion efficiency is the fraction $\beta$ of all transfered materials that is accreted by the accretor. That is, $\dot{M_a} = -\beta\dot{M_d}$ where $M_d$ is the mass of donor and $M_a$ is the mass of accretor.
+Secondly, a parameter on which stable mass transfer process depends is the accrection efficiency $\beta$, which in COSMIC is represented by \verb|acc_lim| in \verb|BSEDict|. Accretion efficiency is the fraction $\beta$ of all transfered materials that is accreted by the accretor. That is, $\dot{\Ma} = -\beta\dot{\Md}$ where $\Md$ is the mass of donor and $\Ma$ is the mass of accretor.
 
 In our simulation, we investigate how accretion efficiency $\beta$ and initial separation $a_i$ affects the final separation $a_f$. We run a grid of three different accretion efficiency — $\beta = 0.0$, $0.5$ and $1.0$, and a linear grid of $a_i$ from $2 \au$ to $8 \au$ with $400$ steps. In total, we simulate $1200$ binaries with different accretion limit and initial separation. For each system, after the simulation is finished, we select the first timestep, if any, that shows a WD+MS binary. We record the separation at this moment as the final separation $a_f$, and we compare them with the observed minimum separation $0.15 \au$ for post-mass transfer WD binaries.
 
@@ -242,7 +246,33 @@ In the previous section, we mentioned how $7\Msun + 1 \Msun$ systems with $\beta
 
 From figure \ref{stable_hi_ex}, we can see that the dependence of $a_f$ on $a_i$ can be roughly divided into four parts. The \textbf{pre-spike} part before the sharp increase with $a_i < 2.5 \au$, the \textbf{spike} part where the $a_f$ inrceases sharply with $2.5 \au < a_i < 3.5 \au$, the gap where the two stars merge with $3.5 \au < a_i < 4.5 \au$, and the part after that with $a_i > 4.5 \au$.
 
-Typical \textbf{pre-spike} and \textbf{spike} systems both follows the evolution path $\boxed{\text{\textbf{3-5-7-8-4-3-4}}}$ before reacing WD+MS. Note that the binaries come into contact (\verb|evol_type = 5|), which follows by a common enevelope phase. After inspecting the evolutionary process more closely, we found that the second stable mass transfer tends to widens the orbit significantly. \textbf{(***TO-DO***)}
+Typical \textbf{pre-spike} and \textbf{spike} systems both follows the evolution path $\boxed{\text{\textbf{3-5-7-8-4-3-4}}}$ before reacing WD+MS. Note that the binaries come into contact (\verb|evol_type = 5|), which follows by a common enevelope phase. After inspecting the evolutionary process more closely, we found that the second mass transfer (the stable one) tends to widens the orbit significantly. 
+
+To qualitatively explain the widening of the orbits, notice that for stable and non-conservative mass transfer with $\dot \Ma = - \beta \dot \Md$, we have
+\[
+  \frac{\dot J}{J} \propto (1 - \beta) q_d \frac{\dot \Md}{\MT},
+\]
+where $q_d = \Md / \Ma$ is the mass ratio between the donor and the accretor. Also,
+\[
+  \frac{\dot a}{a} = 2 \frac{\dot J}{J} - 2 \frac{\dot \Md}{\Md} - 2 \frac{\dot \Ma}{\Ma} + \frac{\dot \MT}{\MT}.
+\]
+Hence, for stable and non-conservative amss transfer, the widening of orbit can be evaluated with
+\begin{equation}
+  \frac{\dot a}{a} \propto - \qty(\frac{2}{q_d} - 2q_d - \beta) \frac{\dot \Md}{\MT}.
+  \label{stableMT}
+\end{equation}
+Also note that the mass transfer begins when the primary is has \verb|evol_type = 8|, a naked Helium star on the Hertzsprung gap, whose wind mass loss is significant. For a fast wind mass loss, we have
+\begin{equation}
+  \frac{\dot a}{a} = - \frac{\dot \Md}{\MT}.
+  \label{wind}
+\end{equation}
+This means that strong wind wtripping mass from the primary will cause the orbit to expand even further. To illustrate this, we change the \verb|windflag| in \verb|BSEDict| to 0, which correspond to weak wind. Now the $a_i = 2.80 \au$ system has final separation $a_f = 0.05 \au$, and the $a_i = 2.90 \au$ system has final separation $a_f = 0.14 \au$, both smaller than the original $0.09 \au$ and $0.27\au$ that correspond to stronger wind.
+
+For our systems, the mass ratio $q_d > 1$, and the value of $q_d$ increases as the initial separation increases. Hence, based on Equation \ref{stableMT}, the stable mass transfer process actually shrinks the orbit, while the wind mass loss compensates it by windening the orbit. For \textbf{spike} bianries, although $q_d$ is slightly higher, causing the orbit to shrink more according to Equation \ref{stableMT}, the mass loss rate is significantly higher than \textbf{pre-spike} binaries, leading to a more significant increase in orbital separation. Also, \textbf{spike} binaries have larger orbital separation $a$ before mass transfer, which also leads to more significant increase in separation during the mass transfer.
+
+For \textbf{merge} binaries, we notice that the separation of binaries at the start of CE is smaller than \textbf{spike} binaries. This lack of orbital energy to eject the CE explains the merger event. As initial separation contines to incerase, the binaries possess more energy to eject the CE after coming into contact, explaining the reappearance of WD+MS binaries instead of merger.
+
+This concludes our qualitative analysis on the evolution results of $7\Msun + 1\Msun$ through stable mass transfer. Again, as shown in Figure \ref{stable_hi}, for stable mass transfer, the observed minimum separation of wide post-mass transfer WD+MS systems $0.15 \au$ can only be achieved in the \textbf{spike} region. That is, in our results, all wide post-mass transfer systems are due to the strong wind mass loss from the primary that widens the orbit significantly.
 
 \section{Population Synthesis Results} \label{sec:population}
 After investigating how the final separation depends on various parameters in individual binary star systems, we now shift our focus onto the distribution of final orbital period in a population of binaries (equivalent to final separation since $\Porb^2 \sim a^3$).
