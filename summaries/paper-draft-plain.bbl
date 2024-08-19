@@ -1,5 +1,20 @@
 \begin{thebibliography}{}
 
+\bibitem[Agrawal et~al., 2023]{Agrawal_2023}
+Agrawal, P., Hurley, J., Stevenson, S., Rodriguez, C.~L., Szécsi, D., and
+  Kemp, A. (2023).
+\newblock Modelling stellar evolution in mass-transferring binaries and
+  gravitational-wave progenitors with <scp>metisse</scp>.
+\newblock {\em Monthly Notices of the Royal Astronomical Society},
+  525(1):933–951.
+
+\bibitem[Agrawal et~al., 2020]{Agrawal_2020}
+Agrawal, P., Hurley, J., Stevenson, S., Szécsi, D., and Flynn, C. (2020).
+\newblock The fates of massive stars: exploring uncertainties in stellar
+  evolution with metisse.
+\newblock {\em Monthly Notices of the Royal Astronomical Society},
+  497(4):4549–4564.
+
 \bibitem[Claeys et~al., 2014]{claeys2014theoretical}
 Claeys, J., Pols, O., Izzard, R., Vink, J., and Verbunt, F. (2014).
 \newblock Theoretical uncertainties of the type ia supernova rate.

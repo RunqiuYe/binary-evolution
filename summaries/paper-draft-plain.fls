@@ -1,8 +1,8 @@
-PWD /Users/runqiuye/Desktop/studies/undergraduate/research/binary evolution/mass transfer/summaries
+PWD /Users/runqiuye/Desktop/studies/research/binary-evolution/mass-transfer/summaries
 INPUT /usr/local/texlive/2022/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/runqiuye/Desktop/studies/undergraduate/research/binary evolution/mass transfer/summaries/paper-draft-plain.tex
+INPUT /Users/runqiuye/Desktop/studies/research/binary-evolution/mass-transfer/summaries/paper-draft-plain.tex
 OUTPUT paper-draft-plain.log
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls

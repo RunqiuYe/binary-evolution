@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex paper-draft-plain"] 1722373502 "paper-draft-plain.aux" "paper-draft-plain.bbl" "paper-draft-plain" 1722373511
+["bibtex paper-draft-plain"] 1724107330 "paper-draft-plain.aux" "paper-draft-plain.bbl" "paper-draft-plain" 1724108360
   "/usr/local/texlive/2022/texmf-dist/bibtex/bst/base/apalike.bst" 1292289607 24635 604dafcc79f521a11ea73e506e1fbd98 ""
-  "paper-draft-plain.aux" 1722373510 12724 01247feb0b9875cdecc62e54da8bd19e "pdflatex"
-  "reference.bib" 1718233134 1566 5f85590df1385ebe0cdf473ccbaa3b49 ""
+  "paper-draft-plain.aux" 1724108360 13055 365153b519d4372603a93d8ebb72e0dd "pdflatex"
+  "reference.bib" 1724107057 2673 87208be31a3682c980be8dd3758df5cb ""
   (generated)
   "paper-draft-plain.bbl"
   "paper-draft-plain.blg"
-["pdflatex"] 1722373503 "/Users/runqiuye/Desktop/studies/undergraduate/research/binary evolution/mass transfer/summaries/paper-draft-plain.tex" "paper-draft-plain.pdf" "paper-draft-plain" 1722373511
-  "/Users/runqiuye/Desktop/studies/undergraduate/research/binary evolution/mass transfer/summaries/paper-draft-plain.tex" 1722373493 38541 0dce162dfc626c8e771f8e3d926cf7c3 ""
+["pdflatex"] 1724108352 "/Users/runqiuye/Desktop/studies/research/binary-evolution/mass-transfer/summaries/paper-draft-plain.tex" "paper-draft-plain.pdf" "paper-draft-plain" 1724108360
+  "/Users/runqiuye/Desktop/studies/research/binary-evolution/mass-transfer/summaries/paper-draft-plain.tex" 1724108352 40569 654ccff3bfcadb37de73e8dc85bf2677 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/ecbx0600.tfm" 1136768653 3584 ad9fcbc26a2a7bccd6d08b0a5792fbe0 ""
@@ -113,9 +113,9 @@
   "fig/stable7+1ex.png" 1717772325 233529 dd7692dec4f7aae94b916d7611da7325 ""
   "fig/stable_hi_log.png" 1717681758 178451 80eebd2e9d212ea658850261110f2563 ""
   "fig/theory-observed.png" 1720539471 175396 ae66498a7a29ddb42e79f37f324e2bfe ""
-  "paper-draft-plain.aux" 1722373510 12724 01247feb0b9875cdecc62e54da8bd19e "pdflatex"
-  "paper-draft-plain.bbl" 1722373503 1355 bcd5739876cfbf6c2e8793c075427381 "bibtex paper-draft-plain"
-  "paper-draft-plain.tex" 1722373493 38541 0dce162dfc626c8e771f8e3d926cf7c3 ""
+  "paper-draft-plain.aux" 1724108360 13055 365153b519d4372603a93d8ebb72e0dd "pdflatex"
+  "paper-draft-plain.bbl" 1724107330 2021 adec4244bbc59d7dede7becd38531bb4 "bibtex paper-draft-plain"
+  "paper-draft-plain.tex" 1724108352 40569 654ccff3bfcadb37de73e8dc85bf2677 ""
   (generated)
   "paper-draft-plain.aux"
   "paper-draft-plain.log"

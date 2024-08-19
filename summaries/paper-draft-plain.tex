@@ -26,6 +26,8 @@
 \newcommand{\Md}{M_{\mathrm{d}}}
 \newcommand{\MT}{M_{\mathrm{T}}}
 \newcommand{\Ma}{M_{\mathrm{a}}}
+\newcommand{\Menv}{M_{\mathrm{env}}}
+\DeclareMathOperator{\sgn}{sign}
 
 \title{Wide Post-Mass Transfer White-Dwarf Binaries}
 \author{Runqiu Ye}
@@ -323,6 +325,19 @@ To also show how the final separation $\Porb$ depends on \verb|kstar_1| type at 
 \end{figure}
 
 To visualize the difference in final orbital period $\Porb$, and how they corresponds to different \verb|kstar_1| type at the start of RLOF, we create plot the difference in orbital period $\Delta P = P_{\mathrm{orb}}^{\lambda = 35} - P_{\mathrm{orb}}^{\lambda = 5}$ against the white dwarf mass $\MWD$ in Figure \ref{dif-kstar map}. From Figure \ref{dif-kstar map}, we can see that for large \verb|kstar_1| type at the start of RLOF, $\Delta P = P_{\mathrm{orb}}^{\lambda = 35} - P_{\mathrm{orb}}^{\lambda = 5}$ is also larger. To explain this, we plot the how final white dwarf mass $\MWD$, difference in final orbital period $\Delta \Porb$, and orbital period before mass transfer $P_{\mathrm{orb}, i}$ related to each other in Figure \ref{dif-kstar-exp}. We see that the larger initial orbital period $P_{\mathrm{orb}, i}$, the more significant effect does $\lambda$ have on the final orbital period. This is not unexpected since during mass transfer, the separation changes as $\dot{a} / a = \text{const}$. Hence $\dot{\Porb} / \Porb = \text{const}$. Therefore, the larger the initial orbital period, the larger it changes, and thus the larger effect does $\lambda$ have.
+
+\section{METISSE} \label{sec:metisse}
+To resolve inconsistencies of results across different population synthesis simulation, METISSE, acronym for METhod of Interpolation for Single Star Evolution is developed. As documented in documented in \cite{Agrawal_2020,Agrawal_2023}, it is a code package designed for rapidly computing the evolution of stellar populations by interpolating within a set of pre-computed stellar evolutionary tracks. To make simulation of binary star systems using METISSE more convenient and improve the simulation accuracy of binary evolution, we modify METISSE to interpolate and save the envelope binding energy of stars. In this way, when we need to calculate envelope binding energy in COSMIC, we no longer need to first calculate common envelope $\lambda$ using the fit formula in \cite{claeys2014theoretical}, and then use Equation \ref{ebind} for binding energy. Instead, we can use the interpolated binding energy obtained from MESA tracks in METISSE directly, achieving improved accuracy and efficiency of simulation results.
+
+Notice that binding energy is stored in CGS units in the input tracks of METISSE, so the value of energy is very large. Hence, it is the best for us to interpolate the log of binding energy per unit envelope mass, instead of binding energy directly. Also, for different tracks and different phase of evolution, the binding energy may either be positive or negative. To keep the sign of binding energy accessible after interpolation, we preprocess the binding energy field in input tracks into
+\begin{equation}
+  u = \sgn{\Ebind} \cdot \frac{\log_{10} \Ebind}{\Menv}.
+\end{equation}
+Then, we interpolate $u$, just as other parameters are interpolated in METISSE. Finally, for non-degenerate stars, we recover the binding energy
+\begin{equation}
+  \Ebind = \sgn{\hat u} \cdot 10^{\hat u \Menv},
+\end{equation}
+where $\hat u$ is the interpolated value of $u$, and save it in \verb|star_parameters|.
 
 \newpage
 \bibliography{reference.bib}
