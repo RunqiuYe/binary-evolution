@@ -329,15 +329,26 @@ To visualize the difference in final orbital period $\Porb$, and how they corres
 \section{METISSE} \label{sec:metisse}
 To resolve inconsistencies of results across different population synthesis simulation, METISSE, acronym for METhod of Interpolation for Single Star Evolution is developed. As documented in documented in \cite{Agrawal_2020,Agrawal_2023}, it is a code package designed for rapidly computing the evolution of stellar populations by interpolating within a set of pre-computed stellar evolutionary tracks. To make simulation of binary star systems using METISSE more convenient and improve the simulation accuracy of binary evolution, we modify METISSE to interpolate and save the envelope binding energy of stars. In this way, when we need to calculate envelope binding energy in COSMIC, we no longer need to first calculate common envelope $\lambda$ using the fit formula in \cite{claeys2014theoretical}, and then use Equation \ref{ebind} for binding energy. Instead, we can use the interpolated binding energy obtained from MESA tracks in METISSE directly, achieving improved accuracy and efficiency of simulation results.
 
-Notice that binding energy is stored in CGS units in the input tracks of METISSE, so the value of energy is very large. Hence, it is the best for us to interpolate the log of binding energy per unit envelope mass, instead of binding energy directly. Also, for different tracks and different phase of evolution, the binding energy may either be positive or negative. To keep the sign of binding energy accessible after interpolation, we preprocess the binding energy field in input tracks into
+Notice that binding energy is stored in CGS units in the input tracks of METISSE, so the value of energy is very large. Hence, it is the best for us to interpolate the log of binding energy per unit envelope mass, instead of binding energy directly. Also, for different tracks and different phase of evolution, the binding energy may either be positive or negative. Therefore, to keep the sign of binding energy accessible after interpolation, we preprocess the binding energy field in input tracks into
 \begin{equation}
-  u = \sgn{\Ebind} \cdot \frac{\log_{10} \Ebind}{\Menv}.
+  u = \sgn{\Ebind} \cdot \frac{\log_{10} \abs{\Ebind}}{\Menv},
 \end{equation}
-Then, we interpolate $u$, just as other parameters are interpolated in METISSE. Finally, for non-degenerate stars, we recover the binding energy
+if the binding energy column is provided in the input tracks. Then, we interpolate $u$, just as other parameters are interpolated in METISSE. Finally, for non-degenerate stars, we recover the binding energy
 \begin{equation}
   \Ebind = \sgn{\hat u} \cdot 10^{\hat u \Menv},
 \end{equation}
-where $\hat u$ is the interpolated value of $u$, and save it in \verb|star_parameters|.
+where $\hat u$ is the interpolated value of $u$, and save $\Ebind$ in the \verb|binding_energy| field in \verb|star_parameters|. In \verb|comenv_lambda.f90|, a file called by COSMIC when common envelope binding enregy is needed, we check if the binding energy column is interpolated. If so, we return the value that corresponds to the interpolated $\Ebind$ directly.
+
+For a small caveat, path to input tracks must be provided in file \verb|metisse.input|. Both hydrogen tracks and helium tracks is required, and the path must be a full path returned by the \verb|pwd| command in terminal. That is, paths should not start with \verb|~/foo|, but something similar to \verb|/Users/john-doe/foo| instead. Also, there should not be spaces anywhere in the path, for eaxmple \verb*|Foo/foo\ bar/Bar| for a directory \verb*|foo bar|. This will cause the simulation to behave incorrectly. 
+
+\begin{figure}
+  \centering
+  \includegraphics[width = 0.6\linewidth]{fig/be-comparison.png}
+  \caption{Comparison of interpolated binding energy using METISSE with binding energy stored in input track for initial mass $M_0 = 5.26 \Msun$.}
+  \label{be-comparison}
+\end{figure}
+
+After modifying the code as described above, we change the initial condition of the simulation in \verb|main.input| and run the program to test it. We set the initial mass to be exactly the same initial mass as one input track. Then we compare the interpolated binding energy using our method with the binding energy stored in the input track. One example of this is shown in Figure \ref{be-comparison}. From the figure, we can see that the interpolated binding energy and the values in input MESA tracks has little deviation, validating our approach.
 
 \newpage
 \bibliography{reference.bib}
