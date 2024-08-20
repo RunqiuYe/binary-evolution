@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex paper-draft-plain"] 1724166257 "paper-draft-plain.aux" "paper-draft-plain.bbl" "paper-draft-plain" 1724166340
+["bibtex paper-draft-plain"] 1724166447 "paper-draft-plain.aux" "paper-draft-plain.bbl" "paper-draft-plain" 1724166456
   "/usr/local/texlive/2022/texmf-dist/bibtex/bst/base/apalike.bst" 1292289607 24635 604dafcc79f521a11ea73e506e1fbd98 ""
-  "paper-draft-plain.aux" 1724166340 13354 46c134cd6c1d9e7c4b235b443011ffa8 "pdflatex"
+  "paper-draft-plain.aux" 1724166455 13348 4c6e04ed301d8de2127946f7db5b174e "pdflatex"
   "reference.bib" 1724107057 2673 87208be31a3682c980be8dd3758df5cb ""
   (generated)
   "paper-draft-plain.bbl"
   "paper-draft-plain.blg"
-["pdflatex"] 1724166331 "/Users/runqiuye/Desktop/studies/research/binary-evolution/mass-transfer/summaries/paper-draft-plain.tex" "paper-draft-plain.pdf" "paper-draft-plain" 1724166340
-  "/Users/runqiuye/Desktop/studies/research/binary-evolution/mass-transfer/summaries/paper-draft-plain.tex" 1724166330 42272 dc919066cc471db62f9cdb9ac6557055 ""
+["pdflatex"] 1724166448 "/Users/runqiuye/Desktop/studies/research/binary-evolution/mass-transfer/summaries/paper-draft-plain.tex" "paper-draft-plain.pdf" "paper-draft-plain" 1724166456
+  "/Users/runqiuye/Desktop/studies/research/binary-evolution/mass-transfer/summaries/paper-draft-plain.tex" 1724166439 42266 e6815fa0f3f9c25925199c47d1a64f33 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/ecbx0600.tfm" 1136768653 3584 ad9fcbc26a2a7bccd6d08b0a5792fbe0 ""
@@ -114,9 +114,9 @@
   "fig/stable7+1ex.png" 1717772325 233529 dd7692dec4f7aae94b916d7611da7325 ""
   "fig/stable_hi_log.png" 1717681758 178451 80eebd2e9d212ea658850261110f2563 ""
   "fig/theory-observed.png" 1720539471 175396 ae66498a7a29ddb42e79f37f324e2bfe ""
-  "paper-draft-plain.aux" 1724166340 13354 46c134cd6c1d9e7c4b235b443011ffa8 "pdflatex"
-  "paper-draft-plain.bbl" 1724166258 2021 adec4244bbc59d7dede7becd38531bb4 "bibtex paper-draft-plain"
-  "paper-draft-plain.tex" 1724166330 42272 dc919066cc471db62f9cdb9ac6557055 ""
+  "paper-draft-plain.aux" 1724166455 13348 4c6e04ed301d8de2127946f7db5b174e "pdflatex"
+  "paper-draft-plain.bbl" 1724166448 2021 adec4244bbc59d7dede7becd38531bb4 "bibtex paper-draft-plain"
+  "paper-draft-plain.tex" 1724166439 42266 e6815fa0f3f9c25925199c47d1a64f33 ""
   (generated)
   "paper-draft-plain.aux"
   "paper-draft-plain.log"
